@@ -34,9 +34,9 @@ function Navbar() {
         alt=""
       />
       <ul className="flex items-center px-3 text-gray-700 shadow-lg shadow-black/5 bg-white/70 rounded-full border backdrop-blur-md">
-        {menuItems.map((item) => {
+        {menuItems.map((item, i) => {
           return (
-            <Link href={item.path}>
+            <Link href={item.path} key={i}>
               <li
                 className={`group py-3 px-5 text-sm relative cursor-pointer transition-all`}
               >
