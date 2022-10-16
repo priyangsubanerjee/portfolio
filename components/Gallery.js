@@ -7,12 +7,17 @@ function Gallery() {
       <img
         src="/dev.png"
         alt=""
-        className="rounded shrink-0 snap-center lg:w-96"
+        className="rounded shrink-0 snap-center lg:w-96 object-cover"
       />
       <img
-        src="/dev.png"
+        src="/dev2.png"
         alt=""
-        className="rounded shrink-0 snap-center lg:w-96"
+        className="rounded shrink-0 snap-center lg:w-96 object-cover"
+      />
+      <img
+        src="/dev3.png"
+        alt=""
+        className="rounded shrink-0 snap-center lg:w-96 object-cover"
       />
     </div>
   );

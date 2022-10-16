@@ -110,7 +110,7 @@ function Navbar() {
                       <div className="relative py-2 text-zinc-200 text-sm cursor-pointer transition-all">
                         <span
                           className={`px-2 ${
-                            router.pathname == item.path && "text-teal-500"
+                            router.pathname == item.path && "text-teal-400"
                           } transition-all`}
                         >
                           {item.name}
@@ -118,7 +118,7 @@ function Navbar() {
                         <span
                           className={`absolute -bottom-[1px] inset-x-0 bg-gradient-to-r from-teal-500/0 transition-all ${
                             router.pathname == item.path
-                              ? "via-teal-500/70"
+                              ? "via-teal-400/70"
                               : "via-teal-500/0"
                           } to-teal-500/0 h-[1px]`}
                         ></span>
