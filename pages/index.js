@@ -1,12 +1,16 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
+import Head from "next/head";
 import Gallery from "../components/Gallery";
 import Socials from "../components/Socials";
 
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Home | Priyangsu Banerjee - Full stack developer</title>
+      </Head>
       <div className="px-5 mt-5 lg:mt-7">
         <div className="space-y-5  lg:px-32 lg:w-[70%]">
           <div className="h-16 lg:h-24 w-16 lg:w-24 rounded-full flex items-center justify-center overflow-hidden">
@@ -154,11 +158,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 ></path>
               </svg>
-              <span className="ml-3">Stay up to date</span>
+              <span className="ml-3">Wanna discuss something?</span>
             </h2>
             <p className="mt-2 text-xs leading-5 text-zinc-400">
-              Get notified when I publish something new, and unsubscribe at any
-              time.
+              I will get back to you as soon as possible.
             </p>
             <div className="mt-6 flex">
               <input
@@ -172,7 +175,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-semibold text-zinc-100 bg-zinc-700 hover:bg-zinc-600 active:bg-zinc-700 active:text-zinc-100/70 ml-4 flex-none"
                 type="submit"
               >
-                Join
+                Send
               </button>
             </div>
           </form>
