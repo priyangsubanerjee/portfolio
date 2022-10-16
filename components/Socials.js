@@ -2,30 +2,11 @@ import React from "react";
 
 function Socials() {
   return (
-    <div className="space-y-6">
-      <ul className="space-y-4">
-        <li className="flex items-center text-gray-600">
-          <i class="bi bi-twitter"></i>
-          <span className="text-xs ml-2">Follow on Twitter</span>
-        </li>
-        <li className="flex items-center text-gray-600">
-          <i class="bi bi-instagram"></i>
-          <span className="text-xs ml-2">Follow on Instagram</span>
-        </li>
-        <li className="flex items-center text-gray-600">
-          <i class="bi bi-github"></i>
-          <span className="text-xs ml-2">Follow on Github</span>
-        </li>
-        <li className="flex items-center text-gray-600">
-          <i class="bi bi-linkedin"></i>
-          <span className="text-xs ml-2">Follow on LinkedIn</span>
-        </li>
-      </ul>
-      <hr />
-      <div className="flex items-center text-gray-600">
-        <i class="bi bi-envelope-fill"></i>
-        <span className="text-xs ml-2">priyangsu26@gmail.com</span>
-      </div>
+    <div className="flex space-x-5 lg:space-x-6 items-center text-zinc-400 text-lg lg:text-xl">
+      <i className="bi bi-github"></i>
+      <i className="bi bi-linkedin"></i>
+      <i className="bi bi-instagram"></i>
+      <i className="bi bi-twitter"></i>
     </div>
   );
 }
