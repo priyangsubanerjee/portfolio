@@ -3,7 +3,7 @@ import React from "react";
 
 function Gallery() {
   return (
-    <div className="flex snap-mandatory snap-x overflow-auto space-x-7 px-5">
+    <div className="flex snap-mandatory snap-x overflow-auto space-x-7 px-5 scrollbar-hide">
       <img
         src="/dev.png"
         alt=""

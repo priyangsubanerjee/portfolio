@@ -3,6 +3,7 @@
 
 import Head from "next/head";
 import Gallery from "../components/Gallery";
+import PrimaryArticle from "../components/PrimaryArticle";
 import Socials from "../components/Socials";
 
 export default function Home() {
@@ -18,13 +19,13 @@ export default function Home() {
           </div>
           <div className="space-y-4 lg:space-y-5">
             <h1 className="text-zinc-100 font-bold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.3]">
-              Software designer, founder, and amateur astronaut.
+              Full stack developer, designer, and founder.
             </h1>
             <p className="text-sm text-zinc-400 leading-6 lg:leading-7">
-              I&apos;m Spencer, a software designer and entrepreneur based in
-              New York City. I&apos;m the founder and CEO of Planetaria, where
-              we develop technologies that empower regular people to explore
-              space on their own terms.
+              I&apos;m Priyangsu, a software developer and entrepreneur based in
+              India. I&apos;m currently building VBC, where we develop
+              technologies that empower regular people to explore tech on their
+              own terms.
             </p>
             <div>
               <Socials />
@@ -36,108 +37,13 @@ export default function Home() {
         <Gallery />
       </div>
       <div className="px-5 lg:px-32 mt-16 lg:mt-20 grid lg:grid-cols-2 gap-16">
-        <div className="grid grid-cols-1 gap-y-16">
-          <article className="group relative flex flex-col items-start">
-            <h2 className="text-base font-semibold tracking-tight text-zinc-200 dark:text-zinc-100">
-              <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-800/90 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-              <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
-                <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative z-10">
-                  Crafting a design system for a multiplanetary future
-                </span>
-              </a>
-            </h2>
-            <time
-              className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-              datetime="2022-09-05"
-            >
-              <span
-                className="absolute inset-y-0 left-0 flex items-center"
-                aria-hidden="true"
-              >
-                <span className="h-4 w-0.5 rounded-full bg-zinc-500 dark:bg-zinc-500"></span>
-              </span>
-              September 5, 2022
-            </time>
-            <p className="relative z-10 mt-2 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-              Most companies try to stay ahead of the curve when it comes to
-              visual design, but for Planetaria we needed to create a brand that
-              would still inspire us 100 years from now when humanity has spread
-              across our entire solar system.
-            </p>
-            <div
-              aria-hidden="true"
-              className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
-            >
-              Read article
-              <svg
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-                className="ml-1 h-4 w-4 stroke-current"
-              >
-                <path
-                  d="M6.75 5.75 9.25 8l-2.5 2.25"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </div>
-          </article>
-          <article className="group relative flex flex-col items-start">
-            <h2 className="text-base font-semibold tracking-tight text-zinc-200 dark:text-zinc-100">
-              <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-800/90 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-              <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
-                <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                <span className="relative z-10">
-                  Crafting a design system for a multiplanetary future
-                </span>
-              </a>
-            </h2>
-            <time
-              className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-              datetime="2022-09-05"
-            >
-              <span
-                className="absolute inset-y-0 left-0 flex items-center"
-                aria-hidden="true"
-              >
-                <span className="h-4 w-0.5 rounded-full bg-zinc-500 dark:bg-zinc-500"></span>
-              </span>
-              September 5, 2022
-            </time>
-            <p className="relative z-10 mt-2 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-              Most companies try to stay ahead of the curve when it comes to
-              visual design, but for Planetaria we needed to create a brand that
-              would still inspire us 100 years from now when humanity has spread
-              across our entire solar system.
-            </p>
-            <div
-              aria-hidden="true"
-              className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
-            >
-              Read article
-              <svg
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-                className="ml-1 h-4 w-4 stroke-current"
-              >
-                <path
-                  d="M6.75 5.75 9.25 8l-2.5 2.25"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </div>
-          </article>
+        <div className="space-y-6">
+          <PrimaryArticle />
         </div>
-        <div className="grid grid-cols-1 gap-10">
+        <div className=" space-y-8">
           <form
             action="/thank-you"
-            className="rounded-2xl border p-6 border-zinc-700/40"
+            className="rounded-2xl border p-6 border-zinc-700/40 h-fit"
           >
             <h2 className="flex text-sm font-semibold text-zinc-100">
               <svg
@@ -181,7 +87,7 @@ export default function Home() {
           </form>
           <form
             action="/thank-you"
-            className="rounded-2xl border p-6 border-zinc-700/40"
+            className="rounded-2xl border p-6 border-zinc-700/40 h-fit"
           >
             <h2 className="flex text-sm font-semibold text-zinc-100">
               <svg
