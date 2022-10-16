@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="apple-touch-icon" href="/favicon.png"></link>
           <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
-          <meta name="theme-color" content="#fff" />
+          <meta name="theme-color" content="#1b1b1b" />
         </Head>
         <body>
           <Main />
