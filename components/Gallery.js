@@ -14,7 +14,7 @@ function Gallery() {
               src={image.path}
               title={image.title}
               alt={image.title}
-              className="cursor-pointer rounded hover:scale-110 transition-all duration-500 shrink-0 snap-center lg:w-96 object-cover overflow-hidden"
+              className="cursor-pointer rounded lg:hover:scale-110 transition-all duration-500 shrink-0 snap-center lg:w-96 object-cover overflow-hidden"
             />
           </Link>
         );
