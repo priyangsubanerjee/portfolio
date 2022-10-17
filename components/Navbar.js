@@ -36,7 +36,7 @@ function Navbar() {
           </button>
 
           <div className="fixed">
-            <Fade when={isOpen}>
+            <Fade when={isOpen} duration={500}>
               {isOpen && (
                 <div className="fixed inset-0 h-full w-full bg-black/50 backdrop-blur z-20"></div>
               )}
@@ -86,7 +86,14 @@ function Navbar() {
                           return (
                             <li key={i}>
                               <Link href={item.path}>
-                                <a className="block py-2">{item.name}</a>
+                                <a
+                                  className={`block py-2 ${
+                                    router.pathname == item.path &&
+                                    "text-teal-500"
+                                  }`}
+                                >
+                                  {item.name}
+                                </a>
                               </Link>
                             </li>
                           );
