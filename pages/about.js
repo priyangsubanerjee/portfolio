@@ -12,7 +12,7 @@ function About() {
       <div className="px-5 mt-5 lg:mt-7">
         <div className="space-y-10 lg:px-32 flex flex-col lg:flex-row-reverse lg:justify-start">
           <div className="lg:w-1/2 shrink-0 flex flex-col items-center lg:px-16">
-            <div className="lg:mt-16 h-64 lg:h-[400px] w-full rounded-xl flex items-center justify-center overflow-hidden">
+            <div className="lg:mt-16 h-96 lg:h-[400px] w-full rounded-xl flex items-center justify-center overflow-hidden">
               <img src="/logo.jpeg" alt="" />
             </div>
             <div class="lg:mt-16 w-full hidden lg:block">
