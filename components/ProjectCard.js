@@ -7,11 +7,11 @@ function ProjectCard() {
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border border-zinc-700/50 bg-zinc-800 ring-0">
         <img
           alt=""
-          src="/logo.jpeg"
+          src="/hotspot.png"
           width="32"
           height="32"
           decoding="async"
-          className="h-8 w-8 object-cover rounded-full"
+          className="h-8 w-8 object-cover rounded-full bg-white shrink-0 p-1"
           loading="lazy"
         ></img>
       </div>
