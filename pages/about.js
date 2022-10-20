@@ -12,10 +12,10 @@ function About() {
       <div className="px-5 mt-5 lg:mt-7">
         <div className="space-y-10 lg:px-32 flex flex-col lg:flex-row-reverse lg:justify-start">
           <div className="lg:w-1/2 shrink-0 flex flex-col items-center lg:px-16">
-            <div className="lg:mt-16 h-96 lg:h-[400px] w-full rounded-xl lg:rounded-none flex items-center justify-center overflow-hidden">
+            <div className="lg:mt-16 w-full  flex items-center justify-center">
               <img
                 src="/logo.jpeg"
-                className="lg:grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                className="lg:grayscale h-[300px] lg:hover:h-[500px] w-[500px] object-cover overflow-hidden hover:grayscale-0 transition-all duration-500 cursor-pointer rounded-2xl"
                 alt=""
               />
             </div>
@@ -112,24 +112,30 @@ function About() {
                 I&apos;m Priyangsu Banerjee. I live in India, where I build the
                 future.
               </h1>
-              <div className="space-y-10">
+              <div className="space-y-8">
                 <p className="text-sm text-zinc-400 leading-6 lg:leading-7">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae reprehenderit modi quis voluptatibus vitae aliquid
-                  deserunt rem, possimus totam error nemo nostrum, libero
-                  voluptate saepe? Ab vitae at, dicta soluta vel, rerum laborum
-                  beatae assumenda doloremque, repudiandae dolorum sequi
-                  reiciendis expedita itaque nemo eum rem cumque illo libero
-                  tenetur consequatur.
+                  I&apos;ve loved making things for as long as I can remember,
+                  and wrote my first program when I was in the 5th grade, just
+                  two weeks after I received my first personal computer, that I
+                  taught myself to type on.
                 </p>
                 <p className="text-sm text-zinc-400 leading-6 lg:leading-7">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae reprehenderit modi quis voluptatibus vitae aliquid
-                  deserunt rem, possimus totam error nemo nostrum, libero
-                  voluptate saepe? Ab vitae at, dicta soluta vel, rerum laborum
-                  beatae assumenda doloremque, repudiandae dolorum sequi
-                  reiciendis expedita itaque nemo eum rem cumque illo libero
-                  tenetur consequatur.
+                  The only thing I loved more than play as a kid was computers.
+                  When I was 12, I wrote the first code which was the damn basic
+                  calculator with html, css & javascript. Counted up for a
+                  moment what i could ever imagine was code code & code. I was
+                  passionate enough to solve my daily life problems by just
+                  wring some amount code which again started off, by building a
+                  simple to-do application.
+                </p>
+                <p className="text-sm text-zinc-400 leading-6 lg:leading-7">
+                  Since Adobe Flash was a complete innovation, alongside with
+                  CSS 1.0 and HTML 4.01 as standards of the current web
+                  I&apos;ve been passionate about web. For over a decade I had
+                  many opportunities to work in a vast spectrum of what let me
+                  gather a significant amount of various experience. Working for
+                  companies and individuals around the globe I met and learnt
+                  from amazing and ambitious people.
                 </p>
               </div>
             </div>
