@@ -48,7 +48,7 @@ function Navbar() {
                   className="fixed inset-0 h-full w-full z-30"
                 >
                   <div
-                    className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800 opacity-100 scale-100"
+                    className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl p-8 ring-1 ring-zinc-900/5 bg-zinc-900 ring-zinc-800 opacity-100 scale-100"
                     id="headlessui-popover-panel-:Rqb6H1:"
                     tabindex="-1"
                     data-headlessui-state="open"
@@ -64,7 +64,7 @@ function Navbar() {
                         <svg
                           viewBox="0 0 24 24"
                           aria-hidden="true"
-                          className="h-6 w-6 text-zinc-500 dark:text-zinc-400"
+                          className="h-6 w-6 text-zinc-400"
                         >
                           <path
                             d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5"
@@ -76,12 +76,12 @@ function Navbar() {
                           ></path>
                         </svg>
                       </button>
-                      <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                      <h2 className="text-sm font-medium text-zinc-400">
                         Navigation
                       </h2>
                     </div>
                     <nav className="mt-6">
-                      <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+                      <ul className="-my-2 divide-y text-base te divide-zinc-100/5 text-zinc-300">
                         {menu.map((item, i) => {
                           return (
                             <li key={i}>
