@@ -16,10 +16,6 @@ const menu = [
     path: "/projects",
   },
   {
-    name: "Speaking",
-    path: "/speaking",
-  },
-  {
     name: "Uses",
     path: "/uses",
   },
