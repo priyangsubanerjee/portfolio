@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
+import projects from "../static/projects";
 
 function Projects() {
   return (
@@ -22,7 +23,9 @@ function Projects() {
         </div>
         <div className="mt-20">
           <ul className="grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-3 lg:px-32">
-            <ProjectCard />
+            {projects.map((project, i) => {
+              return <ProjectCard key={i} data={project} />;
+            })}
           </ul>
         </div>
       </div>

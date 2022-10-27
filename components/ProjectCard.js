@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-function ProjectCard() {
+function ProjectCard({ data }) {
   return (
     <li className="group relative flex flex-col items-start">
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border border-zinc-700/50 bg-zinc-800 ring-0">
         <img
           alt=""
-          src="/hotspot.png"
+          src={data.icon}
           width="32"
           height="32"
           decoding="async"
@@ -17,14 +17,13 @@ function ProjectCard() {
       </div>
       <h2 className="mt-6 text-base font-semibold text-zinc-100">
         <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-        <a href="https://airdropio.vercel.app">
+        <a target={"_blank"} rel="noopener noreferrer" href={data.href}>
           <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-          <span className="relative z-10">Airdrop io</span>
+          <span className="relative z-10">{data.title}</span>
         </a>
       </h2>
       <p className="relative z-10 mt-2 text-sm text-zinc-400 leading-6">
-        Airdrop.io is a free, open-source, decentralized, peer-to-peer file
-        sharing platform.
+        {data.description}
       </p>
       <p className="relative z-10 mt-6 flex text-sm font-medium transition group-hover:text-teal-500 text-zinc-200">
         <svg
