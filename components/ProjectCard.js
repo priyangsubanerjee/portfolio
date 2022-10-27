@@ -36,7 +36,7 @@ function ProjectCard({ data }) {
             fill="currentColor"
           ></path>
         </svg>
-        <span className="ml-2">airdropio.vercel.app</span>
+        <span className="ml-2">View project</span>
       </p>
     </li>
   );
