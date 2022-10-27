@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../static/projects";
@@ -6,6 +7,9 @@ import projects from "../static/projects";
 function Projects() {
   return (
     <div>
+      <Head>
+        <title>Projects - Priyangsu Banerjee</title>
+      </Head>
       <div className="px-5 mt-5 lg:mt-7">
         <div className="space-y-5  lg:px-32 w-full lg:w-[80%]">
           <div className="space-y-4 lg:space-y-5 lg:mt-24">

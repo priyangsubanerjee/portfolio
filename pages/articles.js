@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import PrimaryArticle from "../components/PrimaryArticle";
 import SecondaryArticle from "../components/SecondaryArticle";
@@ -5,6 +6,9 @@ import SecondaryArticle from "../components/SecondaryArticle";
 function articles() {
   return (
     <div>
+      <Head>
+        <title>Articles - Priyangsu Banerjee</title>
+      </Head>
       <div className="px-5 mt-5 lg:mt-7">
         <div className="space-y-5  lg:px-32 w-full lg:w-[80%]">
           <div className="space-y-4 lg:space-y-5 lg:mt-24">
