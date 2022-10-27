@@ -6,7 +6,7 @@ function SecondaryArticle() {
       <div className="md:col-span-3 group relative flex flex-col items-start">
         <h2 className="text-base font-semibold tracking-tight text-zinc-100">
           <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-          <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
+          <a href="#">
             <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
             <span className="relative z-10">
               October summit on System design.
