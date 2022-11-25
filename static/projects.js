@@ -60,7 +60,7 @@ const projects = [
     description:
       "Helps you find all necessary resources near your city, ranging from ambulance service providers, oxygen suppliers, etc.",
     icon: "https://media.graphcms.com/43k0OjdxRFOZXDgwElxI",
-    href: "https://dgpcare.vercel.appr",
+    href: "https://dgpcare.vercel.app",
   },
 ];
 
