@@ -132,6 +132,25 @@ export default function Home() {
               </li>
               <li className="flex items-center">
                 <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
+                  <div className="h-10 w-10 rounded-full">
+                    <img
+                      src="https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png"
+                      className="h-ful w-full"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <p className="text-zinc-300 text-sm font-semibold">
+                    Robotics, IOT development
+                  </p>
+                  <small className="text-xs text-zinc-500">
+                    5+ years of expertise
+                  </small>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
                   <div className="h-9 w-9 rounded-full overflow-hidden">
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Android_11_Developer_Preview_logo.svg/2048px-Android_11_Developer_Preview_logo.svg.png"

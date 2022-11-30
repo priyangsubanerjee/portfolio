@@ -62,6 +62,48 @@ const projects = [
     icon: "https://media.graphcms.com/43k0OjdxRFOZXDgwElxI",
     href: "https://dgpcare.vercel.app",
   },
+  {
+    title: "Weather Station",
+    description:
+      "IoT based live weather station monitoring using NodemCU ESP8266. Recorded data is sent to a mongodb database through a node js api.",
+    icon: "https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png",
+    href: "https://easyfidb.herokuapp.com/download/77a95878-f5c0-4202-82e0-3ef49693342b.png",
+  },
+  {
+    title: "Line follower robot",
+    description:
+      "IR transmits infrared lights. When infrared rays falls on white surface, it's reflected back and catched by photodiodes which generates some voltage changes. ",
+    icon: "https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png",
+    href: "https://easyfidb.herokuapp.com/download/99efaf67-513e-4bd6-8595-1a8b806ccbaf.jpg",
+  },
+  {
+    title: "Edge detector car.",
+    description:
+      "This working model relys on the principle of IR rays reflection. When IR rays falls on white surface, it's reflected back and catched by photodiodes which generates some voltage changes. ",
+    icon: "https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png",
+    href: "https://easyfidb.herokuapp.com/download/689b99ff-23b5-42e6-9835-f5d5dc9e2d84.jpg",
+  },
+  {
+    title: "Smart blind stick.",
+    description:
+      "Works on the fundamental principle of SONAR, the HCSR04 (Utrasonic sensor module) emits ultrasonic waves and receives the reflected waves. The time taken by the reflected waves to return is measured by the module.",
+    icon: "https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png",
+    href: "https://easyfidb.herokuapp.com/download/44ccf949-a4b3-4548-9f9b-b8e657872b9d.jpg",
+  },
+  {
+    title: "Smart notice board.",
+    description:
+      "IOT based notice board management system, powered by ESP8266 & 4 8x8 LED matrix displays. The notice board is controlled by a web app built using node js.",
+    icon: "https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png",
+    href: "https://easyfidb.herokuapp.com/download/3bebecde-cdb3-4903-a0dd-1cf6ee7b5319.jpg",
+  },
+  {
+    title: "RFID based safe/locker.",
+    description:
+      "RFID stands for Radio Frequency IDentification and it’s a non-contact technology that’s broadly used in many industries for tasks such as personnel tracking, access control, supply chain management, books tracking in libraries, tollgate systems and so on",
+    icon: "https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png",
+    href: "https://easyfidb.herokuapp.com/download/32cfde23-7df6-456c-bc5d-bae827e09e20.png",
+  },
 ];
 
 export default projects;
