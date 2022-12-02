@@ -94,7 +94,7 @@ const projects = [
     title: "Smart notice board.",
     description:
       "IOT based notice board management system, powered by ESP8266 & 4 8x8 LED matrix displays. The notice board is controlled by a web app built using node js.",
-    icon: "/projectimages/nortice-arduino.png",
+    icon: "/projectimages/logo-arduino.png",
     href: "/projectimages/notice-board.jpg",
   },
   {
