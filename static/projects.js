@@ -102,7 +102,7 @@ const projects = [
     description:
       "RFID stands for Radio Frequency IDentification and it’s a non-contact technology that’s broadly used in many industries for tasks such as personnel tracking, access control, supply chain management, books tracking in libraries, tollgate systems and so on",
     icon: "/projectimages/logo-arduino.png",
-    href: "https://easyfidb.herokuapp.com/download/32cfde23-7df6-456c-bc5d-bae827e09e20.png",
+    href: "/projectimages/rfid-locker.png",
   },
 ];
 
