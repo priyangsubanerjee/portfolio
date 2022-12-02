@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
                   <div className="h-10 w-10 rounded-full">
                     <img
-                      src="https://easyfidb.herokuapp.com/download/9926904c-d50b-49be-8736-01719ee55b87.png"
+                      src="/projectimages/logo-arduino.png"
                       className="h-ful w-full"
                       alt=""
                     />
