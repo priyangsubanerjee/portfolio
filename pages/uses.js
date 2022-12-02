@@ -47,6 +47,17 @@ function Uses() {
                     </li>
                     <li class="group relative flex flex-col items-start">
                       <h3 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                        13.3” MacBook Air, M1 (2021)
+                      </h3>
+                      <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        I&apos;ve never heard the fans turn on a single time,
+                        coz it doesnt have one. Even under the incredibly heavy
+                        loads I put it through with our various launch
+                        simulations.
+                      </p>
+                    </li>
+                    <li class="group relative flex flex-col items-start">
+                      <h3 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                         Apple Pro Display XDR (Standard Glass)
                       </h3>
                       <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
