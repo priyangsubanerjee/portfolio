@@ -14,11 +14,11 @@ const projects = [
     href: "https://secretconfession.vercel.app",
   },
   {
-    title: "Airdop io",
+    title: "Airshare",
     description:
-      "Airdrop.io is a free, open-source, decentralized, peer-to-peer file sharing platform.",
+      "Airshare is a free, open-source, decentralized, peer-to-peer file sharing platform.",
     icon: "/hotspot.png",
-    href: "https://airdropio.vercel.app",
+    href: "https://airshare.vercel.app",
   },
   {
     title: "Anyratings",
