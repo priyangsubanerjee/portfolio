@@ -7,19 +7,20 @@ const projects = [
     href: "https://drive.google.com/file/d/140ODucP7N910mhKltJ9PVS6QDenvrT4x/view?usp=share_link",
   },
   {
-    title: "Firebase based Morse code generator",
-    description:
-      "Using firebase realtime database to generate morse code from human readable text using an ESP8266 MCU.",
-    icon: "/morsecode.webp",
-    href: "https://drive.google.com/file/d/1vx1sKC7uVWlimauUOkXnfMxpPxU-H28r/view?usp=share_link",
-  },
-  {
     title: "Airshare",
     description:
       "Airshare is a free, open-source, decentralized, peer-to-peer file sharing platform.",
     icon: "/hotspot.png",
     href: "https://airshare.vercel.app",
   },
+  {
+    title: "Firebase based Morse code generator",
+    description:
+      "Using firebase realtime database to generate morse code from human readable text using an ESP8266 MCU.",
+    icon: "/morsecode.webp",
+    href: "https://drive.google.com/file/d/1vx1sKC7uVWlimauUOkXnfMxpPxU-H28r/view?usp=share_link",
+  },
+
   {
     title: "Secret Confession",
     description:
