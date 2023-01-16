@@ -1,5 +1,26 @@
 const projects = [
   {
+    title: "Wifi based home automation",
+    description:
+      "A simple home automation system using ESP8266, Firebase realtime databse and a web app made with NextJs to control the devices.",
+    icon: "/homeautomation.webp",
+    href: "https://drive.google.com/file/d/140ODucP7N910mhKltJ9PVS6QDenvrT4x/view?usp=share_link",
+  },
+  {
+    title: "Firebase based Morse code generator",
+    description:
+      "Using firebase realtime database to generate morse code from human readable text using an ESP8266 MCU.",
+    icon: "/morsecode.webp",
+    href: "https://drive.google.com/file/d/1vx1sKC7uVWlimauUOkXnfMxpPxU-H28r/view?usp=share_link",
+  },
+  {
+    title: "Morse code generator",
+    description:
+      "Generating human readable text to morse code usning arduino & serial communication.",
+    icon: "/morsecode.webp",
+    href: "https://drive.google.com/file/d/1tNXOvGKbDzG6oim3V2ScvFRuvW_Ub9lD/view?usp=share_link",
+  },
+  {
     title: "Diwali Wisher",
     description:
       "A simple web app to send Diwali wishes to your friends and family. Built using NextJs and Tailwind.",
