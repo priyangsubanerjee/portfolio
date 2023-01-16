@@ -14,6 +14,20 @@ const projects = [
     href: "https://drive.google.com/file/d/1vx1sKC7uVWlimauUOkXnfMxpPxU-H28r/view?usp=share_link",
   },
   {
+    title: "Airshare",
+    description:
+      "Airshare is a free, open-source, decentralized, peer-to-peer file sharing platform.",
+    icon: "/hotspot.png",
+    href: "https://airshare.vercel.app",
+  },
+  {
+    title: "Secret Confession",
+    description:
+      "Receive anonymous confessions from your friends and family. Send anonymous confessions to your friends and family.",
+    icon: "/secretconf.png",
+    href: "https://secretconfession.vercel.app",
+  },
+  {
     title: "Morse code generator",
     description:
       "Generating human readable text to morse code usning arduino & serial communication.",
@@ -26,20 +40,6 @@ const projects = [
       "A simple web app to send Diwali wishes to your friends and family. Built using NextJs and Tailwind.",
     icon: "/diwaliwisher.png",
     href: "https://diwali2022.vercel.app",
-  },
-  {
-    title: "Secret Confession",
-    description:
-      "Receive anonymous confessions from your friends and family. Send anonymous confessions to your friends and family.",
-    icon: "/secretconf.png",
-    href: "https://secretconfession.vercel.app",
-  },
-  {
-    title: "Airshare",
-    description:
-      "Airshare is a free, open-source, decentralized, peer-to-peer file sharing platform.",
-    icon: "/hotspot.png",
-    href: "https://airshare.vercel.app",
   },
   {
     title: "Anyratings",

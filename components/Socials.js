@@ -16,6 +16,9 @@ function Socials() {
       <Link href="https://twitter.com/oxygenated_fire">
         <i className="bi bi-twitter transition-all hover:text-zinc-100 cursor-pointer"></i>
       </Link>
+      <Link href="https://www.quora.com/profile/Priyangsu-Banerjee-1">
+        <i className="bi bi-quora transition-all hover:text-zinc-100 cursor-pointer"></i>
+      </Link>
     </div>
   );
 }
