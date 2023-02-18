@@ -1,13 +1,12 @@
-import Footer from "../components/Footer";
-import Layout from "../components/Layout";
-import "../styles/globals.css";
+import Layout from "@/components/Layout";
+import "@/styles/globals.css";
+import NextNProgress from "nextjs-progressbar";
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <Layout>
+      <NextNProgress />
       <Component {...pageProps} />
     </Layout>
   );
 }
-
-export default MyApp;

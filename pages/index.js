@@ -1,235 +1,224 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
+import PrimaryArticle from "@/components/cards/articles/PrimaryArticle";
+import FeaturedArticles from "@/components/sections/FeaturedArticles";
+import Socials from "@/components/Socials";
+import { client, gql } from "@/helper/graph";
 import Head from "next/head";
-import Gallery from "../components/Gallery";
-import PrimaryArticle from "../components/PrimaryArticle";
-import Socials from "../components/Socials";
+import Link from "next/link";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const query = gql`
+    query Experiences {
+      experiences {
+        createdAt
+        duration
+        id
+        publishedAt
+        title
+        updatedAt
+        image {
+          url
+        }
+      }
+      articles {
+        createdAt
+        body
+        slug
+        id
+        tags
+        heading
+        description
+        cover {
+          url
+        }
+        author {
+          name
+          bio
+          image {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  const response = await client.request(query);
+
+  return {
+    props: {
+      experiences: response.experiences,
+      articles: response.articles,
+    },
+  };
+}
+
+export default function Home({ experiences, articles }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Home | Priyangsu Banerjee - Full stack developer</title>
+        <link rel="apple-touch-icon" href="/favicon.png"></link>
+        <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+          name="description"
+          content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
+        />
+        <meta
+          name="keywords"
+          content="sites, web, immovation, design, programmer, priyangsu, front-end, designer, ui, priyangsu banerjee, freelancer, portfolio, website, priyangsu banerjee, android, ios, robotics"
+        />
+        <meta name="author" content="Priyangsu Banerjee" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="web" />
+        <meta name="rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="px-5 mt-5 lg:mt-7">
-        <div className="space-y-5  lg:px-32 lg:w-[70%]">
-          <div className="h-16 lg:h-24 w-16 lg:w-24 rounded-full flex items-center justify-center overflow-hidden">
-            <img src="/logo.jpeg" alt="" />
-          </div>
-          <div className="space-y-4 lg:space-y-5">
-            <h1 className="text-zinc-100 font-bold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.3]">
-              Full stack developer, designer, and founder.
-            </h1>
-            <p className="text-sm text-zinc-400 leading-6 lg:leading-7">
-              I&apos;m Priyangsu, a software developer and entrepreneur based in
-              India. I&apos;m currently building VBC, where we develop
-              technologies that empower regular people to explore tech on their
-              own terms.
-            </p>
-            <div>
-              <Socials />
-            </div>
-          </div>
+      <div className="lg:px-32">
+        <div className="lg:w-[70%] md:w-[85%] w-full px-7">
+          <img
+            src="/priyangsuTwo.jpeg"
+            className="h-28 w-28 rounded-full object-cover object-center"
+            alt=""
+          />
+          <h1 className="text-4xl lg:text-6xl text-zinc-100 font-bold leading-[1.4] lg:leading-[1.3] mt-7">
+            Full stack developer, designer, and{" "}
+            <span className="text-transparent bg-gradient-to-r from-sky-300 to-blue-500 bg-clip-text">
+              founder.
+            </span>
+          </h1>
+          <p className="text-slate-300 leading-9 mt-5">
+            I&apos;m Priyangsu, a software developer and entrepreneur based in
+            India. I&apos;m currently building VBC, where we develop
+            technologies that empower regular people to explore tech on their
+            own terms.
+          </p>
+          <Socials className="mt-5" />
         </div>
-      </div>
-      <div className="mt-12">
-        <Gallery />
-      </div>
-      <div className="px-5 lg:px-32 mt-16 lg:mt-20 grid lg:grid-cols-2 gap-16">
-        <div className="space-y-6">
-          <PrimaryArticle />
-        </div>
-        <div className=" space-y-8">
-          <form
-            action="/thank-you"
-            className="rounded-2xl border p-6 border-zinc-700/40 h-fit"
-          >
-            <h2 className="flex text-sm font-semibold text-zinc-100">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                className="h-6 w-6 flex-none"
-              >
-                <path
-                  d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-                  className="fill-zinc-100/10 stroke-zinc-500"
-                ></path>
-                <path
-                  d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-                  className="stroke-zinc-500"
-                ></path>
-              </svg>
-              <span className="ml-3">Wanna discuss something?</span>
-            </h2>
-            <p className="mt-2 text-xs leading-5 text-zinc-400">
-              I will get back to you as soon as possible.
-            </p>
-            <div className="mt-6 flex">
-              <input
-                type="email"
-                placeholder="Email address"
-                aria-label="Email address"
-                required=""
-                className="min-w-0 flex-auto appearance-none rounded-md border px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 focus:outline-none focus:ring-4 border-zinc-700 bg-zinc-700/[0.15] dark:text-zinc-200 placeholder:text-zinc-500 focus:border-teal-400 focus:ring-teal-400/10 sm:text-sm"
-              />
-              <button
-                className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-semibold text-zinc-100 bg-zinc-700 hover:bg-zinc-600 active:bg-zinc-700 active:text-zinc-100/70 ml-4 flex-none"
-                type="submit"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-          <form
-            action="/thank-you"
-            className="rounded-2xl border p-6 border-zinc-700/40 h-fit"
-          >
-            <h2 className="flex text-sm font-semibold text-zinc-100">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                className="h-6 w-6 flex-none"
-              >
-                <path
-                  d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-                  className="fill-zinc-100/10 stroke-zinc-500"
-                ></path>
-                <path
-                  d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-                  className="stroke-zinc-500"
-                ></path>
-              </svg>
-              <span className="ml-3">Experience</span>
-            </h2>
-            <ul className="mt-6 space-y-6">
-              <li className="flex items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
-                  <div className="h-10 w-10 rounded-full">
-                    <img
-                      src="https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png?width=256&s=3f7493995143d3cf40b1fedc582607cea194b579"
-                      className="h-ful w-full"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <p className="text-zinc-300 text-sm font-semibold">
-                    Full stack web development
-                  </p>
-                  <small className="text-xs text-zinc-500">
-                    7+ years of expertise
-                  </small>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
-                  <div className="h-10 w-10 rounded-full">
-                    <img
-                      src="/projectimages/logo-arduino.png"
-                      className="h-ful w-full"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <p className="text-zinc-300 text-sm font-semibold">
-                    Robotics, IOT development
-                  </p>
-                  <small className="text-xs text-zinc-500">
-                    5+ years of expertise
-                  </small>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
-                  <div className="h-9 w-9 rounded-full overflow-hidden">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Android_11_Developer_Preview_logo.svg/2048px-Android_11_Developer_Preview_logo.svg.png"
-                      className="h-full w-full object-cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <p className="text-zinc-300 text-sm font-semibold">
-                    Android development
-                  </p>
-                  <small className="text-xs text-zinc-500">
-                    3+ years of expertise
-                  </small>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
-                  <div className="h-9 w-9 rounded-full overflow-hidden">
-                    <img
-                      src="https://images.ctfassets.net/ooa29xqb8tix/6MFFWO1k38yxTrLKRZ26e8/2c07fa6c2c4653bfae00dd87625d6e56/swift-logo.png?w=400&q=50"
-                      className="h-full w-full object-cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <p className="text-zinc-300 text-sm font-semibold">
-                    iOS &amp; iPadOs development
-                  </p>
-                  <small className="text-xs text-zinc-500">
-                    2+ years of expertise
-                  </small>
-                </div>
-              </li>
-              <li className="flex items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-700 bg-zinc-700/80 flex items-center justify-center">
-                  <div className="h-9 w-9 rounded-full overflow-hidden">
-                    <img
-                      src="https://ih1.redbubble.net/image.1060800409.1512/pp,840x830-pad,1000x1000,f8f8f8.u1.jpg"
-                      className="h-full w-full object-cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <p className="text-zinc-300 text-sm font-semibold">
-                    Hybrid &amp; cross platform development
-                  </p>
-                  <small className="text-xs text-zinc-500">
-                    2+ years of expertise
-                  </small>
-                </div>
-              </li>
-              <a
-                className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
-                //href="https://drive.google.com/file/d/1U0eWv0CroPbGRmUrk-jdhMTQg5GtIhKV/view?usp=sharing"
-                download={true}
-              >
-                Download CV
+        <FeaturedArticles className="mt-20" />
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="space-y-3">
+            {articles.slice(0, 3).map((article, index) => {
+              return <PrimaryArticle article={article} key={index} />;
+            })}
+          </div>
+          <div className="px-7 lg:p-0">
+            <form
+              action="/thank-you"
+              class="rounded-2xl border p-6 border-slate-700/40 h-fit"
+            >
+              <h2 class="flex text-sm font-semibold text-zinc-100">
                 <svg
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   fill="none"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                   aria-hidden="true"
-                  className="h-4 w-4 stroke-zinc-400 transition group-hover:stroke-zinc-50 group-active:stroke-zinc-50"
+                  class="h-6 w-6 flex-none"
                 >
                   <path
-                    d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+                    class="fill-slate-100/10 stroke-slate-500"
+                  ></path>
+                  <path
+                    d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+                    class="stroke-slate-500"
                   ></path>
                 </svg>
-              </a>
-            </ul>
-          </form>
+                <span class="ml-3">Wanna discuss something?</span>
+              </h2>
+              <p class="mt-2 text-xs leading-5 text-slate-400">
+                I will get back to you as soon as possible.
+              </p>
+              <div class="mt-6 flex">
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  class="min-w-0 flex-auto text-white appearance-none rounded-md border px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 focus:outline-none focus:ring-4 border-slate-700 bg-slate-700/[0.15] placeholder:text-slate-500 focus:border-sky-300 focus:ring-sky-300/10 sm:text-sm"
+                />
+                <button
+                  class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-semibold text-slate-100 bg-slate-700 hover:bg-slate-600 active:bg-slate-700 active:text-slate-100/70 ml-4 flex-none"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+            <div class="rounded-2xl border p-6 border-slate-700/40 h-fit mt-7">
+              <h2 class="flex text-sm font-semibold text-zinc-100">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="h-6 w-6 flex-none"
+                >
+                  <path
+                    d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+                    class="fill-slate-100/10 stroke-slate-500"
+                  ></path>
+                  <path
+                    d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
+                    class="stroke-slate-500"
+                  ></path>
+                </svg>
+                <span class="ml-3">Experience</span>
+              </h2>
+              <ul class="mt-6 space-y-6">
+                {experiences.map((experience, i) => {
+                  return (
+                    <li key={i} class="flex items-center">
+                      <div class="h-12 w-12 rounded-full border border-slate-700 bg-slate-700/80 flex items-center justify-center">
+                        <div class="h-10 w-10 rounded-full overflow-hidden">
+                          <img
+                            src={experience.image.url}
+                            class="h-full w-full object-cover object-center"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <p class="text-zinc-300 text-sm font-semibold">
+                          {experience.title}
+                        </p>
+                        <small class="text-xs text-zinc-500">
+                          {experience.duration}
+                        </small>
+                      </div>
+                    </li>
+                  );
+                })}
+                <a
+                  class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-slate-50 font-medium text-slate-900 hover:bg-slate-100 active:bg-slate-200 active:text-slate-900/60 group mt-6 w-full cursor-pointer select-none"
+                  download=""
+                >
+                  Download CV
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                    class="h-4 w-4 stroke-slate-900 transition group-hover:stroke-slate-700 group-active:stroke-zinc-900/50"
+                  >
+                    <path
+                      d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
