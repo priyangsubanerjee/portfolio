@@ -116,7 +116,7 @@ function ArticleSlug({ article, body }) {
                 className="h-14 w-14 object-cover rounded-full"
               />
               <div className="ml-4 space-y-1">
-                <h1 className="text-slate-100 font-semibold text-xl">
+                <h1 className="text-slate-100 font-semibold text-lg lg:text-xl">
                   {article.author.name}
                 </h1>
                 <p className="text-slate-400 text-sm">
