@@ -3,10 +3,7 @@ import React from "react";
 
 function CofeeButton() {
   return (
-    <Link
-      target={"_blank"}
-      href={"https://www.buymeacoffee.com/priyangsubanerjee"}
-    >
+    <Link target={"_blank"} href={"https://www.buymeacoffee.com/priyangsu"}>
       <button className="text-gray-300 bg-zinc-100 w-10 h-10 border border-gray rounded-full ml-3 flex items-center justify-center">
         <svg
           data-v-fcca4322=""

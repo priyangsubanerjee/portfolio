@@ -64,7 +64,7 @@ function ArticleSlug({ article, body }) {
 
   const router = useRouter({});
   return (
-    <div className="lg:px-16 px-5">
+    <div className="-mt-32">
       <Head>
         <title>{article.heading}</title>
         <link rel="apple-touch-icon" href="/favicon.png"></link>
@@ -102,13 +102,13 @@ function ArticleSlug({ article, body }) {
         <meta property="og:site_name" content="Priyangsu Banerjee" />
       </Head>
       <div className="flex flex-col space-x-10">
-        <div className="w-full lg:w-[750px] shrink-0 overflow-hidden rounded-lg">
+        <div className="w-full shrink-0 overflow-hidden">
           <img
             src={article.cover.url}
-            className="h-80 w-full object-cover rounded-lg border border-slate-700"
+            className="h-96 w-full object-cover "
             alt=""
           />
-          <div className="lg:p-10 mt-10 lg:mt-0">
+          <div className="lg:px-16 mt-10 lg:mt-16 lg:w-[850px]">
             <div className="flex items-center">
               <img
                 src={article.author.image.url}
@@ -124,7 +124,7 @@ function ArticleSlug({ article, body }) {
                 </p>
               </div>
             </div>
-            <h1 className="mt-10 text-3xl lg:text-5xl font-extrabold text-slate-100 leading-[1.4]">
+            <h1 className="mt-10 text-3xl lg:text-5xl font-extrabold text-slate-100 leading-[1.4] lg:leading-[1.4]">
               {article.heading}
             </h1>
             <ul className="flex items-center space-x-4 text-slate-400 mt-7">
@@ -141,7 +141,7 @@ function ArticleSlug({ article, body }) {
         </div>
         <div className="h-auto mb-10"></div>
       </div>
-      <div className="lg:px-10">
+      <div className="lg:px-16 lg:w-[850px]">
         <div className="prose max-w-full prose-h1:text-3xl prose-h2:text-2xl prose-h2:border-b prose-h2:pb-2 prose-h3:text-xl prose-p:text-sm prose-li:text-sm lg:prose-li:text-base prose-li:leading-8 lg:prose-li:leading-8 prose-li:text-slate-300 lg:prose-p:text-base prose-p:leading-8 lg:prose-p:leading-8 prose-p:text-slate-200 prose-headings:text-slate-100 prose-img:rounded-md prose-img:w-full prose-img:object-cover prose-code:font-light prose-code:text-slate-300 prose-code:bg-gray-600 prose-pre">
           <MDXRemote {...body} />
         </div>
