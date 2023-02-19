@@ -27,13 +27,13 @@ function About() {
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="px-5 mt-5 lg:mt-7">
+      <div className="lg:mt-7 -mt-24">
         <div className="space-y-10 lg:px-32 flex flex-col lg:flex-row-reverse lg:justify-start">
           <div className="lg:w-1/2 shrink-0 flex flex-col items-center lg:px-16">
             <div className="lg:mt-16 w-full  flex items-center justify-center">
               <img
                 src="/priyangsuTwo.jpeg"
-                className="lg:grayscale h-[300px] lg:h-[350px] lg:hover:h-[500px] w-[500px] object-cover overflow-hidden hover:grayscale-0 transition-all duration-500 cursor-pointer rounded-2xl"
+                className="lg:grayscale h-[500px] lg:h-[350px] lg:hover:h-[500px] w-[500px] object-cover overflow-hidden hover:grayscale-0 transition-all duration-500 cursor-pointer lg:rounded-2xl"
                 alt=""
               />
             </div>
@@ -124,7 +124,7 @@ function About() {
               </ul>
             </div>
           </div>
-          <div className="lg:w-1/2 shrink-0 mt-16">
+          <div className="lg:w-1/2 shrink-0 mt-16 px-5">
             <div className="space-y-4 lg:space-y-5">
               <h1 className="text-zinc-100 font-bold text-3xl lg:text-5xl leading-[1.3] lg:leading-[1.4]">
                 I&apos;m{" "}
@@ -134,13 +134,13 @@ function About() {
                 I live in India, where I build the future.
               </h1>
               <div className="space-y-8">
-                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-6 lg:leading-7">
+                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-7 lg:leading-7">
                   I&apos;ve loved making things for as long as I can remember,
                   and wrote my first program when I was in the 5th grade, just
                   two weeks after I received my first personal computer, that I
                   taught myself to type on.
                 </p>
-                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-6 lg:leading-7">
+                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-7 lg:leading-7">
                   The only thing I loved more than play as a kid was computers.
                   When I was 12, I wrote the first code which was the damn basic
                   calculator with html, css & javascript. Counted up for a
@@ -149,7 +149,7 @@ function About() {
                   wring some amount code which again started off, by building a
                   simple to-do application.
                 </p>
-                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-6 lg:leading-7">
+                <p className="text-sm text-slate-400 hover:text-slate-200 transition-all leading-7 lg:leading-7">
                   Since Adobe Flash was a complete innovation, alongside with
                   CSS 1.0 and HTML 4.01 as standards of the current web
                   I&apos;ve been passionate about web. For over a decade I had
