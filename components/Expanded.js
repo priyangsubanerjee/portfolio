@@ -7,11 +7,9 @@ import { Fade } from "react-reveal";
 
 function Expanded() {
   const router = useRouter();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // close the menu when the route changes
-
     const handleRouteChange = () => {
       setOpen(false);
     };
