@@ -123,7 +123,7 @@ function ArticleSlug({ article, body }) {
                   {new Date(article.createdAt).toDateString()}
                 </p>
               </div>
-              <div className="flex items-center ml-auto shrink-0 lg:ml-10 space-x-5">
+              <div className="flex items-center ml-auto shrink-0 lg:ml-10 space-x-3">
                 <button className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary">
                   <i class="bi bi-bookmark"></i>
                 </button>
