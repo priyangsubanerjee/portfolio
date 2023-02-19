@@ -69,7 +69,10 @@ function articles({ articles }) {
               <span className="text-transparent bg-gradient-to-r from-sky-300 to-blue-500 bg-clip-text">
                 software development,
               </span>{" "}
-              entrepreneurship, and the open-source industry.
+              , open-source industry and{" "}
+              <span className="text-transparent bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text">
+                dogs.
+              </span>{" "}
             </h1>
             <p className="text-sm text-slate-400 leading-6 lg:leading-7">
               All of my long-form thoughts on programming, leadership, product
