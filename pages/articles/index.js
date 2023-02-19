@@ -61,8 +61,8 @@ function articles({ articles }) {
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="px-5 mt-5 lg:mt-0">
-        <div className="space-y-5 lg:px-32 w-full lg:w-[80%]">
+      <div className="mt-5 lg:mt-0">
+        <div className="space-y-5 px-5 lg:px-32 w-full lg:w-[80%]">
           <div className="space-y-4 lg:space-y-5">
             <h1 className="text-zinc-100 font-bold text-4xl lg:text-5xl leading-[1.2] lg:leading-[1.3]">
               Writing on{" "}
