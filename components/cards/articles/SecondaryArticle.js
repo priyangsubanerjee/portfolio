@@ -4,7 +4,7 @@ import React from "react";
 function SecondaryArticle({ article }) {
   return (
     <Link href={`/articles/${article.slug}`} target={"_blank"}>
-      <article className="md:grid md:grid-cols-4 md:items-baseline">
+      <article className="md:grid md:grid-cols-4 md:items-baseline px-5">
         <div className="md:col-span-3 group relative flex flex-col items-start">
           <h2 className="text-base font-semibold tracking-tight text-zinc-100">
             <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-darkPrimary opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
