@@ -47,9 +47,12 @@ function Expanded() {
                         <Link href={item.path} key={i}>
                           <div
                             className={`mr-5 cursor-pointer ${
-                              router.pathname == item.path
+                              router.pathname == item.match
                                 ? "text-sky-300"
-                                : "hover:text-slate-200"
+                                : router.pathname.split("/")[1] ==
+                                  item.path.split("/")[1]
+                                ? "text-sky-300"
+                                : "text-slate-400"
                             } transition-all`}
                           >
                             {item.title}
