@@ -80,7 +80,7 @@ export default function Home({ experiences, articles }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="lg:px-32">
-        <div className="lg:w-[70%] md:w-[85%] w-full px-7">
+        <div className="lg:w-[70%] md:w-[85%] w-full px-5">
           <img
             src="/priyangsuTwo.jpeg"
             className="h-28 w-28 rounded-full object-cover object-center"
@@ -107,7 +107,7 @@ export default function Home({ experiences, articles }) {
               return <PrimaryArticle article={article} key={index} />;
             })}
           </div>
-          <div className="px-7 lg:p-0">
+          <div className="px-5 lg:p-0">
             <ContactForm />
             <div class="rounded-2xl border p-6 border-slate-700/40 h-fit mt-7">
               <h2 class="flex text-sm font-semibold text-zinc-100">
