@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Fade } from "react-reveal";
 
 function Expanded() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex lg:hidden mr-3">
       <button className="flex items-center bg-darkPrimary px-5 py-3 rounded-full border border-darkPrimary">
