@@ -109,7 +109,7 @@ function ArticleSlug({ article, body }) {
             alt=""
           />
           <div className="lg:px-16 px-4 mt-10 lg:mt-16 lg:w-[850px]">
-            <div className="flex items-center">
+            <div className="flex items-center w-full">
               <img
                 src={article.author.image.url}
                 alt=""
@@ -122,6 +122,14 @@ function ArticleSlug({ article, body }) {
                 <p className="text-slate-400 text-sm">
                   {new Date(article.createdAt).toDateString()}
                 </p>
+              </div>
+              <div className="flex items-center ml-auto shrink-0 lg:ml-10 space-x-5">
+                <button className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <button className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary">
+                  <i class="bi bi-share"></i>
+                </button>
               </div>
             </div>
             <h1 className="mt-10 text-3xl lg:text-5xl font-extrabold text-slate-100 leading-[1.4] lg:leading-[1.4]">
