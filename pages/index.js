@@ -79,7 +79,7 @@ export default function Home({ experiences, articles }) {
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="lg:px-32">
+      <div className="lg:px-32 w-full overflow-hidden">
         <div className="lg:w-[70%] md:w-[85%] w-full px-5">
           <img
             src="/priyangsuTwo.jpeg"
