@@ -29,7 +29,7 @@ function Expanded() {
       <Fade when={open} duration={500}>
         {open && (
           <div className="fixed h-full w-full z-40 inset-0 bg-black/20 backdrop-blur-sm flex p-5 flex-col">
-            <div className="h-fit w-full bg-darkSecondary border border-slate-600 rounded-3xl shrink-0">
+            <div className="h-fit w-full bg-darkPrimary border border-slate-600 rounded-3xl shrink-0">
               <div className="flex py-4 px-6">
                 <button
                   onClick={() => setOpen(false)}
