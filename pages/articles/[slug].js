@@ -3,7 +3,7 @@ import { client, gql } from "@/helper/graph";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
 export async function getServerSideProps(ctx) {
@@ -41,6 +41,9 @@ export async function getServerSideProps(ctx) {
 }
 
 function ArticleSlug({ article, body }) {
+  const router = useRouter();
+  const [bookmarked, setBookmarked] = useState(false);
+
   const hashColors = [
     "text-sky-300",
     "text-orange-400",
@@ -58,11 +61,65 @@ function ArticleSlug({ article, body }) {
     "text-blue-400",
   ];
 
-  const randomColor = () => {
-    return hashColors[Math.floor(Math.random() * hashColors.length)];
+  useEffect(() => {
+    const bookmarks = JSON.parse(localStorage.getItem("bookmarked")) || [];
+    if (bookmarks) {
+      bookmarks.forEach((bookmark) => {
+        if (bookmark === article.slug) {
+          setBookmarked(true);
+        }
+      });
+    }
+  }, [article.slug, bookmarked]);
+
+  const toggleBookmark = () => {
+    console.log("clicked");
+    const bookmarks = JSON.parse(localStorage.getItem("bookmarked"));
+    if (bookmarks) {
+      if (bookmarks.length === 0) {
+        setBookmarked(true);
+        localStorage.setItem("bookmarked", JSON.stringify([article.slug]));
+        return;
+      }
+      bookmarks.forEach((bookmark) => {
+        if (bookmark === article.slug) {
+          setBookmarked(false);
+          const filtered = bookmarks.filter(
+            (bookmark) => bookmark !== article.slug
+          );
+          localStorage.setItem("bookmarked", JSON.stringify(filtered));
+        } else {
+          setBookmarked(true);
+          localStorage.setItem(
+            "bookmarked",
+            JSON.stringify([...bookmarks, article])
+          );
+        }
+      });
+    } else {
+      setBookmarked(true);
+      localStorage.setItem("bookmarked", JSON.stringify([article.slug]));
+    }
   };
 
-  const router = useRouter({});
+  const shareArticle = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: article.heading,
+          text: article.heading,
+          url: `https://priyangsubanerjee.vercel.app/articles/${article.slug}`,
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      navigator.clipboard.writeText(
+        `https://priyangsubanerjee.vercel.app/articles/${article.slug}`
+      );
+    }
+  };
+
   return (
     <div className="-mt-32">
       <Head>
@@ -124,10 +181,20 @@ function ArticleSlug({ article, body }) {
                 </p>
               </div>
               <div className="flex items-center ml-auto shrink-0 lg:ml-10 space-x-3">
-                <button className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary">
-                  <i class="bi bi-bookmark"></i>
+                <button
+                  onClick={() => toggleBookmark()}
+                  className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary"
+                >
+                  {bookmarked ? (
+                    <i class="bi bi-bookmark-fill"></i>
+                  ) : (
+                    <i class="bi bi-bookmark"></i>
+                  )}
                 </button>
-                <button className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary">
+                <button
+                  onClick={() => shareArticle()}
+                  className="flex items-center justify-center text-white h-10 w-10 rounded-full bg-darkPrimary border border-darkPrimary"
+                >
                   <i class="bi bi-share"></i>
                 </button>
               </div>
@@ -139,7 +206,7 @@ function ArticleSlug({ article, body }) {
               {article.tags.map((tag, index) => {
                 return (
                   <li key={index}>
-                    <span className={`${randomColor()} mr-1`}>#</span>
+                    <span className={`${hashColors[index]} mr-1`}>#</span>
                     {tag}
                   </li>
                 );
