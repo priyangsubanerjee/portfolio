@@ -17,6 +17,14 @@ function Expanded() {
     router.events.on("routeChangeStart", handleRouteChange);
   }, [router]);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [open]);
+
   return (
     <div className="flex lg:hidden mr-3">
       <button
