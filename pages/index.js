@@ -102,7 +102,7 @@ export default function Home({ experiences, articles }) {
         </div>
         <FeaturedArticles className="mt-20" />
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="space-y-3">
+          <div className="space-y-12 flex flex-col">
             {articles.slice(0, 3).map((article, index) => {
               return <PrimaryArticle article={article} key={index} />;
             })}
