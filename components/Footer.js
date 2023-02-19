@@ -18,9 +18,12 @@ function Footer() {
                   <Link href={item.path} key={i}>
                     <li
                       className={`mr-5 mt-2 lg:mt-2 cursor-pointer ${
-                        router.pathname == item.path
+                        router.pathname == item.match
                           ? "text-sky-300"
-                          : "hover:text-slate-200"
+                          : router.pathname.split("/")[1] ==
+                            item.path.split("/")[1]
+                          ? "text-sky-300"
+                          : "text-slate-400"
                       } transition-all`}
                     >
                       {item.title}
