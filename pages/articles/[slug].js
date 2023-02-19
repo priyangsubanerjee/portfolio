@@ -83,21 +83,21 @@ function ArticleSlug({ article, body }) {
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="twitter:card" content={article.cover} />
+        <meta name="twitter:card" content={article.cover.url} />
         <meta
           name="twitter:site"
           content="https://priyangsubanerjee.vercel.app"
         />
         <meta name="twitter:title" content={article.heading} />
         <meta name="twitter:description" content={article.description} />
-        <meta name="twitter:image" content={article.cover} />
+        <meta name="twitter:image" content={article.cover.url} />
         <meta property="og:title" content={article.heading} />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://priyangsubanerjee.vercel.app"
         />
-        <meta property="og:image" content={article.cover} />
+        <meta property="og:image" content={article.cover.url} />
         <meta property="og:description" content={article.description} />
         <meta property="og:site_name" content="Priyangsu Banerjee" />
       </Head>
