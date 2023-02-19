@@ -69,7 +69,7 @@ function articles({ articles }) {
               <span className="text-transparent bg-gradient-to-r from-sky-300 to-blue-500 bg-clip-text">
                 software development,
               </span>{" "}
-              , open-source industry and{" "}
+              open-source industry and{" "}
               <span className="text-transparent bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text">
                 dogs.
               </span>{" "}
