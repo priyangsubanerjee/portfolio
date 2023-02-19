@@ -109,7 +109,7 @@ function ArticleSlug({ article, body }) {
             alt=""
           />
           <div className="lg:px-16 px-4 mt-10 lg:mt-16 lg:w-[850px]">
-            <div className="flex items-center w-full">
+            <div className="flex items-start w-full">
               <img
                 src={article.author.image.url}
                 alt=""
