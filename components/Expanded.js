@@ -38,7 +38,7 @@ function Expanded() {
                   <i class="bi bi-x-lg text-sm text-white"></i>
                 </button>
               </div>
-              <div className="px-6 pb-7">
+              <div className="px-6 pb-7 -mt-7">
                 <p className="text-slate-200 font-medium text-2xl">Menu</p>
                 <ul className="text-slate-400 space-y-4 mt-6">
                   {routes.map((item, i) => {
