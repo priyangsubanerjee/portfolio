@@ -61,9 +61,9 @@ function articles({ articles }) {
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="px-5 mt-5 lg:mt-7">
-        <div className="space-y-5  lg:px-32 w-full lg:w-[80%]">
-          <div className="space-y-4 lg:space-y-5 lg:mt-24">
+      <div className="px-5 mt-5 lg:mt-0">
+        <div className="space-y-5 lg:px-32 w-full lg:w-[80%]">
+          <div className="space-y-4 lg:space-y-5">
             <h1 className="text-zinc-100 font-bold text-4xl lg:text-5xl leading-[1.2] lg:leading-[1.3]">
               Writing on{" "}
               <span className="text-transparent bg-gradient-to-r from-sky-300 to-blue-500 bg-clip-text">

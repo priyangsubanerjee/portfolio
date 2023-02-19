@@ -27,10 +27,10 @@ function About() {
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="lg:mt-7 -mt-24">
-        <div className="space-y-10 lg:px-32 flex flex-col lg:flex-row-reverse lg:justify-start">
+      <div className="lg:mt-0 -mt-24">
+        <div className="space-y-10 lg:space-y-0 lg:px-32 flex flex-col lg:flex-row-reverse lg:justify-start">
           <div className="lg:w-1/2 shrink-0 flex flex-col items-center lg:px-16">
-            <div className="lg:mt-16 w-full  flex items-center justify-center">
+            <div className=" w-full  flex items-center justify-center">
               <img
                 src="/priyangsuTwo.jpeg"
                 className="lg:grayscale h-[500px] lg:h-[350px] lg:hover:h-[500px] w-[500px] object-cover overflow-hidden hover:grayscale-0 transition-all duration-500 cursor-pointer lg:rounded-2xl"
@@ -124,7 +124,7 @@ function About() {
               </ul>
             </div>
           </div>
-          <div className="lg:w-1/2 shrink-0 mt-16 px-5">
+          <div className="lg:w-1/2 shrink-0 px-5">
             <div className="space-y-4 lg:space-y-5">
               <h1 className="text-zinc-100 font-bold text-3xl lg:text-5xl leading-[1.3] lg:leading-[1.4]">
                 I&apos;m{" "}
