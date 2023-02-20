@@ -39,11 +39,15 @@ function Projects({ projects }) {
         <meta name="theme-color" content="#0d1117" />
         <meta
           name="description"
-          content="Articles on software development, entrepreneurship, and the open-source industry. All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+          content="I've worked on tons of little projects over the years but
+              these are the ones that I'm most proud of. Many of them are
+              open-source, so if you see something that piques your interest,
+              check out the code and contribute if you have ideas for how it can
+              be improved."
         />
         <meta
           name="keywords"
-          content="sites, web, immovation, design, programmer, priyangsu, front-end, designer, ui, priyangsu banerjee, freelancer, portfolio, website, priyangsu banerjee, android, ios, robotics"
+          content="projects, priyangsu, priyangsu banerjee, sites, web, immovation, design, programmer, priyangsu, front-end, designer, ui, priyangsu banerjee, freelancer, portfolio, website, priyangsu banerjee, android, ios, robotics"
         />
         <meta name="author" content="Priyangsu Banerjee" />
         <meta name="robots" content="index, follow" />
@@ -53,6 +57,25 @@ function Projects({ projects }) {
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Projects" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://priyangsubanerjee.vercel.app"
+        />
+        <meta
+          property="og:image"
+          content="https://media.graphassets.com/USfDQuihRjifQsHuiXUI"
+        />
+        <meta
+          property="og:description"
+          content="I've worked on tons of little projects over the years but
+              these are the ones that I'm most proud of. Many of them are
+              open-source, so if you see something that piques your interest,
+              check out the code and contribute if you have ideas for how it can
+              be improved."
+        />
+        <meta property="og:site_name" content="Priyangsu Banerjee" />
       </Head>
       <div className="mt-5 lg:mt-0">
         <div className="space-y-5 px-5 lg:px-32 w-full lg:w-[80%]">
