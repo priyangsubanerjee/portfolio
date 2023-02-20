@@ -2,7 +2,7 @@
 
 import PrimaryArticle from "@/components/cards/articles/PrimaryArticle";
 import ContactForm from "@/components/ContactForm";
-import FeaturedArticles from "@/components/sections/FeaturedArticles";
+import UpcomingEvents from "@/components/sections/UpcomingEvents";
 import Socials from "@/components/Socials";
 import { client, gql } from "@/helper/graph";
 import Head from "next/head";
@@ -100,7 +100,7 @@ export default function Home({ experiences, articles }) {
           </p>
           <Socials className="mt-5" />
         </div>
-        <FeaturedArticles className="mt-20" />
+        <UpcomingEvents className="mt-20" />
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-12 flex flex-col">
             {articles.slice(0, 3).map((article, index) => {

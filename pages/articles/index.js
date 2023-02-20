@@ -36,11 +36,11 @@ export async function getServerSideProps() {
   };
 }
 
-function articles({ articles }) {
+function Articles({ articles }) {
   return (
     <div>
       <Head>
-        <title>Articles | Blogs</title>
+        <title>Articles</title>
         <link rel="apple-touch-icon" href="/favicon.png"></link>
         <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
         <meta name="theme-color" content="#0d1117" />
@@ -95,4 +95,4 @@ function articles({ articles }) {
   );
 }
 
-export default articles;
+export default Articles;

@@ -24,7 +24,7 @@ function FeaturedArticles({ className }) {
               a brief introduction to the framework.
             </p>
             <div className="flex mt-5">
-              <button className="border group w-full border-darkPrimary text-zinc-300 hover:bg-sky-200 active:bg-sky-300 hover:text-black px-3 py-3 rounded-lg text-sm ml-auto flex items-center justify-center space-x-2 transition-all duration-700">
+              <button className="border group w-full border-darkPrimary text-zinc-300 hover:bg-sky-400 active:bg-sky-500 hover:text-black px-3 py-3 rounded-lg text-sm ml-auto flex items-center justify-center space-x-2 transition-all duration-700">
                 <span>Register now</span>
               </button>
             </div>

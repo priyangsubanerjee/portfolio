@@ -24,7 +24,7 @@ function Navbar() {
                         : router.pathname.split("/")[1] ==
                           route.path.split("/")[1]
                         ? "text-sky-300"
-                        : "text-zinc-400"
+                        : "text-slate-400"
                     }`}
                   >
                     {route.title}
