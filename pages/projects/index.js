@@ -146,7 +146,7 @@ function Projects({ projects }) {
                           <span className="text-xs">View project</span>
                         </a>
                       )}
-                      {project.githubRepo !== "" && (
+                      {project.githubRepo !== null && (
                         <a
                           hidden={project.githubRepo === ""}
                           href={project.githubRepo}
