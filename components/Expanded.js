@@ -17,9 +17,9 @@ function Expanded() {
 
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden";
+      document.getElementById("scrollContent").style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      document.getElementById("scrollContent").style.overflow = "auto";
     }
   }, [open]);
 
