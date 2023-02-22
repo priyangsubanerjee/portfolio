@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const slug = ctx.params.slug;
   const query = gql`
       query Articles {
@@ -37,6 +37,7 @@ export async function getServerSideProps(ctx) {
       article,
       body: await serialize(article.body),
     },
+    revalidate: 10,
   };
 }
 

@@ -32,7 +32,7 @@ function About() {
           <div className="lg:w-1/2 shrink-0 flex flex-col items-center lg:px-16">
             <div className=" w-full  flex items-center justify-center">
               <img
-                src="/priyangsuTwo.jpeg"
+                src="/priyangsuThree.jpeg"
                 className="lg:grayscale h-[500px] lg:h-[350px] lg:hover:h-[500px] w-[500px] object-cover overflow-hidden hover:grayscale-0 transition-all duration-500 cursor-pointer lg:rounded-2xl"
                 alt=""
               />

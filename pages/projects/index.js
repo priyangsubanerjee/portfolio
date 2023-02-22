@@ -4,7 +4,7 @@ import React from "react";
 import SecondaryArticle from "../../components/cards/articles/SecondaryArticle";
 import { gql, client } from "../../helper/graph";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const query = gql`
     query Projects {
       projects {
@@ -26,6 +26,7 @@ export async function getServerSideProps() {
     props: {
       projects,
     },
+    revalidate: 10,
   };
 }
 

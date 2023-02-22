@@ -82,7 +82,7 @@ export default function Home({ experiences, articles }) {
       <div className="lg:px-32 w-full overflow-hidden">
         <div className="lg:w-[70%] md:w-[85%] w-full px-5">
           <img
-            src="/priyangsuTwo.jpeg"
+            src="/priyangsuThree.jpeg"
             className="h-28 w-28 rounded-full object-cover object-center"
             alt=""
           />

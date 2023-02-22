@@ -20,8 +20,8 @@ const routes = [
     match: "/projects/*",
   },
   {
-    path: "/uses",
-    title: "Uses",
+    path: "/bookmarks",
+    title: "Bookmarks",
     match: "/uses",
   },
 ];
