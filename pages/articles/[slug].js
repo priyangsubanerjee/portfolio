@@ -41,6 +41,21 @@ export async function getStaticProps(ctx) {
   };
 }
 
+export async function getStaticPaths() {
+  const query = gql`
+    query Articles {
+      articles {
+        slug
+      }
+    }
+  `;
+  const { articles } = await client.request(query);
+  const paths = articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
+  return { paths, fallback: true };
+}
+
 function ArticleSlug({ article, body }) {
   const router = useRouter();
   const [bookmarked, setBookmarked] = useState(false);
