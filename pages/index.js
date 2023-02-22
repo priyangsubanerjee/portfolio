@@ -8,7 +8,7 @@ import { client, gql } from "@/helper/graph";
 import Head from "next/head";
 import Link from "next/link";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const query = gql`
     query Experiences {
       experiences {
@@ -51,6 +51,7 @@ export async function getServerSideProps() {
       experiences: response.experiences,
       articles: response.articles,
     },
+    revalidate: 10,
   };
 }
 
