@@ -12,7 +12,7 @@ function Footer() {
       <footer className="mt-32">
         <div className="border-t border-darkPrimary">
           <div className="px-5 lg:px-16 pt-8 lg:pt-12 pb-16 flex flex-col lg:flex-row items-center justify-between">
-            <ul className="flex text-slate-400 text-sm flex-wrap items-center">
+            <ul className="flex text-slate-400 text-xs lg:text-sm flex-wrap items-center">
               {routes.map((item, i) => {
                 return (
                   <Link href={item.path} key={i}>
