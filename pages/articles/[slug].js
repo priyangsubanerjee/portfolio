@@ -6,12 +6,28 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-export async function getStaticProps(ctx) {
-  const slug = ctx.params.slug;
+export async function getStaticPaths() {
   const query = gql`
-      query Articles {
-        article(where: { slug: "${slug}" }) {
-          createdAt
+    query Articles {
+      articles {
+        slug
+      }
+    }
+  `;
+  const { articles } = await client.request(query);
+
+  const paths = articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
+
+  return { paths, fallback: true };
+}
+
+export async function getStaticProps({ params }) {
+  const query = gql`
+    query Article{
+      articles(where: { slug: "${params.slug}"}) {
+        createdAt
           body
           slug
           id
@@ -27,48 +43,22 @@ export async function getStaticProps(ctx) {
                 url
             }
           }
-        }
-      }
-    `;
-
-  const { article } = await client.request(query);
-  return {
-    props: {
-      article,
-      body: await serialize(article.body),
-    },
-    revalidate: 10,
-  };
-}
-
-export async function getStaticPaths() {
-  const query = gql`
-    query Articles {
-      articles {
-        createdAt
-        body
-        slug
-        id
-        tags
-        heading
-        cover {
-          url
-        }
-        author {
-          name
-          bio
-          image {
-            url
-          }
-        }
       }
     }
   `;
-  const { articles } = await client.request(query);
-  const paths = articles.map((article) => ({
-    params: { slug: article.slug },
-  }));
-  return { paths, fallback: true };
+  const { articles } = await client.request(query, {
+    slug: params.slug,
+  });
+
+  const mdxSource = await serialize(articles[0].body);
+
+  return {
+    props: {
+      article: articles[0],
+      body: mdxSource,
+    },
+    revalidate: 10,
+  };
 }
 
 function ArticleSlug({ article, body }) {
@@ -154,8 +144,8 @@ function ArticleSlug({ article, body }) {
   return (
     <div className="-mt-32">
       {router.isFallback && (
-        <div className="flex justify-center items-center h-screen bg-white">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+        <div className="flex justify-center items-center h-screen bg-slate-900 z-30 fixed inset-0">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-100"></div>
         </div>
       )}
       <Head>
