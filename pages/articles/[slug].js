@@ -6,28 +6,12 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
-export async function getStaticPaths() {
+export async function getServerSideProps(ctx) {
+  const slug = ctx.params.slug;
   const query = gql`
-    query Articles {
-      articles {
-        slug
-      }
-    }
-  `;
-  const { articles } = await client.request(query);
-
-  const paths = articles.map((article) => ({
-    params: { slug: article.slug },
-  }));
-
-  return { paths, fallback: true };
-}
-
-export async function getStaticProps({ params }) {
-  const query = gql`
-    query Article{
-      articles(where: { slug: "${params.slug}"}) {
-        createdAt
+      query Articles {
+        article(where: { slug: "${slug}" }) {
+          createdAt
           body
           slug
           id
@@ -43,21 +27,16 @@ export async function getStaticProps({ params }) {
                 url
             }
           }
+        }
       }
-    }
-  `;
-  const { articles } = await client.request(query, {
-    slug: params.slug,
-  });
+    `;
 
-  const mdxSource = await serialize(articles[0].body);
-
+  const { article } = await client.request(query);
   return {
     props: {
-      article: articles[0],
-      body: mdxSource,
+      article,
+      body: await serialize(article.body),
     },
-    revalidate: 10,
   };
 }
 
@@ -143,11 +122,6 @@ function ArticleSlug({ article, body }) {
 
   return (
     <div className="-mt-32">
-      {router.isFallback && (
-        <div className="flex justify-center items-center h-screen bg-slate-900 z-30 fixed inset-0">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-100"></div>
-        </div>
-      )}
       <Head>
         <title>{article.heading}</title>
         <link rel="apple-touch-icon" href="/favicon.png"></link>
