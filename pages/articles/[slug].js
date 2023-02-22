@@ -43,12 +43,27 @@ export async function getStaticProps(ctx) {
 
 export async function getStaticPaths() {
   const query = gql`
-    query Articles {
-      articles {
-        slug
+      query Articles {
+        article(where: { slug: "${slug}" }) {
+          createdAt
+          body
+          slug
+          id
+          tags
+          heading
+          cover {
+            url
+          }
+           author {
+            name
+            bio
+            image {
+                url
+            }
+          }
+        }
       }
-    }
-  `;
+    `;
   const { articles } = await client.request(query);
   const paths = articles.map((article) => ({
     params: { slug: article.slug },
