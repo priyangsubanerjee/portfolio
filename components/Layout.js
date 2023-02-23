@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
-    <div className="h-screen overflow-auto flex lg:px-24 bg-darkPrimary">
+    <div className="h-screen overflow-hidden flex lg:px-24 bg-darkPrimary">
       <div
         id="scrollContent"
         className="h-screen w-full bg-darkSecondary lg:border-x border-darkPrimary overflow-auto relative"
