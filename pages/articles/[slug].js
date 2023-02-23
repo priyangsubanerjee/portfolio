@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import { toast } from "react-hot-toast";
 
 export async function getServerSideProps(ctx) {
   const slug = ctx.params.slug;
@@ -79,6 +80,7 @@ function ArticleSlug({ article, body }) {
       if (bookmarks.length === 0) {
         setBookmarked(true);
         localStorage.setItem("bookmarked", JSON.stringify([article.slug]));
+        toast("Article Bookmarked !");
         return;
       }
       bookmarks.forEach((bookmark) => {
@@ -88,17 +90,20 @@ function ArticleSlug({ article, body }) {
             (bookmark) => bookmark !== article.slug
           );
           localStorage.setItem("bookmarked", JSON.stringify(filtered));
+          toast("Article Removed from Bookmarks !");
         } else {
           setBookmarked(true);
           localStorage.setItem(
             "bookmarked",
             JSON.stringify([...bookmarks, article])
           );
+          toast("Article Bookmarked !");
         }
       });
     } else {
       setBookmarked(true);
       localStorage.setItem("bookmarked", JSON.stringify([article.slug]));
+      toast("Article Bookmarked !");
     }
   };
 
@@ -117,6 +122,7 @@ function ArticleSlug({ article, body }) {
       navigator.clipboard.writeText(
         `https://priyangsubanerjee.vercel.app/articles/${article.slug}`
       );
+      toast("Link Copied to Clipboard !");
     }
   };
 
