@@ -11,7 +11,7 @@ function Layout({ children }) {
         className="h-fit lg:h-screen w-full bg-darkSecondary lg:border-x border-darkPrimary lg:overflow-auto relative"
       >
         <Navbar />
-        <div className="py-10 lg:pt-20">{children}</div>
+        <div className="pt-20">{children}</div>
         <Footer />
       </div>
     </div>

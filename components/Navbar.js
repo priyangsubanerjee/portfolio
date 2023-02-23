@@ -9,7 +9,7 @@ function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="sticky top-5 inset-x-0 block z-30">
+    <nav className="fixed lg:sticky top-5 inset-x-0 block z-30">
       <div className="w-full flex items-center justify-end lg:justify-between px-5 lg:px-20">
         <div></div>
         <ul className="h-10 hidden bg-darkPrimary text-zinc-400 text-sm rounded-full border border-darkPrimary lg:flex items-center space-x-2 px-6">
