@@ -5,13 +5,13 @@ import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
-    <div className="h-screen overflow-hidden flex lg:px-24 bg-darkPrimary">
+    <div className="h-screen lg:overflow-hidden flex lg:px-24 bg-darkPrimary">
       <div
         id="scrollContent"
-        className="h-screen w-full bg-darkSecondary lg:border-x border-darkPrimary overflow-auto relative"
+        className="h-fit lg:h-screen w-full bg-darkSecondary lg:border-x border-darkPrimary lg:overflow-auto relative"
       >
         <Navbar />
-        <div className="pt-10 lg:pt-20">{children}</div>
+        <div className="py-10 lg:pt-20">{children}</div>
         <Footer />
       </div>
     </div>
