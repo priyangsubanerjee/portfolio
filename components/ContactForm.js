@@ -1,19 +1,24 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 
 function ContactForm() {
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <div>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
+          setIsLoading(true);
           const res = await axios.post(
             "https://remitapi.vercel.app/send/clead0agx2onc0a1hl7ia4j1p",
             JSON.stringify({
               to: "priyangsu26@gmail.com",
               subject: "Some one wants to connect.",
-              html: `<p>Hey, reply me at ${email}</p>
+              html: `<p>Email: ${email}</p>
+                <p>Date: ${new Date().toLocaleDateString()}</p>
+                <p>Time: ${new Date().toLocaleTimeString()}</p>
               <p>Thanks</p>`,
             }),
             {
@@ -23,6 +28,8 @@ function ContactForm() {
             }
           );
           if (res.status === 200) {
+            setIsLoading(false);
+            toast("Email Sent !");
             setEmail("");
           }
         }}
@@ -61,10 +68,14 @@ function ContactForm() {
             class="min-w-0 flex-auto text-white appearance-none rounded-md border px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 focus:outline-none focus:ring-4 border-slate-700 bg-slate-700/[0.15] placeholder:text-slate-500 focus:border-sky-300 focus:ring-sky-300/10 sm:text-sm"
           />
           <button
-            class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-semibold text-slate-100 bg-slate-700 hover:bg-slate-600 active:bg-slate-700 active:text-slate-100/70 ml-4 flex-none"
+            class="inline-flex w-16 h-10 items-center gap-2 justify-center rounded-md text-sm outline-offset-2 transition active:transition-none font-semibold text-slate-100 bg-slate-700 hover:bg-slate-600 active:bg-slate-700 active:text-slate-100/70 ml-4 flex-none"
             type="submit"
           >
-            Send
+            {isLoading ? (
+              <div className="h-6 w-6 border border-white border-t-transparent rounded-full animate-spin"></div>
+            ) : (
+              <span>Send</span>
+            )}
           </button>
         </div>
       </form>
