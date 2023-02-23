@@ -7,7 +7,7 @@ import { gql, client } from "../../helper/graph";
 export async function getStaticProps() {
   const query = gql`
     query Projects {
-      projects(first: 500, orderBy: updatedAt_ASC) {
+      projects(first: 20) {
         cover {
           url
         }
@@ -21,10 +21,11 @@ export async function getStaticProps() {
     }
   `;
 
-  const { projects } = await client.request(query);
+  const response = await client.request(query);
+
   return {
     props: {
-      projects,
+      projects: response.projects,
     },
     revalidate: 10,
   };
@@ -102,6 +103,7 @@ function Projects({ projects }) {
           <div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               {projects.map((project, index) => {
+                console.log(project);
                 return (
                   <li
                     key={index}
