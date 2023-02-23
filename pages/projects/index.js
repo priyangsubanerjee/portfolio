@@ -4,10 +4,10 @@ import React from "react";
 import SecondaryArticle from "../../components/cards/articles/SecondaryArticle";
 import { gql, client } from "../../helper/graph";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const query = gql`
     query Projects {
-      projects(orderBy: publishedAt_ASC, first: 500) {
+      projects(first: 500, orderBy: updatedAt_ASC) {
         cover {
           url
         }
@@ -26,6 +26,7 @@ export async function getServerSideProps() {
     props: {
       projects,
     },
+    revalidate: 10,
   };
 }
 
