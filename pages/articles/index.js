@@ -43,8 +43,8 @@ function Articles({ articles }) {
     <div>
       <Head>
         <title>Articles</title>
-        <link rel="apple-touch-icon" href="/favicon.png"></link>
-        <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
+        <link rel="apple-touch-icon" href="/favicon.jpeg"></link>
+        <link rel="icon" type="image/x-icon" href="/favicon.jpeg"></link>
         <meta name="theme-color" content="#0d1117" />
         <meta
           name="description"
