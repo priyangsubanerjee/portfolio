@@ -19,11 +19,6 @@ const routes = [
     title: "Projects",
     match: "/projects/*",
   },
-  {
-    path: "/bookmarks",
-    title: "Bookmarks",
-    match: "/uses",
-  },
 ];
 
 export default routes;
