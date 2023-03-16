@@ -6,7 +6,7 @@ import { gql, client } from "../../helper/graph";
 export async function getStaticProps() {
   const query = gql`
     query Articles {
-      articles(first: 20) {
+      articles(first: 20, orderBy: publishedAt_DESC) {
         createdAt
         body
         slug
@@ -39,7 +39,6 @@ export async function getStaticProps() {
 }
 
 function Articles({ articles }) {
-  console.log(articles);
   return (
     <div>
       <Head>
