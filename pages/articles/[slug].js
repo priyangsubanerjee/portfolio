@@ -171,7 +171,7 @@ function ArticleSlug({ article, body }) {
             className="h-60 lg:h-96 w-full object-cover "
             alt=""
           />
-          <div className="lg:px-16 px-4 mt-10 lg:mt-16 lg:w-[850px]">
+          <div className="lg:px-16 px-4 mt-10 lg:mt-16 lg:w-[900px]">
             <div className="flex items-start w-full">
               <img
                 src={article.author.image.url}
@@ -223,7 +223,7 @@ function ArticleSlug({ article, body }) {
         <div className="h-auto mb-10"></div>
       </div>
       <div className="lg:px-16 px-4 lg:w-[850px]">
-        <div className="prose max-w-full prose-h1:text-3xl prose-h2:text-2xl prose-h2:pb-0 prose-h3:text-xl prose-p:text-slate-300 prose-p:text-sm prose-li:text-sm lg:prose-li:text-base prose-li:leading-8 lg:prose-li:leading-8 prose-li:text-slate-300 lg:prose-p:text-base prose-p:leading-8 lg:prose-p:leading-8  prose-headings:text-slate-100 prose-img:rounded-md prose-img:w-full prose-img:object-cover prose-code:font-light prose-code:text-slate-300 prose-code:bg-gray-600 prose-pre">
+        <div className="prose max-w-full prose-h1:text-3xl prose-h2:text-2xl prose-h2:pb-0 prose-h3:text-xl prose-p:text-slate-300 prose-p:text-sm prose-li:text-sm lg:prose-li:text-base prose-li:leading-8 lg:prose-li:leading-8 prose-li:text-slate-300 lg:prose-p:text-base prose-p:leading-8 lg:prose-p:leading-8  prose-headings:text-slate-100 prose-img:rounded-md prose-img:w-full prose-img:object-cover prose-strong:text-slate-100 prose-strong:font-semibold prose-code:font-light prose-code:text-slate-300 prose-code:bg-gray-600 prose-pre">
           <MDXRemote {...body} />
         </div>
       </div>
