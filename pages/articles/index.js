@@ -6,7 +6,7 @@ import { gql, client } from "../../helper/graph";
 export async function getStaticProps() {
   const query = gql`
     query Articles {
-      articles {
+      articles(first: 20) {
         createdAt
         body
         slug
