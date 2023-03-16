@@ -34,11 +34,12 @@ export async function getStaticProps() {
     props: {
       articles,
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 
 function Articles({ articles }) {
+  console.log(articles);
   return (
     <div>
       <Head>
