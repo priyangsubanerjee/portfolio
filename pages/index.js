@@ -60,10 +60,6 @@ export default function Home({ experiences, articles }) {
     <>
       <Head>
         <title>Home | Priyangsu Banerjee - Full stack developer</title>
-        <link rel="apple-touch-icon" href="/favicon.png"></link>
-        <link rel="icon" type="image/x-icon" href="/favicon.jpeg"></link>
-        <link rel="shortcut icon" href="/favicon.jpeg" />
-
         <meta name="theme-color" content="#0d1117" />
         <meta
           name="description"

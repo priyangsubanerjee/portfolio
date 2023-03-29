@@ -6,8 +6,6 @@ function bookmarks() {
     <div>
       <Head>
         <title>Articles</title>
-        <link rel="apple-touch-icon" href="/favicon.png"></link>
-        <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
         <meta name="theme-color" content="#0d1117" />
         <meta
           name="description"
