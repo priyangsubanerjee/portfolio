@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.jpeg"></link>
+        <link rel="shortcut icon" href="/favicon.jpeg" />
       </Head>
       <body>
         <Main />
