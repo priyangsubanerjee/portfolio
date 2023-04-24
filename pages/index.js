@@ -7,6 +7,7 @@ import Socials from "@/components/Socials";
 import { client, gql } from "@/helper/graph";
 import Head from "next/head";
 import Link from "next/link";
+import { animated } from "@react-spring/web";
 
 export async function getStaticProps() {
   const query = gql`
@@ -22,7 +23,7 @@ export async function getStaticProps() {
           url
         }
       }
-      articles {
+      articles(orderBy: publishedAt_DESC) {
         createdAt
         body
         slug
