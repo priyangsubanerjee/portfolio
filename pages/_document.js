@@ -4,9 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <Head>
-          <link rel="shortcut icon" href="/favicons/android-icon-192x192.png" />
-        </Head>
+         <link rel="shortcut icon" href="/favicons/android-icon-192x192.png" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
