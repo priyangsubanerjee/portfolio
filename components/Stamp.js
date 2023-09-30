@@ -8,7 +8,7 @@ function Stamp() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5800]);
+    }, [5900]);
   }, [parked]);
   return (
     <div
