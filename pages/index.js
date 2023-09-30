@@ -22,11 +22,11 @@ export default function Home() {
 
   return (
     <>
-      <section className="max-h-full h-full w-full bg-[#ffffff] relative flex flex-col pb-5 lg:pb-10">
+      <section className="max-h-full h-full w-full bg-transparent relative flex flex-col pb-5 lg:pb-10">
         <Navbar />
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[105px] font-black">
+          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[60px] lg:leading-[105px] font-black">
             FULL <br />{" "}
             <span
               className={`

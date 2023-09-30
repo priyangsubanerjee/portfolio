@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { Icon } from "@iconify/react";
+import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
 function Stamp() {
+  const { theme, setTheme } = useTheme();
   const [parked, setParked] = useState(false);
 
   useEffect(() => {
@@ -23,7 +25,11 @@ function Stamp() {
           </span>
         </button>
         <img
-          src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
+          src={
+            theme === "dark"
+              ? "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696100246/Personal/Think_Develop_Fix_Repeat_2_grudmq.png"
+              : "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
+          }
           alt=""
           className="animate-rotate absolute inset-0 h-full w-full pointer-events-none select-none"
         />

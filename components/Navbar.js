@@ -1,10 +1,12 @@
+import { useTheme } from "next-themes";
 import React from "react";
 
 function Navbar() {
+  const { theme, setTheme } = useTheme();
   return (
     <nav className="px-6 lg:px-16 mt-7 mb-12 flex items-center justify-between relative">
       <div>
-        <h1 className="font-semibold text-xl">
+        <h1 className="font-semibold text-xl text-neutral-950 dark:text-slate-100">
           Priyangsu <span className="text-neutral-500">Banerjee.</span>
         </h1>
       </div>
@@ -14,7 +16,9 @@ function Navbar() {
         <li>Process</li>
         <li>Make it happen</li>
       </ul>
-      <button>Dark</button>
+      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        Toggle
+      </button>
     </nav>
   );
 }
