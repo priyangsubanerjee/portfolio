@@ -10,7 +10,7 @@ function Runway() {
 
   useEffect(() => {
     var tl = gsap.timeline();
-    tl.to("#plane", {
+    gsap.to("#plane", {
       duration: 4.7,
       ease: "easeInOut",
       opacity: 1,

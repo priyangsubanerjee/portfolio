@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Runway from "@/components/Runway";
 import Stamp from "@/components/Stamp";
+import gsap from "gsap";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,13 @@ export default function Home() {
       setParked(true);
     }, [4800]);
   }, [parked]);
+
+  useEffect(() => {
+    gsap.to("#box", {
+      scrollTrigger: "#box", // start the animation when ".box" enters the viewport (once)
+      x: 500,
+    });
+  }, []);
 
   return (
     <>
