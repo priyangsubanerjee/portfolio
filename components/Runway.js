@@ -79,7 +79,7 @@ function Runway() {
       `}
       >
         <div className="absolute top-3 right-3 text-xs">
-          <span className="text-neutral-800 dark:text-neutral-400">
+          <span className="text-neutral-800 dark:text-neutral-200">
             accomplishment runway - 03
           </span>
         </div>
