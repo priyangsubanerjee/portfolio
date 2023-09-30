@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [4800]);
+    }, [5800]);
   }, [parked]);
 
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <Navbar />
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[65px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[95px] font-black font-Bebas Neue">
+          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[95px] font-black font-Bebas Neue">
             FULL <br />{" "}
             <span
               className={`

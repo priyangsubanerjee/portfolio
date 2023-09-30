@@ -9,7 +9,7 @@ function Runway() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [4800]);
+    }, [5800]);
   }, [parked]);
 
   return (
@@ -23,7 +23,7 @@ function Runway() {
               parked ? "bg-red-50" : "bg-neutral-50"
             } transition-all duration-500`}
     >
-      <div className="flex items-center justify-center absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2">
+      <div className="flex items-center justify-center absolute top-0 left-0 -translate-x-[52%] -translate-y-1/2">
         <div
           style={{
             background: parked ? "rgb(239 68 68)" : "#000",
@@ -48,7 +48,7 @@ function Runway() {
         transition={{
           duration: 5,
           ease: "easeOut",
-          delay: 0,
+          delay: 1,
         }}
         className="absolute rotate-180 left-0 -translate-x-[51%] -translate-y-3"
       >
