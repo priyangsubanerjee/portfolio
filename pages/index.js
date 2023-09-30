@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5900]);
+    }, [5600]);
   }, [parked]);
 
   return (

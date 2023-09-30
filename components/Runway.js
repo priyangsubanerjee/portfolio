@@ -10,7 +10,7 @@ function Runway() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5900]);
+    }, [5600]);
   }, [parked]);
 
   return (
@@ -48,7 +48,7 @@ function Runway() {
         }}
         transition={{
           duration: 5,
-          ease: "easeOut",
+          ease: "easeInOut",
           delay: 1,
         }}
         className={`absolute rotate-180 left-0 z-30 -translate-x-[51%] -translate-y-3 ${

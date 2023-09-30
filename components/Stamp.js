@@ -7,13 +7,13 @@ function Stamp() {
   const { theme, setTheme } = useTheme();
   const [parked, setParked] = useState(false);
 
-  const [isLight, setIsLight] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5800]);
+    }, [5600]);
   }, [parked]);
+
+  useEffect(() => {}, []);
   return (
     <div
       className={`h-28 w-28 lg:h-44 lg:w-44 mb-8 lg:mr-2 lg:static absolute -top-[235%] right-0
