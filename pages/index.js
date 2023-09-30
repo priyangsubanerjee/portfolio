@@ -41,7 +41,7 @@ export default function Home() {
           </h1>
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <Stamp />
-            <p className="text-right leading-7 mt-6 lg:mt-0">
+            <p className="text-right leading-7 mt-6 lg:mt-0 text-sm lg:text-base">
               specialized in Web Design & Development, UX / UI, Webflow, and
               Front End Development.
             </p>
