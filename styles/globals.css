@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Milonga&family=Yeseva+One&display=swap");
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

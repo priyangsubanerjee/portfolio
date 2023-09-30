@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Runway from "@/components/Runway";
 import CircleType from "circletype";
+import Stamp from "@/components/Stamp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,21 +40,7 @@ export default function Home() {
             <br /> DEVELOPER
           </h1>
           <div className="lg:w-[30%] flex flex-col items-end relative">
-            <div
-              className={`h-28 w-28 lg:h-44 lg:w-44 mb-8 lg:mr-2 lg:static absolute -top-[235%] right-0
-              ${parked ? "opacity-100" : "opacity-0"}
-              transition-all duration-1000`}
-            >
-              <div className="h-full w-full relative">
-                <button className="hidden lg:block h-10 w-10 z-20 hover:w-24 hover:h-24 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all"></button>
-                <img
-                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
-                  alt=""
-                  className="animate-rotate absolute inset-0 h-full w-full"
-                />
-              </div>
-            </div>
-
+            <Stamp />
             <p className="text-right leading-7 mt-6 lg:mt-0">
               specialized in Web Design & Development, UX / UI, Webflow, and
               Front End Development.
