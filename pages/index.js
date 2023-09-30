@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Icon } from "@iconify/react";
@@ -5,6 +6,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Runway from "@/components/Runway";
+import CircleType from "circletype";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +20,12 @@ export default function Home() {
   }, [parked]);
 
   return (
-    <main className="fixed inset-0 max-h-full w-full overflow-auto flex flex-col">
-      <div className="max-h-full h-full w-full bg-[#ffffff] relative flex flex-col pb-10">
+    <>
+      <section className="max-h-full h-full w-full bg-[#ffffff] relative flex flex-col pb-10">
         <Navbar />
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[95px] font-black font-Bebas Neue">
+          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[105px] font-black font-Bebas Neue">
             FULL <br />{" "}
             <span
               className={`
@@ -36,12 +38,30 @@ export default function Home() {
             </span>{" "}
             <br /> DEVELOPER
           </h1>
-          <p className="lg:w-[30%] text-right leading-7 mt-6 lg:mt-0">
-            specialized in Web Design & Development, UX / UI, Webflow, and Front
-            End Development.
-          </p>
+          <div className="lg:w-[30%] flex flex-col items-end relative">
+            <div
+              className={`h-32 w-32 lg:h-44 lg:w-44 mb-8 lg:mr-7 lg:static absolute -top-[205px] right-0
+              ${parked ? "opacity-100" : "opacity-0"}
+              transition-all duration-1000
+                          `}
+            >
+              <div className="h-full w-full relative">
+                <button className="h-10 w-10 z-20 hover:w-16 hover:h-16 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all"></button>
+                <img
+                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
+                  alt=""
+                  className="animate-rotate absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
+
+            <p className="text-right leading-7 mt-6 lg:mt-0">
+              specialized in Web Design & Development, UX / UI, Webflow, and
+              Front End Development.
+            </p>
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
+    </>
   );
 }
