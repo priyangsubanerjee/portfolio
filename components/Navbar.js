@@ -11,7 +11,7 @@ function Navbar() {
           Priyangsu <span className="text-neutral-500">Banerjee.</span>
         </h1>
       </div>
-      <ul className="hidden lg:flex items-center justify-center space-x-9 absolute left-1/2 -translate-x-1/2">
+      <ul className="hidden text-neutral-700 dark:text-neutral-300 lg:flex items-center justify-center space-x-9 absolute left-1/2 -translate-x-1/2">
         <li>Home</li>
         <li>Work</li>
         <li>Process</li>

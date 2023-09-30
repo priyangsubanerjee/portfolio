@@ -21,8 +21,8 @@ function Stamp() {
               transition-all duration-1000`}
     >
       <div className="h-full w-full relative">
-        <button className="hidden lg:flex h-10 w-10 group z-20 hover:w-24 hover:h-24 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all items-center justify-center text-white overflow-auto">
-          <span className="opacity-0 group-hover:opacity-100 text-white">
+        <button className="hidden lg:flex h-10 w-10 group z-20 hover:w-24 hover:h-24 bg-black dark:bg-white rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all items-center justify-center text-white dark:text-black overflow-auto">
+          <span className="opacity-0 group-hover:opacity-100 text-white dark:text-black">
             <Icon height={40} icon="mingcute:telegram-fill" />
           </span>
         </button>
