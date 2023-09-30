@@ -50,7 +50,7 @@ function Runway() {
           ease: "easeOut",
           delay: 1,
         }}
-        className="absolute rotate-180 left-0 -translate-x-[51%] -translate-y-3"
+        className={`absolute rotate-180 left-0 -translate-x-[51%] -translate-y-3`}
       >
         <Icon height={30} icon="ri:plane-fill" />
       </motion.button>

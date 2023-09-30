@@ -25,7 +25,7 @@ export default function Home() {
         <Navbar />
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[105px] font-black font-Bebas Neue">
+          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 text-left leading-[60px] lg:leading-[105px] font-black">
             FULL <br />{" "}
             <span
               className={`
@@ -40,13 +40,12 @@ export default function Home() {
           </h1>
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <div
-              className={`h-32 w-32 lg:h-44 lg:w-44 mb-8 lg:mr-7 lg:static absolute -top-[205px] right-0
+              className={`h-28 w-28 lg:h-44 lg:w-44 mb-8 lg:mr-2 lg:static absolute -top-[235%] right-0
               ${parked ? "opacity-100" : "opacity-0"}
-              transition-all duration-1000
-                          `}
+              transition-all duration-1000`}
             >
               <div className="h-full w-full relative">
-                <button className="h-10 w-10 z-20 hover:w-16 hover:h-16 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all"></button>
+                <button className="hidden lg:block h-10 w-10 z-20 hover:w-24 hover:h-24 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all"></button>
                 <img
                   src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
                   alt=""
