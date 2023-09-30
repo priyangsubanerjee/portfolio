@@ -3,14 +3,25 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Marquee from "react-fast-marquee";
+import gsap from "gsap";
 
 function Runway() {
   const [parked, setParked] = useState(false);
 
   useEffect(() => {
+    var tl = gsap.timeline();
+    tl.to("#plane", {
+      duration: 4.7,
+      ease: "easeInOut",
+      opacity: 1,
+      top: "98%",
+    });
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5600]);
+    }, [4800]);
   }, [parked]);
 
   return (
@@ -37,19 +48,11 @@ function Runway() {
           <div className="w-6 h-6 rounded-full bg-black/50 dark:bg-white/50 animate-ping flex items-center justify-center absolute inset-0"></div>
         </div>
       </div>
-      <motion.button
-        initial={{
-          opacity: 1,
-          top: "0",
-        }}
-        animate={{
-          opacity: 1,
-          top: "98%",
-        }}
-        transition={{
-          duration: 5,
-          ease: "easeInOut",
-          delay: 1,
+
+      <button
+        id="plane"
+        style={{
+          opacity: 0.5,
         }}
         className={`absolute rotate-180 left-0 z-30 -translate-x-[51%] -translate-y-3 ${
           parked
@@ -58,9 +61,10 @@ function Runway() {
         }`}
       >
         <Icon height={30} icon="ri:plane-fill" />
-      </motion.button>
+      </button>
+
       <span
-        className={`absolute left-0 text-neutral-800 dark:text-neutral-300 tracking-widest -translate-x-[60%] -rotate-90 top-1/2 text-xs uppercase font-mono ${
+        className={`absolute left-0 text-neutral-800 dark:text-neutral-300 tracking-widest -translate-x-[60%] -rotate-90 top-1/2 -translate-y-1/2 text-xs uppercase font-mono ${
           parked ? "opacity-100" : "opacity-0"
         } transition-all duration-500
         }`}

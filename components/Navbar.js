@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="px-6 lg:px-16 mt-7 mb-12 flex items-center justify-between relative">
       <div>
-        <h1 className="font-semibold text-xl text-neutral-950 dark:text-slate-100">
+        <h1 className="font-semibold text-xl lg:text-2xl text-neutral-950 dark:text-slate-100">
           Priyangsu <span className="text-neutral-500">Banerjee.</span>
         </h1>
       </div>
