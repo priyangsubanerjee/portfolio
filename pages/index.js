@@ -20,13 +20,6 @@ export default function Home() {
     }, [4800]);
   }, [parked]);
 
-  useEffect(() => {
-    gsap.to("#box", {
-      scrollTrigger: "#box", // start the animation when ".box" enters the viewport (once)
-      x: 500,
-    });
-  }, []);
-
   return (
     <>
       <section className="max-h-full h-full w-full bg-transparent relative flex flex-col pb-5 lg:pb-10">
