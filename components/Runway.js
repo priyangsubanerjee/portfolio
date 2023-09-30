@@ -19,7 +19,7 @@ function Runway() {
       className={`h-auto my-auto mb-10 flex-grow w-auto ml-16 lg:ml-36 relative
             ${
               parked
-                ? "bg-[#ffe9e9] dark:bg-[#ff7c7c1e] border-l-[2px] border-[#EF4444]"
+                ? "bg-[#ffe9e9] dark:bg-[#e344441e] border-l-[2px] border-[#EF4444]"
                 : "bg-neutral-50 dark:bg-neutral-300/10 border-l-[2px] border-black dark:border-white/50"
             }
             
@@ -79,8 +79,8 @@ function Runway() {
       `}
       >
         <div className="absolute top-3 right-3 text-xs">
-          <span className="text-neutral-800 dark:text-neutral-200">
-            accomplishment runway - 03
+          <span className="text-neutral-800 dark:text-neutral-400">
+            0:00:00
           </span>
         </div>
         <Marquee>

@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import React from "react";
 
@@ -16,9 +17,18 @@ function Navbar() {
         <li>Process</li>
         <li>Make it happen</li>
       </ul>
-      <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-        Toggle
-      </button>
+      <div className="h-full flex items-center justify-center">
+        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          {theme == "dark" ? (
+            <Icon height={"25"} icon="ph:sun" />
+          ) : (
+            <Icon height={"25"} icon="ri:moon-fill" />
+          )}
+        </button>
+        <button className="ml-6 lg:hidden">
+          <Icon height={24} icon="line-md:menu" />
+        </button>
+      </div>
     </nav>
   );
 }

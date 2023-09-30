@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Runway from "@/components/Runway";
-import CircleType from "circletype";
 import Stamp from "@/components/Stamp";
 
 const inter = Inter({ subsets: ["latin"] });
