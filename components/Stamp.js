@@ -7,10 +7,12 @@ function Stamp() {
   const { theme, setTheme } = useTheme();
   const [parked, setParked] = useState(false);
 
+  const [isLight, setIsLight] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [5900]);
+    }, [5800]);
   }, [parked]);
   return (
     <div
@@ -26,9 +28,9 @@ function Stamp() {
         </button>
         <img
           src={
-            theme === "dark"
-              ? "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696100246/Personal/Think_Develop_Fix_Repeat_2_grudmq.png"
-              : "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
+            theme === "light"
+              ? "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
+              : "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696100246/Personal/Think_Develop_Fix_Repeat_2_grudmq.png"
           }
           alt=""
           className="animate-rotate absolute inset-0 h-full w-full pointer-events-none select-none"
