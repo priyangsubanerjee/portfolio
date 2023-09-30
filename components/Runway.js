@@ -23,7 +23,7 @@ function Runway() {
               parked ? "bg-red-50" : "bg-neutral-50"
             } transition-all duration-500`}
     >
-      <div className="flex items-center justify-center absolute top-0 left-0 -translate-x-[52%] -translate-y-1/2">
+      <div className="flex items-center justify-center absolute top-0 left-0 -translate-x-[53%] -translate-y-1/2">
         <div
           style={{
             background: parked ? "rgb(239 68 68)" : "#000",
