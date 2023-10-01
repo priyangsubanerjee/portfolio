@@ -150,7 +150,7 @@ function Navbar() {
               {airplaneState == "landed"
                 ? "Taxiing"
                 : airplaneState == "touchDown"
-                ? "Approaching minimums"
+                ? "Approaching Runway 07"
                 : airplaneState == "expedite"
                 ? "Expedite"
                 : ""}
