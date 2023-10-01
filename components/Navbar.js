@@ -84,9 +84,9 @@ function Navbar() {
             {airplaneState == "hangar" ? (
               <Icon height={24} icon="line-md:menu" />
             ) : airplaneState == "inAir" ? (
-              <Icon height={24} icon="line-md:close" />
+              <Icon height={24} icon="icon-park:close" />
             ) : (
-              <Icon height={24} icon="eos-icons:loading" />
+              <div className="h-6 w-6 bg-red-500 rounded-full animate-pulse"></div>
             )}
           </button>
         </div>
