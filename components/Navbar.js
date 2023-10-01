@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -15,7 +16,7 @@ function Navbar() {
       setTimeout(() => {
         setParked(true);
       }, [4000]);
-      setAirplaneState("takingOff");
+      setAirplaneState("touchDown");
       document.getElementById("navmenu").style.transform = "translateY(0%)";
       gsap
         .fromTo(
@@ -30,7 +31,7 @@ function Navbar() {
           }
         )
         .then(() => {
-          setAirplaneState("inAir");
+          setAirplaneState("landed");
         });
     } else {
       setAirplaneState("expedite");
@@ -47,6 +48,7 @@ function Navbar() {
         });
     }
   }, [navbarExpanded]);
+
   return (
     <>
       <nav className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50">
@@ -73,17 +75,17 @@ function Navbar() {
           </button>
           <button
             disabled={
-              airplaneState == "expedite" || airplaneState == "takingOff"
+              airplaneState == "expedite" || airplaneState == "touchDown"
             }
             onClick={() => {
               setNavbarExpanded(!navbarExpanded);
             }}
-            className="ml-6 lg:hidden"
+            className="ml-6 w-6 h-6 flex items-center justify-center lg:hidden"
           >
             {/* <Icon height={24} icon="line-md:menu" /> */}
             {airplaneState == "hangar" ? (
               <Icon height={24} icon="line-md:menu" />
-            ) : airplaneState == "inAir" ? (
+            ) : airplaneState == "landed" ? (
               <Icon height={24} icon="icon-park:close" />
             ) : (
               <div className="h-6 w-6 bg-red-500 rounded-full animate-pulse"></div>
@@ -107,10 +109,10 @@ function Navbar() {
             <li>Make it happen</li>
           </ul>
           <div className="w-full mt-16 h-32 border-y border-black/60 dark:border-white/60 relative">
-            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 top-4 left-12 absolute flex items-center">
+            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 z-10 top-4 left-12 absolute flex items-center">
               <div className="w-full h-[40%] bg-white dark:bg-black"></div>
             </div>
-            <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-20 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
+            <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-10 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
               07
             </h1>
             <button
@@ -119,10 +121,36 @@ function Navbar() {
             >
               <Icon height={50} icon="ri:plane-fill" />
             </button>
-            <div className=" w-full border-t-4 border-dashed border-black/30 dark:border-white/30 absolute top-1/2 -translate-y-1/2"></div>
-            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute flex items-center">
+
+            <div className="w-full h-full absolute inset-0 z-0 flex items-center justify-center">
+              <Marquee
+                play={airplaneState == "landed" || airplaneState == "expedite"}
+              >
+                {Array(20)
+                  .fill()
+                  .map((_, i) => (
+                    <div
+                      className="w-6 h-1 mr-6 dark:bg-white/50 bg-black/50"
+                      key={i}
+                    ></div>
+                  ))}
+              </Marquee>
+            </div>
+
+            <div className="h-5 w-8 z-10 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute flex items-center">
               <div className="w-full h-[40%] bg-white dark:bg-black"></div>
             </div>
+          </div>
+          <div className="flex items-center justify-center mt-10">
+            <span className="text-xs uppercase tracking-wider">
+              {airplaneState == "landed"
+                ? "Taxiing"
+                : airplaneState == "touchDown"
+                ? "Prepare for landing"
+                : airplaneState == "expedite"
+                ? "Expedite"
+                : ""}
+            </span>
           </div>
         </div>
       </div>
