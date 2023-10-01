@@ -26,7 +26,7 @@ function Runway() {
   }, [parked]);
 
   return (
-    <div className="flex flex-col h-full mt-10 lg:mt-16">
+    <div className="flex flex-col h-full mt-7 lg:mt-7">
       <div
         id="runway"
         className={`h-auto my-auto mb-10 flex-grow w-auto ml-16 lg:ml-36 relative

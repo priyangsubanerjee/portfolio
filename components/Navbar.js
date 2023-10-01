@@ -108,7 +108,7 @@ function Navbar() {
           </ul>
           <div className="w-full mt-16 h-32 border-y border-black/60 dark:border-white/60 relative">
             <div className="h-5 w-8 bg-black/10 dark:bg-white/20 top-4 left-12 absolute flex items-center">
-              <div className="w-full h-[40%] bg-black"></div>
+              <div className="w-full h-[40%] bg-white dark:bg-black"></div>
             </div>
             <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-20 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
               07
@@ -121,7 +121,7 @@ function Navbar() {
             </button>
             <div className=" w-full border-t-4 border-dashed border-black/30 dark:border-white/30 absolute top-1/2 -translate-y-1/2"></div>
             <div className="h-5 w-8 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute flex items-center">
-              <div className="w-full h-[40%] bg-black"></div>
+              <div className="w-full h-[40%] bg-white dark:bg-black"></div>
             </div>
           </div>
         </div>
