@@ -10,7 +10,7 @@ function Stamp() {
   useEffect(() => {
     setTimeout(() => {
       setParked(true);
-    }, [4800]);
+    }, [4500]);
   }, [parked]);
 
   useEffect(() => {}, []);
