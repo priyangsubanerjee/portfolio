@@ -24,8 +24,8 @@ function Navbar() {
     } else {
       gsap
         .to("#plane2", {
-          duration: 3,
-          left: "120%",
+          duration: 2,
+          left: "100%",
         })
         .then(() => {
           document.getElementById("navmenu").style.transform =
@@ -70,20 +70,25 @@ function Navbar() {
         className="fixed inset-x-0 bottom-0 -translate-y-full h-[calc(100%-64px)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
       >
         <div className="h-full flex flex-col w-full relative">
-          <ul className="text-neutral-800 mt-16 font-light text-3xl space-y-10 dark:text-neutral-300 px-6 pb-24">
+          <ul className="text-neutral-800 mt-16 font-light text-3xl space-y-9 dark:text-neutral-300 px-6">
             <li>Home</li>
             <li>Work</li>
             <li>Process</li>
             <li>Make it happen</li>
           </ul>
-          <div className="w-full h-32 border-y border-black/60 dark:border-white/60 relative">
+          <div className="w-full mt-24 h-32 border-y border-black/60 dark:border-white/60 relative">
+            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 top-4 left-12 absolute"></div>
+            <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-20 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
+              07
+            </h1>
             <button
               id="plane2"
-              className="rotate-90 absolute top-[25%] text-black dark:text-white z-20 -left-[30%]"
+              className="rotate-90 absolute top-[29.5%] text-black dark:text-white z-20 -left-[30%]"
             >
-              <Icon height={60} icon="ri:plane-fill" />
+              <Icon height={50} icon="ri:plane-fill" />
             </button>
-            <div className="h-1 w-full border-t-4 border-dashed border-black/30 dark:border-white/30 absolute top-1/2 -translate-y-1/2"></div>
+            <div className=" w-full border-t-4 border-dashed border-black/30 dark:border-white/30 absolute top-1/2 -translate-y-1/2"></div>
+            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute"></div>
           </div>
         </div>
       </div>
