@@ -51,6 +51,8 @@ function Navbar() {
 
   return (
     <>
+      {/* normal navbar */}
+
       <nav className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50">
         <div>
           <h1 className="font-semibold text-xl lg:text-2xl text-neutral-950 dark:text-slate-100">
@@ -92,13 +94,16 @@ function Navbar() {
           </button>
         </div>
       </nav>
-      <div
+
+      {/* expanded navbar */}
+
+      <section
         id="navmenu"
         className="fixed inset-x-0 bottom-0 -translate-y-full h-[calc(100%-64px)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
       >
         <div className="h-full flex flex-col w-full relative">
           <ul
-            className={`text-neutral-800 mt-16 font-light text-3xl space-y-9 dark:text-neutral-300 px-6 transition-all duration-500 ${
+            className={`text-neutral-800 mt-10 font-light text-3xl space-y-9 dark:text-neutral-300 px-6 transition-all duration-500 ${
               parked ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -152,7 +157,7 @@ function Navbar() {
             </span>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
