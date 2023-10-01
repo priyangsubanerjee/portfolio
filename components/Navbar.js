@@ -13,18 +13,18 @@ function Navbar() {
       gsap.fromTo(
         "#plane2",
         {
-          left: "0%",
+          left: "-30%",
         },
         {
           duration: 4,
           delay: 0.5,
-          left: "90%",
+          left: "60%",
         }
       );
     } else {
       gsap
         .to("#plane2", {
-          duration: 1,
+          duration: 3,
           left: "120%",
         })
         .then(() => {
@@ -70,16 +70,16 @@ function Navbar() {
         className="fixed inset-x-0 bottom-0 -translate-y-full h-[calc(100%-64px)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
       >
         <div className="h-full flex flex-col w-full relative">
-          <ul className="text-neutral-800 mt-16 font-light text-4xl space-y-10 dark:text-neutral-300 px-6 pb-24">
+          <ul className="text-neutral-800 mt-16 font-light text-3xl space-y-10 dark:text-neutral-300 px-6 pb-24">
             <li>Home</li>
             <li>Work</li>
             <li>Process</li>
             <li>Make it happen</li>
           </ul>
-          <div className="w-full h-44 border-y border-black/60 dark:border-white/60 relative">
+          <div className="w-full h-32 border-y border-black/60 dark:border-white/60 relative">
             <button
               id="plane2"
-              className="rotate-90 -translate-x-full absolute top-[32%] text-black dark:text-white z-20 -left-[35%]"
+              className="rotate-90 absolute top-[25%] text-black dark:text-white z-20 -left-[30%]"
             >
               <Icon height={60} icon="ri:plane-fill" />
             </button>
