@@ -14,7 +14,7 @@ function Navbar() {
     if (navbarExpanded) {
       setTimeout(() => {
         setParked(true);
-      }, [3800]);
+      }, [4000]);
       setAirplaneState("takingOff");
       document.getElementById("navmenu").style.transform = "translateY(0%)";
       gsap
