@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 function Stamp() {
   const { theme, setTheme } = useTheme();
+  const [isLight, setIsLight] = useState(true);
   const [parked, setParked] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,9 @@ function Stamp() {
     }, [4500]);
   }, [parked]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setIsLight(theme === "light");
+  }, [theme]);
   return (
     <div
       className={`h-28 w-28 lg:h-44 lg:w-44 mb-8 lg:mr-2 lg:static absolute -top-[235%] right-0
@@ -28,7 +31,7 @@ function Stamp() {
         </button>
         <img
           src={
-            theme === "light"
+            isLight
               ? "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696093664/Personal/Think_Develop_Fix_Repeat_wxgncq.png"
               : "https://res.cloudinary.com/db9kd4qbi/image/upload/v1696100246/Personal/Think_Develop_Fix_Repeat_2_grudmq.png"
           }

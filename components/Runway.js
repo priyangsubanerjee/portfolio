@@ -64,7 +64,7 @@ function Runway() {
         </button>
 
         <span
-          className={`absolute left-0 text-neutral-800 dark:text-neutral-300 tracking-widest -translate-x-[60%] -rotate-90 top-1/2 -translate-y-1/2 text-xs uppercase font-mono ${
+          className={`absolute left-0 text-neutral-800 dark:text-neutral-300 tracking-widest -translate-x-[60%] lg:-translate-x-[65%] -rotate-90 top-1/2 -translate-y-1/2 text-xs uppercase font-mono ${
             parked ? "opacity-100" : "opacity-0"
           } transition-all duration-500
         }`}
