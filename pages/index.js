@@ -26,7 +26,7 @@ export default function Home() {
         <Navbar />
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[60px] lg:leading-[105px] font-black">
+          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[105px] font-black">
             FULL <br />{" "}
             <span
               className={`
@@ -41,7 +41,7 @@ export default function Home() {
           </h1>
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <Stamp />
-            <p className="text-right leading-7 mt-6 lg:mt-0 text-sm lg:text-base">
+            <p className="text-right leading-6 lg:leading-7 mt-6 lg:mt-0 text-sm lg:text-base">
               specialized in Web Design & Development, UX / UI, Webflow, and
               Front End Development.
             </p>
