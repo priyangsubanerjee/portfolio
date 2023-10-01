@@ -80,13 +80,12 @@ function Navbar() {
             onClick={() => {
               setNavbarExpanded(!navbarExpanded);
             }}
-            className="ml-6 w-6 h-6 flex items-center justify-center lg:hidden"
+            className="ml-6 w-6 h-6 flex text-black dark:text-white items-center justify-center lg:hidden"
           >
-            {/* <Icon height={24} icon="line-md:menu" /> */}
             {airplaneState == "hangar" ? (
               <Icon height={24} icon="line-md:menu" />
             ) : airplaneState == "landed" ? (
-              <Icon height={24} icon="icon-park:close" />
+              <Icon height={24} icon="ep:close" />
             ) : (
               <div className="h-6 w-6 bg-red-500 rounded-full animate-pulse"></div>
             )}

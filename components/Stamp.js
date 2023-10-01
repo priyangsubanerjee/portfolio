@@ -15,7 +15,13 @@ function Stamp() {
   }, [parked]);
 
   useEffect(() => {
-    setIsLight(theme === "light");
+    if (theme == "light") {
+      setIsLight(true);
+    } else if (theme == "dark") {
+      setIsLight(false);
+    } else {
+      setIsLight(true);
+    }
   }, [theme]);
   return (
     <div
