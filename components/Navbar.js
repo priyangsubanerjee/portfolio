@@ -150,7 +150,7 @@ function Navbar() {
 
       <section
         id="navmenu"
-        className="fixed inset-x-0 top-0 -translate-y-[100%] h-[calc(100%)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
+        className="fixed inset-x-0 top-0 -translate-y-[100%] h-[calc(100%)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 lg:hidden flex flex-col justify-end"
       >
         <div className="h-full flex flex-col w-full relative pt-16">
           <ul
@@ -208,7 +208,7 @@ function Navbar() {
                   nAirplaneState == "landed" || nAirplaneState == "expedite"
                 }
               >
-                {Array(20)
+                {Array(50)
                   .fill()
                   .map((_, i) => (
                     <div

@@ -17,6 +17,7 @@ module.exports = {
         "yeseva-one": ["Yeseva One", "serif"],
         milonga: ["Milonga", "serif"],
         "Bebas-Neue": ["Bebas Neue", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
       },
       keyframes: {
         rotate: {
