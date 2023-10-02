@@ -10,10 +10,6 @@ import Marquee from "react-fast-marquee";
 function Navbar() {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-  const [navbarExpanded, setNavbarExpanded] = useState(false);
-  const [airplaneState, setAirplaneState] = useState("hangar");
-  const [status, setStatus] = useState("Approaching Runway 07");
-  const [parked, setParked] = useState(false);
 
   const [nTopExpanded, setNTopExpanded] = useState(false);
   const [nAirplaneState, setNAirplaneState] = useState("inAir"); // inAir, landed, expedite
