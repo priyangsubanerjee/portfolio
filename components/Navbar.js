@@ -240,7 +240,11 @@ function Navbar() {
             </button>
 
             <div className="w-full h-full absolute inset-0 z-0 flex items-center justify-center">
-              <Marquee play={nAirplaneState == "landed"}>
+              <Marquee
+                play={
+                  nAirplaneState == "landed" || nAirplaneState == "expedite"
+                }
+              >
                 {Array(20)
                   .fill()
                   .map((_, i) => (
