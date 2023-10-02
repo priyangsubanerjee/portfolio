@@ -1,53 +1,143 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 function Navbar() {
+  const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [navbarExpanded, setNavbarExpanded] = useState(false);
   const [airplaneState, setAirplaneState] = useState("hangar");
-
+  const [status, setStatus] = useState("Approaching Runway 07");
   const [parked, setParked] = useState(false);
 
-  useEffect(() => {
-    if (navbarExpanded) {
-      setTimeout(() => {
-        setParked(true);
-      }, [4000]);
-      setAirplaneState("touchDown");
-      document.getElementById("navmenu").style.transform = "translateY(0%)";
-      gsap
-        .fromTo(
-          "#plane2",
-          {
-            left: "-30%",
-          },
-          {
-            duration: 4,
-            delay: 0.5,
-            left: "60%",
-          }
-        )
-        .then(() => {
-          setAirplaneState("landed");
-        });
+  const [nTopExpanded, setNTopExpanded] = useState(false);
+  const [nAirplaneState, setNAirplaneState] = useState("inAir"); // inAir, landed, expedite
+  const [nStatus, setNStatus] = useState("Approaching Runway 07");
+
+  //   useEffect(() => {
+  //     document.getElementById("mainLayout").style.overflow = navbarExpanded
+  //       ? "hidden"
+  //       : "auto";
+  //     if (navbarExpanded) {
+  //       setAirplaneState("touchDown");
+  //       document.getElementById("navmenu").style.transform = "translateY(0%)";
+  //       gsap.to("#runwayMarking", {
+  //         left: "10%",
+  //       });
+  //       gsap
+  //         .fromTo(
+  //           "#plane2",
+  //           {
+  //             left: "-30%",
+  //           },
+  //           {
+  //             duration: 4,
+  //             delay: 0.5,
+  //             left: "60%",
+  //           }
+  //         )
+  //         .then(() => {
+  //           gsap.to("#runwayMarking", {
+  //             duration: 4,
+  //             left: "-20%",
+  //           });
+  //           setParked(true);
+  //           setAirplaneState("landed");
+  //           setStatus("Taxiing");
+  //         });
+  //     } else {
+  //       closeNav();
+  //     }
+  //   }, [navbarExpanded]);
+
+  const toggleNav = () => {
+    if (nTopExpanded) {
+      closeNav();
+      setNTopExpanded(false);
     } else {
-      setAirplaneState("expedite");
-      gsap
-        .to("#plane2", {
-          duration: 1,
-          left: "100%",
-        })
-        .then(() => {
-          setAirplaneState("hangar");
-          setParked(false);
-          document.getElementById("navmenu").style.transform =
-            "translateY(-100%)";
-        });
+      openNav();
+      setNTopExpanded(true);
     }
-  }, [navbarExpanded]);
+  };
+
+  const openNav = () => {
+    const parentDiv = document.getElementById("navmenu");
+    const mainLayout = document.getElementById("mainLayout");
+
+    // disable scroll
+
+    parentDiv.style.transform = "translateY(0%)";
+    mainLayout.style.overflow = "hidden";
+    setNStatus("Approaching Runway 07");
+    setNAirplaneState("touchDown");
+    resetTouchPoint();
+    resetAirplane();
+
+    // translate airplane to 60%
+    gsap
+      .to("#plane2", {
+        duration: 4,
+        delay: 0.5,
+        left: "60%",
+      })
+      .then(() => {
+        gsap.to("#runwayMarking", {
+          duration: 4,
+          left: "-20%",
+        });
+        setNAirplaneState("landed");
+        setNStatus("Taxiing");
+      });
+
+    // translate runway marking to -20%
+  };
+
+  const closeNav = (status, destination) => {
+    const parentDiv = document.getElementById("navmenu");
+    const mainLayout = document.getElementById("mainLayout");
+
+    // disable scroll
+
+    setNAirplaneState("expedite");
+    setNStatus(status ? status : "Expedite");
+
+    gsap
+      .to("#plane2", {
+        duration: 1,
+        left: "100%",
+        ease: "power1.in",
+      })
+      .then(() => {
+        resetTouchPoint();
+        resetAirplane(2);
+        setNAirplaneState("inAir");
+        setNStatus("Approaching Runway 07");
+        parentDiv.style.transform = "translateY(-100%)";
+        mainLayout.style.overflow = "auto";
+
+        if (destination) {
+          router.push(destination);
+        }
+      });
+  };
+
+  const resetTouchPoint = () => {
+    gsap.to("#runwayMarking", {
+      left: "10%",
+    });
+  };
+
+  const resetAirplane = (delay) => {
+    gsap.to("#plane2", {
+      left: "-30%",
+      delay: delay ? delay : 0,
+    });
+  };
 
   return (
     <>
@@ -55,9 +145,11 @@ function Navbar() {
 
       <nav className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50">
         <div>
-          <h1 className="font-semibold text-xl lg:text-2xl text-neutral-950 dark:text-slate-100">
-            Priyangsu <span className="text-neutral-500">Banerjee.</span>
-          </h1>
+          <Link href={"/"}>
+            <h1 className="font-semibold text-xl lg:text-2xl text-neutral-950 dark:text-slate-100">
+              Priyangsu <span className="text-neutral-500">Banerjee.</span>
+            </h1>
+          </Link>
         </div>
         <ul
           className={`hidden text-neutral-700 dark:text-neutral-300 lg:flex items-center justify-center space-x-9 absolute left-1/2 -translate-x-1/2`}
@@ -77,16 +169,16 @@ function Navbar() {
           </button>
           <button
             disabled={
-              airplaneState == "expedite" || airplaneState == "touchDown"
+              nAirplaneState == "expedite" || nAirplaneState == "touchDown"
             }
             onClick={() => {
-              setNavbarExpanded(!navbarExpanded);
+              toggleNav();
             }}
             className="ml-6 w-6 h-6 flex text-black dark:text-white items-center justify-center lg:hidden"
           >
-            {airplaneState == "hangar" ? (
+            {nAirplaneState == "inAir" ? (
               <Icon height={24} icon="line-md:menu" />
-            ) : airplaneState == "landed" ? (
+            ) : nAirplaneState == "landed" ? (
               <Icon height={24} icon="ep:close" />
             ) : (
               <div className="h-6 w-6 bg-red-500 rounded-full animate-pulse"></div>
@@ -99,26 +191,51 @@ function Navbar() {
 
       <section
         id="navmenu"
-        className="fixed inset-x-0 bottom-0 -translate-y-full h-[calc(100%-64px)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
+        className="fixed inset-x-0 top-0 -translate-y-[100%] h-[calc(100%)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 flex flex-col justify-end"
       >
-        <div className="h-full flex flex-col w-full relative">
+        <div className="h-full flex flex-col w-full relative pt-16">
           <ul
             className={`text-neutral-800 mt-10 font-light text-3xl space-y-9 dark:text-neutral-300 px-6 transition-all duration-500 ${
-              parked ? "opacity-100" : "opacity-0"
+              nAirplaneState == "landed" || nAirplaneState == "expedite"
+                ? "opacity-100"
+                : "opacity-0"
             }`}
           >
-            <li>Home</li>
+            <li
+              onClick={() => {
+                closeNav("Taking you home", "/services");
+              }}
+            >
+              Home
+            </li>
             <li>Work</li>
             <li>Process</li>
             <li>Make it happen</li>
           </ul>
           <div className="w-full mt-16 h-32 border-y border-black/60 dark:border-white/60 relative">
-            <div className="h-5 w-8 bg-black/10 dark:bg-white/20 z-10 top-4 left-12 absolute flex items-center">
-              <div className="w-full h-[40%] bg-white dark:bg-black"></div>
+            <div
+              id="runwayMarking"
+              className="absolute h-full inset-y-0 left-8 flex flex-col justify-evenly"
+            >
+              <div className="h-5 w-8 bg-black/10 dark:bg-white/20 flex items-center">
+                <div className="w-full h-[40%] bg-white dark:bg-black"></div>
+              </div>
+              <h1 className="font-Bebas-Neue w-fit text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-10 -rotate-90">
+                07
+              </h1>
+              <div className="h-5 w-8 bg-black/10 dark:bg-white/20 flex items-center">
+                <div className="w-full h-[40%] bg-white dark:bg-black"></div>
+              </div>
+              {/* <div className="h-5 w-8 bg-black/10 dark:bg-white/20 z-10 top-4 left-12 absolute flex items-center">
+                <div className="w-full h-[40%] bg-white dark:bg-black"></div>
+              </div>
+              <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-10 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
+                07
+              </h1>
+              <div className="h-5 w-8 z-10 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute flex items-center">
+                <div className="w-full h-[40%] bg-white dark:bg-black"></div>
+              </div> */}
             </div>
-            <h1 className="font-Bebas-Neue text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-10 -rotate-90 top-1/2 -translate-y-1/2 left-12 absolute">
-              07
-            </h1>
             <button
               id="plane2"
               className="rotate-90 absolute top-[29.5%] text-black dark:text-white z-20 -left-[30%]"
@@ -127,9 +244,7 @@ function Navbar() {
             </button>
 
             <div className="w-full h-full absolute inset-0 z-0 flex items-center justify-center">
-              <Marquee
-                play={airplaneState == "landed" || airplaneState == "expedite"}
-              >
+              <Marquee play={nAirplaneState == "landed"}>
                 {Array(20)
                   .fill()
                   .map((_, i) => (
@@ -140,21 +255,9 @@ function Navbar() {
                   ))}
               </Marquee>
             </div>
-
-            <div className="h-5 w-8 z-10 bg-black/10 dark:bg-white/20 bottom-4 left-12 absolute flex items-center">
-              <div className="w-full h-[40%] bg-white dark:bg-black"></div>
-            </div>
           </div>
           <div className="flex items-center justify-center mt-10">
-            <span className="text-xs uppercase tracking-wider">
-              {airplaneState == "landed"
-                ? "Taxiing"
-                : airplaneState == "touchDown"
-                ? "Approaching Runway 07"
-                : airplaneState == "expedite"
-                ? "Expedite"
-                : ""}
-            </span>
+            <span className="text-xs uppercase tracking-wider">{nStatus}</span>
           </div>
         </div>
       </section>

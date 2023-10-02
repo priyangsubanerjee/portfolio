@@ -22,8 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="max-h-full h-full w-full bg-transparent relative flex flex-col pb-5 lg:pb-10">
-        <Navbar />
+      <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
           <h1 className="text-[60px] lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[105px] font-black">
