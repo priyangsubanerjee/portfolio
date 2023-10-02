@@ -14,43 +14,6 @@ function Navbar() {
   const [nTopExpanded, setNTopExpanded] = useState(false);
   const [nAirplaneState, setNAirplaneState] = useState("inAir"); // inAir, landed, expedite
   const [nStatus, setNStatus] = useState("Approaching Runway 07");
-
-  //   useEffect(() => {
-  //     document.getElementById("mainLayout").style.overflow = navbarExpanded
-  //       ? "hidden"
-  //       : "auto";
-  //     if (navbarExpanded) {
-  //       setAirplaneState("touchDown");
-  //       document.getElementById("navmenu").style.transform = "translateY(0%)";
-  //       gsap.to("#runwayMarking", {
-  //         left: "10%",
-  //       });
-  //       gsap
-  //         .fromTo(
-  //           "#plane2",
-  //           {
-  //             left: "-30%",
-  //           },
-  //           {
-  //             duration: 4,
-  //             delay: 0.5,
-  //             left: "60%",
-  //           }
-  //         )
-  //         .then(() => {
-  //           gsap.to("#runwayMarking", {
-  //             duration: 4,
-  //             left: "-20%",
-  //           });
-  //           setParked(true);
-  //           setAirplaneState("landed");
-  //           setStatus("Taxiing");
-  //         });
-  //     } else {
-  //       closeNav();
-  //     }
-  //   }, [navbarExpanded]);
-
   const toggleNav = () => {
     if (nTopExpanded) {
       closeNav();
