@@ -25,7 +25,7 @@ export default function Home() {
       <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
-          <h1 className="text-[60px] lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[105px] font-black">
+          <h1 className="text-[60px] tracking-tight  lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[105px] font-black">
             FULL <br />{" "}
             <span
               className={`
@@ -60,9 +60,13 @@ export default function Home() {
               your ideas into an exceptional web reality.
             </p>
 
-            <button className="flex items-center justify-center rounded-full h-12 mt-10 text-white dark:text-black dark:bg-white bg-black px-5">
-              <span className="text-sm md:text-base">Drop me a line</span>
-              <div className="h-2 w-2 bg-white dark:bg-black rounded-full ml-7"></div>
+            <button className="flex group relative w-48 items-center justify-between rounded-full h-12 mt-10 text-white dark:text-black dark:bg-white bg-black">
+              <span className="text-sm md:text-base ml-5">Drop me a line</span>
+              <div className="absolute group right-[13%] hover:right-[13%] translate-x-1/2 top-1/2 -translate-y-1/2 h-3 w-3 group-hover:h-10 group-hover:w-10 text-black dark:text-white overflow-hidden bg-white dark:bg-black rounded-full ml-7 flex items-center justify-center transition-all">
+                <span className="group-hover:visible invisible">
+                  <Icon icon="iconoir:arrow-tr" />
+                </span>
+              </div>
             </button>
           </div>
           <div className="w-fit hidden lg:block">
@@ -106,7 +110,7 @@ export default function Home() {
                 quas, ea porro deleniti, neque magnam commodi, est quos esse!
                 Nemo impedit laborum quis vel.
               </p>
-            </div>{" "}
+            </div>
             <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
               <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
                 03

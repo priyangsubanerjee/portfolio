@@ -13,7 +13,6 @@ function Runway() {
     gsap.to("#plane", {
       duration: 4.7,
       ease: "easeInOut",
-      opacity: 1,
       delay: 0.5,
       top: "98%",
     });
@@ -51,9 +50,6 @@ function Runway() {
 
         <button
           id="plane"
-          style={{
-            opacity: 0.5,
-          }}
           className={`absolute rotate-180 left-0 z-30 -translate-x-[51%] -translate-y-3 ${
             parked
               ? "text-[#EF4444] dark:text-[#EF4444]"
