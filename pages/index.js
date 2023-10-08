@@ -81,7 +81,6 @@ export default function Home() {
             </ul>
           </div>
         </div>
-
         <div className="mt-56 px-6 lg:px-16">
           <h2 className="text-4xl lg:text-5xl font-poppins">
             I can help you with ...
@@ -120,7 +119,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <div className="mt-32 lg:mt-56 px-6 lg:px-16 pb-10">
           <h2 className="text-2xl lg:text-3xl font-poppins">
             Selected works ...
