@@ -92,36 +92,78 @@ export default function Home() {
                 01
               </h1>
               <h2 className="mt-10 text-2xl">Design</h2>
-              <p className="line-clamp-3 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur libero doloremque quisquam debitis doloribus fuga
-                quas, ea porro deleniti, neque magnam commodi, est quos esse!
-                Nemo impedit laborum quis vel.
+              <p className="line-clamp-4 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
+                According to a study, 75% of users judge a company&apos;s credit
+                by its digital presence, can venture into the world of design
+                and create a lasting impression.
               </p>
             </div>
             <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
               <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
                 02
               </h1>
-              <h2 className="mt-10 text-2xl">Design</h2>
-              <p className="line-clamp-3 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur libero doloremque quisquam debitis doloribus fuga
-                quas, ea porro deleniti, neque magnam commodi, est quos esse!
-                Nemo impedit laborum quis vel.
+              <h2 className="mt-10 text-2xl">Development</h2>
+              <p className="line-clamp-4 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
+                Having footprints in the industry for more than 7 years, I can
+                help you with the digital transformation of ideas into reality.
               </p>
             </div>
             <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
               <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
                 03
               </h1>
-              <h2 className="mt-10 text-2xl">Design</h2>
-              <p className="line-clamp-3 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur libero doloremque quisquam debitis doloribus fuga
-                quas, ea porro deleniti, neque magnam commodi, est quos esse!
-                Nemo impedit laborum quis vel.
+              <h2 className="mt-10 text-2xl">Consultation</h2>
+              <p className="line-clamp-4 mt-3 text-sm text-neutral-600 dark:text-neutral-300 leading-7">
+                Sometimes you just need a second opinion. Understanding the
+                requirements of your business, can help build a better product.
               </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-56 px-6 lg:px-16 pb-10">
+          <h2 className="text-2xl lg:text-3xl font-poppins">
+            Selected works ...
+          </h2>
+          <div className="mt-16">
+            <div className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex">
+              <div className="lg:ml-20">
+                <h1 className="text-3xl lg:text-5xl">Foggies Token</h1>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-5">
+                  Next JS, Tailwind CSS, React-Scripts
+                </p>
+              </div>
+              <div className="ml-auto whitespace-nowrap shrink-0">
+                <h1 className="text-2xl lg:text-4xl dark:text-white font-thin">
+                  / 2023
+                </h1>
+              </div>
+            </div>
+            <div className="py-10 border-b  border-neutral-400 dark:border-neutral-700 flex">
+              <div className="lg:ml-20">
+                <h1 className="text-3xl lg:text-5xl">Paste Jam</h1>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 dark:text-white/50 mt-5">
+                  Next JS, Tailwind CSS, Firebase, Next-Auth
+                </p>
+              </div>
+              <div className="ml-auto whitespace-nowrap shrink-0">
+                <h1 className="text-2xl lg:text-4xl dark:text-white font-thin">
+                  / 2022
+                </h1>
+              </div>
+            </div>
+            <div className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex">
+              <div className="lg:ml-20">
+                <h1 className="text-3xl lg:text-5xl">Airshare</h1>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-5 line-clamp-1">
+                  Next JS, Tailwind CSS, React-Scripts, WebSockets, Cloudinary
+                </p>
+              </div>
+              <div className="ml-auto whitespace-nowrap shrink-0">
+                <h1 className="text-2xl lg:text-4xl dark:text-white font-thin">
+                  / 2023
+                </h1>
+              </div>
             </div>
           </div>
         </div>
