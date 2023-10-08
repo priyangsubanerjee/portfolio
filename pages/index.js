@@ -121,7 +121,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-56 px-6 lg:px-16 pb-10">
+        <div className="mt-32 lg:mt-56 px-6 lg:px-16 pb-10">
           <h2 className="text-2xl lg:text-3xl font-poppins">
             Selected works ...
           </h2>
