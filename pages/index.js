@@ -163,6 +163,63 @@ export default function Home() {
                 </h1>
               </div>
             </div>
+            <div className="mt-16 pl-20 flex items-center">
+              <h1 className="font-light text-xl">Want to see more?</h1>
+              <button className="flex group relative ml-6 w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
+                <span className="text-sm md:text-base ml-5">
+                  Go to projects
+                </span>
+                <div className="absolute group right-[13%] hover:right-[13%] translate-x-1/2 top-1/2 -translate-y-1/2 h-3 w-3 group-hover:h-10 group-hover:w-10 text-black dark:text-white overflow-hidden bg-white dark:bg-black rounded-full ml-7 flex items-center justify-center transition-all">
+                  <span className="group-hover:visible invisible">
+                    <Icon icon="iconoir:arrow-tr" />
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-60 px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2">
+          <div className="lg:pr-16">
+            <h1 className="text-6xl font-light leading-[1.2]">
+              My way of getting <br /> things done
+            </h1>
+            <p className="leading-8 mt-10">
+              Fast and transparent, the path to owning a website that will
+              represent your brand in the best of light is only 4 weeks away.
+              Standing by the Waterfall methodology, I assure a step by step
+              completion of the whole process.
+            </p>
+          </div>
+          <div className="lg:pl-16">
+            <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
+              <div className="flex items-center text-xl font-light">
+                <span>01.</span>
+                <span className="ml-4">UX / Wireframing</span>
+                <button className="ml-auto">+</button>
+              </div>
+            </div>
+            <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
+              <div className="flex items-center text-xl font-light">
+                <span>02.</span>
+                <span className="ml-4">Web Design</span>
+                <button className="ml-auto">+</button>
+              </div>
+            </div>
+            <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
+              <div className="flex items-center text-xl font-light">
+                <span>03.</span>
+                <span className="ml-4">Web Development</span>
+                <button className="ml-auto">+</button>
+              </div>
+            </div>
+            <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
+              <div className="flex items-center text-xl font-light">
+                <span>04.</span>
+                <span className="ml-4">Web Analytics & Support</span>
+                <button className="ml-auto">+</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
