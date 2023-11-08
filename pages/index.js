@@ -163,7 +163,7 @@ export default function Home() {
                 </h1>
               </div>
             </div>
-            <div className="mt-16 pl-20 flex items-center">
+            <div className="mt-16 lg:pl-20 flex items-center">
               <h1 className="font-light text-xl">Want to see more?</h1>
               <button className="flex group relative ml-6 w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
                 <span className="text-sm md:text-base ml-5">
@@ -179,9 +179,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-60 px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2">
+        <div className="mt-60 px-6 lg:px-16 grid grid-cols-1 gap-7 lg:grid-cols-2">
           <div className="lg:pr-16">
-            <h1 className="text-6xl font-light leading-[1.2]">
+            <h1 className="text-4xl lg:text-6xl font-light leading-[1.4] lg:leading-[1.2]">
               My way of getting <br /> things done
             </h1>
             <p className="leading-8 mt-10">
