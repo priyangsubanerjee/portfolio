@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="min-h-[calc(100%-64px)] lg:min-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
+      <section className="min-h-[calc(100%-64px)] lg:min-h-[calc(100%-96px)] h-fit w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <div className="px-6 lg:px-16 mt-24 lg:flex items-center justify-between">
           <div className="lg:w-[60%]">
             <Icon height={40} icon="icon-park-outline:quote" />
@@ -164,10 +164,9 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-16 lg:pl-20 flex items-center">
-              <h1 className="font-light text-xl">Want to see more?</h1>
-              <button className="flex group relative ml-6 w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
+              <button className="flex group relative w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
                 <span className="text-sm md:text-base ml-5">
-                  Go to projects
+                  See all projects
                 </span>
                 <div className="absolute group right-[13%] hover:right-[13%] translate-x-1/2 top-1/2 -translate-y-1/2 h-3 w-3 group-hover:h-10 group-hover:w-10 text-black dark:text-white overflow-hidden bg-white dark:bg-black rounded-full ml-7 flex items-center justify-center transition-all">
                   <span className="group-hover:visible invisible">
@@ -178,7 +177,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <div className="mt-60 px-6 lg:px-16 grid grid-cols-1 gap-7 lg:grid-cols-2">
           <div className="lg:pr-16">
             <h1 className="text-4xl lg:text-6xl font-light leading-[1.4] lg:leading-[1.2]">
@@ -222,6 +220,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="h-44 w-ful"></div>
       </section>
     </>
   );
