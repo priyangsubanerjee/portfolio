@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "circletype": "^2.3.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
