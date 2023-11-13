@@ -16,34 +16,6 @@ function Process() {
         </p>
       </div>
       <div className="lg:pl-16">
-        {/* <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
-          <div className="flex items-center text-xl font-light">
-            <span>01.</span>
-            <span className="ml-4">UX / Wireframing</span>
-            <button className="ml-auto">+</button>
-          </div>
-        </div>
-        <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
-          <div className="flex items-center text-xl font-light">
-            <span>02.</span>
-            <span className="ml-4">Web Design</span>
-            <button className="ml-auto">+</button>
-          </div>
-        </div>
-        <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
-          <div className="flex items-center text-xl font-light">
-            <span>03.</span>
-            <span className="ml-4">Web Development</span>
-            <button className="ml-auto">+</button>
-          </div>
-        </div>
-        <div className="py-6 border-b border-neutral-400 dark:border-neutral-700">
-          <div className="flex items-center text-xl font-light">
-            <span>04.</span>
-            <span className="ml-4">Web Analytics & Support</span>
-            <button className="ml-auto">+</button>
-          </div>
-        </div> */}
         <Accordion isCompact={false}>
           <AccordionItem
             key="1"
@@ -55,10 +27,13 @@ function Process() {
               </div>
             }
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <p className="pb-4 text-sm leading-7 text-neutral-700 -mt-2">
+              One of the most important steps in the process of creating a
+              website / mobile application is understanding the needs of the
+              client and the end user. This is the first step in the process of
+              creating a website / mobile application, and it is very important
+              to get it right.
+            </p>
           </AccordionItem>
           <AccordionItem
             key="2"
@@ -66,14 +41,16 @@ function Process() {
             title={
               <div className="flex items-center text-xl font-light py-2">
                 <span>02.</span>
-                <span className="ml-4">Web Design</span>
+                <span className="ml-4">Design</span>
               </div>
             }
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <p className="pb-4 text-sm leading-7 text-neutral-700 -mt-2">
+              Then comes the actual visual representation of the website /
+              mobile application. This is the part where I take the wireframes
+              and turn them into a beautiful and functional website / mobile
+              application.
+            </p>
           </AccordionItem>
           <AccordionItem
             key="3"
@@ -81,14 +58,16 @@ function Process() {
             title={
               <div className="flex items-center text-xl font-light py-2">
                 <span>03.</span>
-                <span className="ml-4">Web Development</span>
+                <span className="ml-4">Development</span>
               </div>
             }
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <p className="pb-4 text-sm leading-7 text-neutral-700 -mt-2">
+              The final step in the process is the development of the website /
+              mobile application. This is the part where I choose the
+              appropriate framework and start building the product from the
+              ground up.
+            </p>
           </AccordionItem>
           <AccordionItem
             key="4"
@@ -100,10 +79,11 @@ function Process() {
               </div>
             }
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <p className="pb-4 text-sm leading-7 text-neutral-700 -mt-2">
+              Even after the website / mobile application is finished, someone
+              can still opt in for a monthly support plan. This includes website
+              / mobile application maintenance, SEO, and web analytics.
+            </p>
           </AccordionItem>
         </Accordion>
       </div>

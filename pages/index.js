@@ -14,6 +14,7 @@ import Works from "@/components/Sections/Works";
 import Courtsey from "@/components/Sections/Courtsey";
 import Process from "@/components/Sections/Process";
 import Head from "next/head";
+import Rate from "@/components/Modals/Rate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,6 +83,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <Rate />
     </>
   );
 }
