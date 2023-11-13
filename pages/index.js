@@ -59,7 +59,7 @@ export default function Home() {
         <Process />
         <Courtsey />
       </section>
-      <footer className="mt-20 mb-10 border-t max-w-7xl mx-auto px-6 lg:px-0">
+      <footer className="mt-20 mb-10 border-t dark:border-t-white/30 border-t-black/30 max-w-7xl mx-auto px-6 lg:px-0">
         <div className="w-full">
           <div className="lg:flex space-y-10 lg:space-y-0 items-center justify-between mt-10">
             <span className="text-sm">
