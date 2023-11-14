@@ -27,7 +27,7 @@ export default function Document() {
         />
         <meta
           name="keywords"
-          content="sites, web, immovation, design, programmer, priyangsu, front-end, designer, ui, priyangsu banerjee, freelancer, portfolio, website, priyangsu banerjee, android, ios, robotics"
+          content="sites, web, immovation, design, programmer, priyangsu, front-end, designer, ui, priyangsu banerjee, freelancer, portfolio, website, priyangsu banerjee, android, ios, robotics, developer priyangsu"
         />
         <meta name="author" content="Priyangsu Banerjee" />
         <meta name="robots" content="index, follow" />

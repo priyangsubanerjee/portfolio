@@ -29,10 +29,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Home | Full Stack Developer</title>
+      </Head>
       <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
-        <Head>
-          <title>Home | Full Stack Developer</title>
-        </Head>
         <Runway />
         <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
           <h1 className="text-[60px] tracking-tight  lg:text-[120px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[105px] font-black">
