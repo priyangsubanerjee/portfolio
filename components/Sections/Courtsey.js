@@ -9,7 +9,7 @@ function Courtsey() {
         <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 top-0 z-10"></div>
         <img
           className="h-12 lg:h-14 w-12 lg:w-14 absolute top-0 left-0 rounded-full"
-          src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699964452/Personal/IMG_5D022AA3C935-1_mueiqw.jpg"
+          src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699544530/Personal/Screenshot_2023-11-09_at_9.11.34_PM_dfr99a.png"
           alt=""
         />
         <span className="pl-14 lg:pl-16">Let&apos;s</span> talk about a project,
