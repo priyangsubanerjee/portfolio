@@ -7,18 +7,18 @@ export default function Document() {
       <Head>
         <link
           rel="shortcut icon"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699544530/Personal/Screenshot_2023-11-09_at_9.11.34_PM_dfr99a.png"
+          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
         />
         <link
           rel="shortcut icon"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699544530/Personal/Screenshot_2023-11-09_at_9.11.34_PM_dfr99a.png"
+          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
           type="image/x-icon"
         ></link>
         <link
           rel="icon"
           type="image/png"
           sizes="192x192"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699544530/Personal/Screenshot_2023-11-09_at_9.11.34_PM_dfr99a.png"
+          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
         />
 
         <meta
