@@ -15,6 +15,7 @@ import Courtsey from "@/components/Sections/Courtsey";
 import Process from "@/components/Sections/Process";
 import Head from "next/head";
 import Rate from "@/components/Modals/Rate";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,10 +72,28 @@ export default function Home() {
               © 2023All Rights Reserved. Design & Coded with ❤️️
             </span>
             <ul className="lg:flex space-y-3 lg:space-y-0 items-center lg:first-letter:space-x-8 text-sm">
-              <li>LinkedIn</li>
-              <li>Github</li>
-              <li>Email</li>
-              <li>Instagram</li>
+              <li>
+                <Link href={"https://github.com/priyangsubanerjee"}>
+                  Github
+                </Link>
+              </li>
+              <li>
+                <Link href={"https://www.linkedin.com/in/priyangsu-banerjee/"}>
+                  Linkedin
+                </Link>
+              </li>
+              <li>
+                <Link href={"https://www.instagram.com/priyangsu__banerjee/"}>
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"https://www.quora.com/profile/Priyangsu-Banerjee-1"}
+                >
+                  Quora
+                </Link>
+              </li>
             </ul>
             <ul className="flex items-center space-x-6 lg:space-x-8 text-sm">
               <li>Support</li>

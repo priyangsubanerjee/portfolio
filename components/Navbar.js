@@ -113,10 +113,19 @@ function Navbar() {
         <ul
           className={`hidden text-neutral-700 dark:text-neutral-300 lg:flex items-center justify-center space-x-9 absolute left-1/2 -translate-x-1/2`}
         >
-          <li>Home</li>
-          <li>Work</li>
-          <li>Process</li>
-          <li>Make it happen</li>
+          <li>
+            <Link href={"/#home"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/#work"}>Work</Link>
+          </li>
+          <li>
+            <Link href={"/#process"}>Process</Link>
+          </li>
+          <li>
+            {" "}
+            <Link href={"/#"}>Make it happen</Link>
+          </li>
         </ul>
         <div className="h-full flex items-center justify-center">
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>

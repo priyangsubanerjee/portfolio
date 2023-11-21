@@ -3,7 +3,10 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 function Process() {
   return (
-    <div className="mt-60 px-6 lg:px-16 grid grid-cols-1 gap-7 lg:grid-cols-2">
+    <div
+      id="process"
+      className="mt-60 px-6 lg:px-16 grid grid-cols-1 gap-7 lg:grid-cols-2"
+    >
       <div className="lg:pr-16">
         <h1 className="text-4xl lg:text-6xl font-light leading-[1.4] lg:leading-[1.2]">
           My way of getting <br /> things done

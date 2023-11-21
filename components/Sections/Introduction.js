@@ -1,9 +1,13 @@
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 import React from "react";
 
 function Introduction() {
   return (
-    <div className="px-6 lg:px-16 mt-24 lg:flex items-center justify-between">
+    <div
+      id="home"
+      className="px-6 lg:px-16 mt-24 lg:flex items-center justify-between"
+    >
       <div className="lg:w-[60%]">
         <Icon height={40} icon="icon-park-outline:quote" />
         <p className="text-base mt-5 md:text-lg lg:text-[20px] leading-8 md:leading-9 lg:leading-[45px] text-neutral-700 dark:text-neutral-300 font-normal font-poppins">
@@ -29,10 +33,24 @@ function Introduction() {
           Let&apos;s get connected
         </p>
         <ul className="space-y-3 mt-6 text-neutral-900 dark:text-neutral-300">
-          <li>Github</li>
-          <li>Linkedin</li>
-          <li>Instagram</li>
-          <li>Quora</li>
+          <li>
+            <Link href={"https://github.com/priyangsubanerjee"}>Github</Link>
+          </li>
+          <li>
+            <Link href={"https://www.linkedin.com/in/priyangsu-banerjee/"}>
+              Linkedin
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://www.instagram.com/priyangsu__banerjee/"}>
+              Instagram
+            </Link>
+          </li>
+          <li>
+            <Link href={"https://www.quora.com/profile/Priyangsu-Banerjee-1"}>
+              Quora
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
