@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <main
       id="mainLayout"
-      className="fixed bg-white dark:bg-black inset-0 max-h-full h-full w-full overflow-y-auto overflow-x-hidden"
+      className="fixed scroll-smooth bg-white dark:bg-black inset-0 max-h-full h-full w-full overflow-y-auto overflow-x-hidden"
     >
       <Navbar />
 
