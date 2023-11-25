@@ -171,14 +171,32 @@ function Navbar() {
           >
             <li
               onClick={() => {
-                closeNav("Taking you home", "/services");
+                closeNav("Taking you home", "/#home");
               }}
             >
               Home
             </li>
-            <li>Work</li>
-            <li>Process</li>
-            <li>Make it happen</li>
+            <li
+              onClick={() => {
+                closeNav("Taking you to my work", "/#work");
+              }}
+            >
+              Work
+            </li>
+            <li
+              onClick={() => {
+                closeNav("Taking you to my work", "/#process");
+              }}
+            >
+              Process
+            </li>
+            <li
+              onClick={() => {
+                closeNav("Taking you to my work", "/message");
+              }}
+            >
+              Make it happen
+            </li>
           </ul>
           <div className="w-full mt-16 h-32 border-y border-black/60 dark:border-white/60 relative">
             <div
