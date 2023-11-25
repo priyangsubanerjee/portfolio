@@ -124,7 +124,7 @@ function Navbar() {
           </li>
           <li>
             {" "}
-            <Link href={"/#"}>Make it happen</Link>
+            <Link href={"/message"}>Make it happen</Link>
           </li>
         </ul>
         <div className="h-full flex items-center justify-center">
