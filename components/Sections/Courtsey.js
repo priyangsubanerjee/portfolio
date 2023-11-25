@@ -1,11 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { Icon } from "@iconify/react";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
 function Courtsey() {
   return (
     <div className="px-6 lg:px-16 mt-44 pb-8">
+      <Head>
+        <title>Home | Full Stack Developer</title>
+      </Head>
       <h1 className="text-3xl lg:text-4xl font-poppins relative lg:leading-[1.5] leading-[1.4] max-w-2xl">
         <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 top-0 z-10"></div>
         <img
