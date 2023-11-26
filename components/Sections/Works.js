@@ -3,7 +3,7 @@ import React from "react";
 
 function Works() {
   return (
-    <div id="work" className="mt-32 lg:mt-56 px-6 lg:px-16 pb-10">
+    <div id="work" className="pt-32 lg:pt-16 lg:mt-32 px-6 lg:px-16 pb-10">
       <h2 className="text-2xl lg:text-3xl font-poppins">Selected works ...</h2>
       <div className="mt-16">
         <div className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex">

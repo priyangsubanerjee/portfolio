@@ -10,14 +10,14 @@ function Courtsey() {
       <Head>
         <title>Contact | Full Stack Developer</title>
       </Head>
-      <h1 className="text-3xl lg:text-4xl font-poppins relative lg:leading-[1.5] leading-[1.4] max-w-2xl">
-        <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 top-0 z-10"></div>
+      <h1 className="text-3xl lg:text-4xl font-poppins relative lg:leading-[1.5] leading-[1.7] max-w-2xl">
+        <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 -top-2 lg:-top-5 z-10"></div>
         <img
-          className="h-12 lg:h-14 w-12 lg:w-14 absolute top-0 left-0 rounded-full object-cover"
-          src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
+          className="h-16 lg:h-20 w-16 lg:w-20 absolute -top-3 lg:-top-6 left-0 rounded-full object-cover pointer-events-none"
+          src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054297/Personal/IMG_1137_htau8p.jpg"
           alt=""
         />
-        <span className="pl-14 lg:pl-16">Let&apos;s</span> talk about a project,
+        <span className="pl-20 lg:pl-24">Let&apos;s</span> talk about a project,
         collaboration or an idea you may have
       </h1>
       <Link href={"/message"}>

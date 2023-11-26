@@ -6,7 +6,7 @@ function Introduction() {
   return (
     <div
       id="home"
-      className="px-6 lg:px-16 mt-24 lg:flex items-center justify-between"
+      className="px-6 lg:px-16 pt-24 lg:flex items-center justify-between"
     >
       <div className="lg:w-[60%]">
         <Icon height={40} icon="icon-park-outline:quote" />
