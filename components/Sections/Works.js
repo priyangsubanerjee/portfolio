@@ -16,7 +16,7 @@ function Works() {
           >
             <div>
               <img
-                src="https://assets.website-files.com/64b4320d9bd69e8f6cf59f6e/64bec5ce9b8660007a7f4482_group_34.webp"
+                src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp"
                 className="w-48 h-48  object-scale-down lg:group-hover:object-cover rounded-xl -ml-[200px] group-hover:ml-20 transition-all duration-1000"
                 alt=""
               />
