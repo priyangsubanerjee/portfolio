@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { projects } from "@/static/projects";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
@@ -11,17 +12,24 @@ function Works() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex"
+            className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group"
           >
-            <div className="lg:ml-20">
+            <div>
+              <img
+                src="https://assets.website-files.com/64b4320d9bd69e8f6cf59f6e/64bec5ce9b8660007a7f4482_group_34.webp"
+                className="w-48 h-48  object-scale-down lg:group-hover:object-cover rounded-xl -ml-[200px] group-hover:ml-20 transition-all duration-1000"
+                alt=""
+              />
+            </div>
+            <div className="lg:group-hover:ml-10 lg:ml-20 transition-all duration-1000">
               <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
-              <p className="text-sm max-w-3xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
+              <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
                 {project.description}
               </p>
               <div className="mt-6 flex items-center space-x-9">
                 {project.preview && (
                   <Link href={project.preview}>
-                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-blue-500">
+                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-neutral-500 dark:text-neutral-200">
                       <span>Preview</span>
                       <Icon icon="ion:open-outline" />
                     </button>
@@ -29,7 +37,7 @@ function Works() {
                 )}
                 {project.github && (
                   <Link href={project.github}>
-                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-blue-500">
+                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-neutral-500 dark:text-neutral-200">
                       <span>Github</span>
                       <Icon icon="ion:open-outline" />
                     </button>
