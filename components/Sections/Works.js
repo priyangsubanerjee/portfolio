@@ -14,14 +14,14 @@ function Works() {
             key={i}
             className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group"
           >
-            <div>
+            {/* <div>
               <img
-                src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp"
-                className="w-48 h-48  object-scale-down lg:group-hover:object-cover rounded-xl -ml-[200px] group-hover:ml-20 transition-all duration-1000"
+                src={project.image}
+                className="w-48 h-48  object-scale-down lg:group-hover:object-contain  -ml-[200px] lg:group-hover:ml-20 transition-all duration-1000"
                 alt=""
               />
-            </div>
-            <div className="lg:group-hover:ml-10 lg:ml-20 transition-all duration-1000">
+            </div> */}
+            <div className="lg:ml-20 transition-all duration-1000">
               <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
               <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
                 {project.description}
