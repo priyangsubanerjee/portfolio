@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const router = useRouter();
@@ -102,7 +103,16 @@ function Navbar() {
     <>
       {/* normal navbar */}
 
-      <nav className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50">
+      <motion.nav
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+        className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50"
+      >
         <div>
           <Link href={"/"}>
             <h1 className="font-semibold text-xl lg:text-2xl text-neutral-950 dark:text-slate-100">
@@ -153,7 +163,7 @@ function Navbar() {
             )}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* expanded navbar */}
 
