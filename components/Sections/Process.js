@@ -1,5 +1,6 @@
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 function Process() {
   return (
@@ -7,7 +8,15 @@ function Process() {
       id="process"
       className="pt-16 mt-32 px-6 lg:px-16 grid grid-cols-1 gap-7 lg:grid-cols-2"
     >
-      <div className="lg:pr-16">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+        }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="lg:pr-16"
+      >
         <h1 className="text-4xl lg:text-6xl font-light leading-[1.4] lg:leading-[1.2]">
           My way of getting <br /> things done
         </h1>
@@ -17,7 +26,7 @@ function Process() {
           Waterfall methodology, I assure a step by step completion of the whole
           process.
         </p>
-      </div>
+      </motion.div>
       <div className="lg:pl-16">
         <Accordion isCompact={false}>
           <AccordionItem

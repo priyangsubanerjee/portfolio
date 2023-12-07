@@ -3,24 +3,24 @@ import { projects } from "@/static/projects";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 function Works() {
   return (
     <div id="work" className="pt-32 lg:pt-16 lg:mt-32 px-6 lg:px-16 pb-10">
-      <h2 className="text-2xl lg:text-3xl font-poppins">Selected works ...</h2>
+      <h2 className="text-2xl lg:text-3xl font-poppins">Recent works ...</h2>
       <div className="mt-16">
         {projects.map((project, i) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{
+              once: true,
+            }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             key={i}
             className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group"
           >
-            {/* <div>
-              <img
-                src={project.image}
-                className="w-48 h-48  object-scale-down lg:group-hover:object-contain  -ml-[200px] lg:group-hover:ml-20 transition-all duration-1000"
-                alt=""
-              />
-            </div> */}
             <div className="lg:ml-20 transition-all duration-1000">
               <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
               <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
@@ -50,7 +50,7 @@ function Works() {
                 / {project.year}
               </h1>
             </div>
-          </div>
+          </motion.div>
         ))}
 
         <div className="mt-16 lg:pl-20 flex items-center">

@@ -3,10 +3,19 @@ import { Icon } from "@iconify/react";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 function Courtsey() {
   return (
-    <div className="px-6 lg:px-16 mt-44 pb-8">
+    <motion.div
+      initial={{ opacity: 0, y: 100, scale: 0.9, rotate: 0 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{
+        once: true,
+      }}
+      className="px-6 lg:px-16 mt-44 pb-8"
+    >
       <Head>
         <title>Contact | Full Stack Developer</title>
       </Head>
@@ -30,7 +39,7 @@ function Courtsey() {
           </div>
         </button>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

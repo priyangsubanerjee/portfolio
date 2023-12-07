@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Services() {
   return (
@@ -7,7 +8,15 @@ function Services() {
         I can help you with ...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-20 mb-10">
-        <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{
+            once: true,
+          }}
+          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+        >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             01
           </h1>
@@ -17,8 +26,16 @@ function Services() {
             its digital presence, can venture into the world of design and
             create a lasting impression.
           </p>
-        </div>
-        <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{
+            once: true,
+          }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+        >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             02
           </h1>
@@ -27,8 +44,16 @@ function Services() {
             Having footprints in the industry for more than 7 years, I can help
             you with the digital transformation of ideas into reality.
           </p>
-        </div>
-        <div className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{
+            once: true,
+          }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+        >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             03
           </h1>
@@ -37,7 +62,7 @@ function Services() {
             Sometimes you just need a second opinion. Understanding the
             requirements of your business, can help build a better product.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
