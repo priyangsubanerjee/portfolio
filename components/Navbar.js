@@ -212,7 +212,10 @@ function Navbar() {
             </li>
             <li
               onClick={() => {
-                closeNav("Taking you to my work", "https://rzp.io/l/priyangsu");
+                closeNav(
+                  "Taking you to payment page",
+                  "https://rzp.io/l/priyangsu"
+                );
               }}
             >
               Pay
