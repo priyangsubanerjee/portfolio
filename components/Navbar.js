@@ -137,7 +137,7 @@ function Navbar() {
             <Link href={"/message"}>Make it happen</Link>
           </li>
           <li>
-            <Link href={"https://rzp.io/l/priyangsu"}>Pay</Link>
+            <Link href={"https://razorpay.me/@priyangsubanerjee"}>Pay</Link>
           </li>
         </ul>
         <div className="h-full flex items-center justify-center">
