@@ -214,7 +214,7 @@ function Navbar() {
               onClick={() => {
                 closeNav(
                   "Taking you to payment page",
-                  "https://rzp.io/l/priyangsu"
+                  "https://razorpay.me/@priyangsubanerjee"
                 );
               }}
             >
