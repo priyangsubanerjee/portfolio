@@ -136,6 +136,9 @@ function Navbar() {
             {" "}
             <Link href={"/message"}>Make it happen</Link>
           </li>
+          <li>
+            <Link href={"https://rzp.io/l/priyangsu"}>Pay</Link>
+          </li>
         </ul>
         <div className="h-full flex items-center justify-center">
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
@@ -206,6 +209,13 @@ function Navbar() {
               }}
             >
               Make it happen
+            </li>
+            <li
+              onClick={() => {
+                closeNav("Taking you to my work", "https://rzp.io/l/priyangsu");
+              }}
+            >
+              Pay
             </li>
           </ul>
           <div className="w-full mt-16 h-32 border-y border-black/60 dark:border-white/60 relative">
