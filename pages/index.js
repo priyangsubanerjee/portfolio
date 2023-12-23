@@ -96,8 +96,27 @@ export default function Home() {
               </li>
             </ul>
             <ul className="flex items-center space-x-6 lg:space-x-8 text-sm">
-              <li>Support</li>
-              <li>Share</li>
+              <li>
+                <Link href={"https://razorpay.me/@priyangsubanerjee"}>
+                  Support
+                </Link>
+              </li>
+              <li
+                className="cursor-pointer"
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: "Priyangsu Banerjee",
+                      text: "Full Stack Developer",
+                      url: "https://priyangsubanerjee.com",
+                    });
+                  } else {
+                    alert("Share not supported in your browser");
+                  }
+                }}
+              >
+                Share
+              </li>
             </ul>
           </div>
         </div>
