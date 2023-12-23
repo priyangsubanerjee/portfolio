@@ -16,9 +16,6 @@ function Courtsey() {
       }}
       className="px-6 lg:px-16 mt-44 pb-8"
     >
-      <Head>
-        <title>Contact | Full Stack Developer</title>
-      </Head>
       <h1 className="text-3xl lg:text-4xl font-poppins relative lg:leading-[1.5] leading-[1.7] max-w-2xl">
         <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 -top-2 lg:-top-5 z-10"></div>
         <img

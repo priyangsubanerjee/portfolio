@@ -1,4 +1,5 @@
 import { Button, Input, Textarea } from "@nextui-org/react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 
@@ -36,6 +37,9 @@ function Message() {
 
   return (
     <div className="pt-16">
+      <Head>
+        <title>Get in touch.</title>
+      </Head>
       <div className="px-5">
         {submitted == false ? (
           <>
