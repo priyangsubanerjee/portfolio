@@ -37,11 +37,6 @@ function Message() {
 
   return (
     <>
-      <img
-        src="https://www.feeltourism.com/images/tour-banner.jpg"
-        alt=""
-        className="h-44 overflow-hidden w-full object-cover filter grayscale"
-      />
       <div className="pt-10">
         <Head>
           <title>Get in touch.</title>
