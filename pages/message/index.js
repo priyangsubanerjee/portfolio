@@ -39,7 +39,7 @@ function Message() {
     <>
       <div className="pt-10">
         <Head>
-          <title>Get in touch.</title>
+          <title>Get in touch</title>
         </Head>
         <div className="px-5">
           {submitted == false ? (
