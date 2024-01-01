@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Priyangsu Banerjee</title>
+        <title>Priyangsu Banerjee | Developer</title>
       </Head>
       <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <Runway />
