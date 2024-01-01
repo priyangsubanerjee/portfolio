@@ -54,14 +54,18 @@ function Works() {
         ))}
 
         <div className="mt-16 lg:pl-20 flex items-center">
-          <button className="flex group relative w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
-            <span className="text-sm md:text-base ml-5">See all projects</span>
-            <div className="absolute group right-[13%] hover:right-[13%] translate-x-1/2 top-1/2 -translate-y-1/2 h-3 w-3 group-hover:h-10 group-hover:w-10 text-black dark:text-white overflow-hidden bg-white dark:bg-black rounded-full ml-7 flex items-center justify-center transition-all">
-              <span className="group-hover:visible invisible">
-                <Icon icon="iconoir:arrow-tr" />
+          <Link href="/projects">
+            <button className="flex group relative w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
+              <span className="text-sm md:text-base ml-5">
+                See all projects
               </span>
-            </div>
-          </button>
+              <div className="absolute group right-[13%] hover:right-[13%] translate-x-1/2 top-1/2 -translate-y-1/2 h-3 w-3 group-hover:h-10 group-hover:w-10 text-black dark:text-white overflow-hidden bg-white dark:bg-black rounded-full ml-7 flex items-center justify-center transition-all">
+                <span className="group-hover:visible invisible">
+                  <Icon icon="iconoir:arrow-tr" />
+                </span>
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

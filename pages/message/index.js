@@ -37,7 +37,7 @@ function Message() {
 
   return (
     <>
-      <div className="pt-10">
+      <div className="pt-12">
         <Head>
           <title>Get in touch</title>
         </Head>
