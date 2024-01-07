@@ -35,7 +35,7 @@ export default function Home() {
       </Head>
       <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <Runway />
-        <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16">
+        <div className="mt-auto lg:flex lg:justify-between lg:items-end px-6 lg:px-16 relative">
           <h1 className="text-[60px] tracking-tight  lg:text-[100px] text-neutral-800 dark:text-neutral-200 text-left leading-[55px] lg:leading-[85px] font-black">
             FULL <br />{" "}
             <span
@@ -49,6 +49,12 @@ export default function Home() {
             </span>{" "}
             <br /> DEVELOPER
           </h1>
+          <img
+            src="/gallery/pb1.png"
+            className="absolute top-0 right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0"
+            alt="Priyangsu Banerjee"
+            id="pb1"
+          />
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <Stamp />
             <p className="text-right leading-6 lg:leading-7 mt-6 lg:mt-0 text-sm lg:text-base">
