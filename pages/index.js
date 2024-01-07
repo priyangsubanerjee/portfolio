@@ -50,7 +50,7 @@ export default function Home() {
             <br /> DEVELOPER
           </h1>
           <img
-            src="/gallery/pb1.png"
+            src="/gallery/pk1.png"
             className="absolute top-0 right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0"
             alt="Priyangsu Banerjee"
             id="pb1"
