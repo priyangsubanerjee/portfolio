@@ -12,13 +12,13 @@ function Gallery() {
   ];
   return (
     <div>
-      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-3 px-9 pb-9">
         {images.map((image, index) => (
           <div key={index} className="h-full w-full overflow-hidden">
             <img
               src={image}
               alt="Priyangsu Banerjee"
-              className="w-full h-full grayscale hover:grayscale-0 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+              className="w-full h-full hover:grayscale-0 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
             />
           </div>
         ))}
