@@ -5,6 +5,15 @@
         <loc>https://priyangsu.dev</loc>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/pk1.png</image:loc>
+        </image:image>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/dw2.png</image:loc>
+        </image:image>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/pb1.png</image:loc>
+        </image:image>
     </url>
      <url>
         <loc>https://priyangsu.dev/message</loc>
@@ -16,32 +25,25 @@
         <image:image>
             <image:loc>https://priyangsu.dev/gallery/sw1.png</image:loc>
         </image:image>
+
         <image:image>
             <image:loc>https://priyangsu.dev/gallery/pk4.png</image:loc>
         </image:image>
+
          <image:image>
             <image:loc>https://priyangsu.dev/gallery/pk3.png</image:loc>
         </image:image>
-         <image:image>
+
+        <image:image>
             <image:loc>https://priyangsu.dev/gallery/pk1.png</image:loc>
         </image:image>
+
          <image:image>
             <image:loc>https://priyangsu.dev/gallery/dw1.png</image:loc>
         </image:image>
+        
          <image:image>
             <image:loc>https://priyangsu.dev/gallery/pb1.png</image:loc>
         </image:image>
-     </url>
-     <url>
-        <loc>https://priyangsu.dev/</loc>
-         <image:image>
-            <image:loc>https://priyangsu.dev/gallery/pk1.png</image:loc>
-        </image:image>
-         <image:image>
-            <image:loc>https://priyangsu.dev/gallery/dw2.png</image:loc>
-        </image:image>
-         <image:image>
-            <image:loc>https://priyangsu.dev/gallery/pb1.png</image:loc>
-        </image:image>
-     </url>
+    </url>
 </urlset>
