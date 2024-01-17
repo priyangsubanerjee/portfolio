@@ -31,5 +31,17 @@
          <image:image>
             <image:loc>https://priyangsu.dev/gallery/pb1.png</image:loc>
         </image:image>
-  </url>
+     </url>
+     <url>
+        <loc>https://priyangsu.dev/</loc>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/pk1.png</image:loc>
+        </image:image>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/dw2.png</image:loc>
+        </image:image>
+         <image:image>
+            <image:loc>https://priyangsu.dev/gallery/pb1.png</image:loc>
+        </image:image>
+     </url>
 </urlset>
