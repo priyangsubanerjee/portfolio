@@ -51,9 +51,21 @@ export default function Home() {
           </h1>
           <img
             src="/gallery/pk1.png"
-            className="absolute top-0 right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0"
+            className="absolute top-0 right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0 pointer-events-none"
+            alt="Priyangsu Banerjee"
+            id="pk1"
+          />
+          <img
+            src="/gallery/pb1.png"
+            className="absolute top-[20%] right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0 pointer-events-none"
             alt="Priyangsu Banerjee"
             id="pb1"
+          />
+          <img
+            src="/gallery/dw2.png"
+            className="absolute top-[40%] right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0 pointer-events-none"
+            alt="Priyangsu Banerjee"
+            id="dw2"
           />
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <Stamp />
