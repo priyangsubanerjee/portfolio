@@ -5,7 +5,7 @@ import React, { useLayoutEffect } from "react";
 function CronServer() {
   const router = useRouter();
   useLayoutEffect(() => {
-    router.push(
+    router.replace(
       "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550"
     );
   }, []);
