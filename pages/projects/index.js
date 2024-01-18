@@ -7,7 +7,7 @@ export default function Projects() {
     return (
       <div className="h-72 relative md:rounded-md overflow-hidden group">
         <div className="absolute z-10 inset-0 bg-gradient-to-b from-transparent to-black flex flex-col justify-end p-5">
-          <h1 className="text-white font-semibold text-3xl font-poppins">
+          <h1 className="text-white font-semibold text-2xl font-poppins">
             Airshare
           </h1>
           <div className="flex items-center mt-3">
