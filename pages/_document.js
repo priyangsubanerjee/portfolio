@@ -36,7 +36,10 @@ export default function Document() {
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
 
         <meta
           property="twitter:card"
@@ -63,10 +66,6 @@ export default function Document() {
           content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
         />
         <meta property="og:url" content="https://priyangsu.dev"></meta>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-        />
       </Head>
 
       <body>
