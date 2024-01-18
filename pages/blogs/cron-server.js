@@ -1,17 +1,11 @@
 import Head from "next/head";
-import React from "react";
-
-export function getServerSideProps() {
-  return {
-    redirect: {
-      destination:
-        "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550",
-      permanent: false,
-    },
-  };
-}
+import React, { useLayoutEffect } from "react";
 
 function CronServer() {
+  useLayoutEffect(() => {
+    window.location.href =
+      "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550";
+  }, []);
   return (
     <div>
       <Head>
