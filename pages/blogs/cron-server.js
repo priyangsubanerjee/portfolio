@@ -1,10 +1,13 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useLayoutEffect } from "react";
 
 function CronServer() {
+  const router = useRouter();
   useLayoutEffect(() => {
-    window.location.href =
-      "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550";
+    router.push(
+      "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550"
+    );
   }, []);
   return (
     <div>
@@ -41,6 +44,9 @@ function CronServer() {
           content="https://priyangsu.dev/blogs/cron-server"
         ></meta>
       </Head>
+      <div className="text-center py-24 animate-pulse">
+        Redirecting to the blog ...
+      </div>
     </div>
   );
 }
