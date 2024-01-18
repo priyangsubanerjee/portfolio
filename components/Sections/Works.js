@@ -19,9 +19,9 @@ function Works() {
             }}
             transition={{ duration: 0.6, delay: 0.3 }}
             key={i}
-            className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group"
+            className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group relative"
           >
-            <div className="lg:ml-20 transition-all duration-1000">
+            <div className="lg:ml-20 transition-all duration-1000 bg-white">
               <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
               <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
                 {project.description}
@@ -29,7 +29,7 @@ function Works() {
               <div className="mt-6 flex items-center space-x-9">
                 {project.preview && (
                   <Link href={project.preview}>
-                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-neutral-500 dark:text-neutral-200">
+                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium hover:underline text-neutral-500 dark:text-neutral-200">
                       <span>Preview</span>
                       <Icon icon="ion:open-outline" />
                     </button>
@@ -37,7 +37,7 @@ function Works() {
                 )}
                 {project.github && (
                   <Link href={project.github}>
-                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium text-neutral-500 dark:text-neutral-200">
+                    <button className="flex items-center space-x-2 uppercase text-sm tracking-wider font-medium hover:underline text-neutral-500 dark:text-neutral-200">
                       <span>Github</span>
                       <Icon icon="ion:open-outline" />
                     </button>
