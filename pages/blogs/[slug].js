@@ -20,7 +20,7 @@ function Blog({ blog }) {
   const router = useRouter();
 
   const ProceedToBlog = () => {
-    router.push(blog.url);
+    window.open(blog.url, "_blank");
   };
 
   const CopyUrl = () => {
