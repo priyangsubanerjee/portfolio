@@ -4,6 +4,7 @@ import { blogs } from "@/static/blogs";
 import { Button, Spinner } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export function getServerSideProps({ params }) {
   const slug = params.slug;
@@ -36,6 +37,32 @@ function Blog({ blog }) {
 
   return (
     <div>
+      <Head>
+        <Head>
+          <title>{blog.title}</title>
+          <meta name="description" content={blog.description} />
+          <meta name="author" content="Priyangsu Banerjee" />
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="distribution" content="web" />
+          <meta name="rating" content="general" />
+          <meta property="twitter:card" content={blog.image}></meta>
+          <meta property="twitter:title" content={blog.title}></meta>
+          <meta
+            property="twitter:description"
+            content={blog.description}
+          ></meta>
+          <meta property="og:image" content={blog.image}></meta>
+          <meta property="og:title" content={blog.title}></meta>
+          <meta property="og:description" content={blog.description} />
+          <meta
+            property="og:url"
+            content={`https://priyangsu.dev/blogs/${blog.slug}`}
+          ></meta>
+        </Head>
+      </Head>
       <img
         src={blog.image}
         className="mx-auto w-full object-cover md:object-contain h-[200px] md:h-auto md:max-w-[500px] md:rounded-md md:mt-10"
