@@ -21,7 +21,7 @@ function Works() {
             key={i}
             className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group relative"
           >
-            <div className="lg:ml-20 transition-all duration-1000 bg-white">
+            <div className="lg:ml-20 transition-all duration-1000">
               <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
               <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
                 {project.description}

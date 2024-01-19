@@ -97,7 +97,11 @@ function Blog({ blog }) {
             className="bg-slate-100 text-black rounded flex items-center"
           >
             <span>Read the full story</span>
-            <Icon height={16} icon="ph:arrow-right-bold" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png"
+              className="w-5 h-5"
+              alt=""
+            />
           </Button>
           <Button
             radius="none"
