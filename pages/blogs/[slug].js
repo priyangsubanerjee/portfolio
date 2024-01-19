@@ -70,10 +70,10 @@ function Blog({ blog }) {
       />
 
       <div className="px-4 mt-10">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">
+        <h1 className="text-2xl md:text-5xl font-bold text-center leading-[1.4]">
           {blog.title}
         </h1>
-        <p className="text-center text-xs md:text-sm mt-3 md:mt-6 text-neutral-300 leading-6">
+        <p className="text-center text-xs md:text-sm mt-3 md:mt-6 dark:text-neutral-400 text-neutral-600 leading-6">
           {blog.description}
         </p>
         <div className="flex text-sm mt-9 items-center justify-center">
