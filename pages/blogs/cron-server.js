@@ -6,7 +6,7 @@ function CronServer() {
   const router = useRouter();
   useLayoutEffect(() => {
     router.replace(
-      "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-0b64cbab4a7444a397fd81121a3d6550"
+      "https://priyangsubanerjee.notion.site/Cron-job-using-Esp8266-9b61b55ad63b46c395193df20f737547?pvs=4"
     );
   }, []);
   return (
