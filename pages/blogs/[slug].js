@@ -37,16 +37,16 @@ function Blog({ blog }) {
   return (
     <div>
       <img
-        src={blog.banner}
-        className="md:max-h-[200px] max-h-[100px] w-full object-cover mx-auto grayscale brightness-50"
+        src={blog.image}
+        className="mx-auto w-full object-cover md:object-contain h-[200px] md:h-auto md:max-w-[500px] md:rounded-md md:mt-10"
         alt=""
       />
 
-      <div className="px-4">
-        <h1 className="text-2xl md:text-5xl font-bold text-center mt-10 md:mt-16">
+      <div className="px-4 mt-10">
+        <h1 className="text-3xl md:text-5xl font-bold text-center">
           {blog.title}
         </h1>
-        <p className="text-center text-xs md:text-sm mt-2 md:mt-6 text-neutral-300 leading-6">
+        <p className="text-center text-xs md:text-sm mt-3 md:mt-6 text-neutral-300 leading-6">
           {blog.description}
         </p>
         <div className="flex text-sm mt-9 items-center justify-center">
