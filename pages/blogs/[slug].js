@@ -18,9 +18,15 @@ export function getServerSideProps({ params }) {
 
 function Blog({ blog }) {
   const router = useRouter();
+  const [collectRating, setCollectRating] = React.useState(false);
 
   const ProceedToBlog = () => {
     window.open(blog.url, "_blank");
+    let timeReq = blog.estimatedReadingTime * 60000;
+
+    setTimeout(() => {
+      setCollectRating(true);
+    }, timeReq);
   };
 
   const CopyUrl = () => {
@@ -83,7 +89,7 @@ function Blog({ blog }) {
           </div>
           <div className="flex items-center space-x-2">
             <span>⏰</span>
-            <span>10 mins read</span>
+            <span>{blog.estimatedReadingTime} mins read</span>
           </div>
         </div>
         <div className="flex items-center justify-center space-x-4 mt-10">
@@ -109,6 +115,26 @@ function Blog({ blog }) {
           </Button>
         </div>
       </div>
+
+      {collectRating && (
+        <div className="fixed inset-0 h-full w-full bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white max-w-[450px] p-8 rounded-md">
+            <h1 className="text-lg font-semibold">Liked the story?</h1>
+            <p className="text-sm leading-7 text-neutral-500 mt-2">
+              Feedback plays a vital role in improving the quality of the
+              content. Please rate the story and help me improve.
+            </p>
+            <div className="grid grid-cols-2 gap-2 mt-6">
+              <Button radius="none" className="rounded">
+                <span>No, it was&apos;nt</span>
+              </Button>
+              <Button radius="none" className="rounded bg-black text-white">
+                <span>It was helpful</span>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -15,6 +15,7 @@ function Navbar() {
   const [nTopExpanded, setNTopExpanded] = useState(false);
   const [nAirplaneState, setNAirplaneState] = useState("inAir"); // inAir, landed, expedite
   const [nStatus, setNStatus] = useState("Approaching Runway 07");
+
   const toggleNav = () => {
     if (nTopExpanded) {
       closeNav();
@@ -111,7 +112,7 @@ function Navbar() {
           opacity: 1,
         }}
         transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-        className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50"
+        className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-40"
       >
         <div>
           <Link href={"/"}>
