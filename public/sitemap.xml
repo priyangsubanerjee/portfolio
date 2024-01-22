@@ -20,6 +20,12 @@
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
+     <url>
+        <loc>https://priyangsu.dev/blogs/cron-server</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <url>
         <loc>https://priyangsu.dev/gallery</loc>
         <image:image>
