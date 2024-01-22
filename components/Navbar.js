@@ -112,7 +112,7 @@ function Navbar() {
           opacity: 1,
         }}
         transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-        className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-40"
+        className="px-6 bg-white dark:bg-black lg:px-16 shrink-0 h-16 lg:h-24 flex items-center justify-between relative z-50"
       >
         <div>
           <Link href={"/"}>

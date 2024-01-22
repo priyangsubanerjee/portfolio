@@ -5,6 +5,7 @@ import { Button, Spinner } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 
 export function getServerSideProps({ params }) {
   const slug = params.slug;
@@ -23,7 +24,13 @@ function Blog({ blog }) {
   const ProceedToBlog = () => {
     window.open(blog.url, "_blank");
     let timeReq = blog.estimatedReadingTime * 60000;
+    let reactedSlugs = localStorage.getItem("reactedSlugs")
+      ? JSON.parse(localStorage.getItem("reactedSlugs"))
+      : [];
 
+    if (reactedSlugs.includes(blog.slug)) return;
+    reactedSlugs.push(blog.slug);
+    localStorage.setItem("reactedSlugs", JSON.stringify(reactedSlugs));
     setTimeout(() => {
       setCollectRating(true);
     }, timeReq);
@@ -83,10 +90,12 @@ function Blog({ blog }) {
             <span>📅</span>
             <span>{blog.date}</span>
           </div>
-          <div className="flex items-center space-x-2 mr-8">
-            <span>👔</span>
-            <span>@priyangsubanerjee</span>
-          </div>
+          <Link href={blog.authorProfile}>
+            <div className="flex items-center space-x-2 mr-8">
+              <span>👔</span>
+              <span>@priyangsubanerjee</span>
+            </div>
+          </Link>
           <div className="flex items-center space-x-2">
             <span>⏰</span>
             <span>{blog.estimatedReadingTime} mins read</span>
@@ -117,19 +126,29 @@ function Blog({ blog }) {
       </div>
 
       {collectRating && (
-        <div className="fixed inset-0 h-full w-full bg-black/50 z-50 flex items-center justify-center">
-          <div className="bg-white max-w-[450px] p-8 rounded-md">
+        <div className="fixed inset-0 h-full w-full bg-black/80 z-50 flex items-end md:items-center justify-center">
+          <div className="bg-white  w-full md:max-w-[450px] p-6 md:p-8 md:rounded-md">
             <h1 className="text-lg font-semibold">Liked the story?</h1>
             <p className="text-sm leading-7 text-neutral-500 mt-2">
               Feedback plays a vital role in improving the quality of the
               content. Please rate the story and help me improve.
             </p>
             <div className="grid grid-cols-2 gap-2 mt-6">
-              <Button radius="none" className="rounded">
-                <span>No, it was&apos;nt</span>
+              <Button
+                onClick={() => setCollectRating(false)}
+                radius="none"
+                className="rounded"
+              >
+                <span>No</span>
+                <span>👎</span>
               </Button>
-              <Button radius="none" className="rounded bg-black text-white">
-                <span>It was helpful</span>
+              <Button
+                onClick={() => setCollectRating(false)}
+                radius="none"
+                className="rounded bg-black text-white"
+              >
+                <span>Yes</span>
+                <span>👍</span>
               </Button>
             </div>
           </div>
