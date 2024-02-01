@@ -37,11 +37,15 @@ export default function Projects() {
             />
           </div>
         </div>
-        <img
-          src={project.cover}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover object-center transition-all group-hover:scale-105 duration-1000"
-        />
+        <video
+          id="video"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          autoPlay
+          playsInline
+          muted
+        >
+          <source src="/mockups/mock.mov" type="video/mp4" />
+        </video>
       </div>
     );
   };
