@@ -18,37 +18,40 @@ export default function Projects() {
   ];
 
   const ProjectCard = ({ project }) => {
+    const [isPlaying, setIsPlaying] = React.useState(false);
     return (
       <div className="h-96 relative md:rounded-xl overflow-hidden group">
-        <div className="absolute z-10 inset-0 bg-gradient-to-b from-transparent to-black flex flex-col justify-end p-10">
-          <h1 className="text-white font-light text-5xl font-poppins">
-            {project.title}
-          </h1>
-          <div className="flex items-center mt-7">
-            <button className="text-black bg-white backdrop-blur text-xs px-4 py-1 rounded-full flex items-center space-x-2">
-              <span>Read case study</span>{" "}
-              <span className="text-lg">&rarr;</span>
-            </button>
-            <Icon icon="mdi:github" className="text-white text-xl ml-auto" />
-            <Icon
-              height={24}
-              icon="mdi:link"
-              className="text-white text-xl ml-5"
-            />
-          </div>
-        </div>
         <video
           id="video"
           onPlay={() => {
-            console.log("Playing now");
+            setIsPlaying(true);
           }}
           className="absolute inset-0 h-full w-full object-cover object-center"
           autoPlay
           playsInline
+          controls={false}
           muted
         >
-          <source src="/mockups/mock.mov" type="video/mp4" />
+          <source src="/projects/airshare/mock.mov" type="video/mp4" />
         </video>
+        <img
+          className="absolute inset-0 h-full w-full"
+          style={{
+            opacity: isPlaying ? 0 : 1,
+          }}
+          src="/projects/airshare/mock.png"
+          alt=""
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex items-end">
+          <div className="w-full px-12 mb-7 flex items-center justify-between">
+            <h1 className="text-5xl text-white font-semibold">Airshare.</h1>
+            <div className="flex items-center justify-between space-x-5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2">
+              <Icon height={20} icon="fluent:open-20-filled" />
+              <Icon height={20} icon="mdi:github" />
+              <Icon height={20} icon="lucide:copy" />
+            </div>
+          </div>
+        </div>
       </div>
     );
   };
