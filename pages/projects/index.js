@@ -26,7 +26,7 @@ export default function Projects() {
     const [isPlaying, setIsPlaying] = React.useState(false);
     return (
       <div className="relative">
-        <div className="h-80 md:h-96 relative md:rounded-xl overflow-hidden group">
+        <div className="h-80 md:h-96 relative rounded-xl overflow-hidden group">
           <video
             id="video"
             onPlay={() => {
@@ -47,23 +47,25 @@ export default function Projects() {
             src={project.coverImage}
             alt=""
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex items-end">
-            <div className="w-full px-5 md:px-12 mb-10 md:mb-12 flex items-center justify-between">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex flex-col justify-end">
+            <div className="w-full px-5 flex items-center justify-between">
               <div>
                 <h1 className="text-3xl md:text-3xl lg:text-3xl text-white font-semibold">
                   {project.title}
                 </h1>
-                <p className="text-sm leading-7 text-white/80 mt-3">
+                <p className="text-sm leading-7 text-white/80 mt-3 max-w-md line-clamp-2">
                   {project.description}
                 </p>
               </div>
             </div>
+            <div className="flex items-center justify-center px-6 mt-3 mb-4 md:mb-6">
+              <div className="flex z-20  w-fit text-white items-center justify-between space-x-5 bg-white/20 backdrop-blur-md rounded-full px-5 py-2">
+                <Icon height={18} icon="fluent:open-20-filled" />
+                <Icon height={18} icon="mdi:github" />
+                <Icon height={18} icon="lucide:copy" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="flex z-20 absolute w-fit bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 md:-translate-y-5 text-white items-center justify-between space-x-5 bg-white/20 backdrop-blur-md rounded-full px-5 py-2">
-          <Icon height={18} icon="fluent:open-20-filled" />
-          <Icon height={18} icon="mdi:github" />
-          <Icon height={18} icon="lucide:copy" />
         </div>
       </div>
     );
@@ -75,7 +77,7 @@ export default function Projects() {
       <p className="text-center text-sm mt-3 text-neutral-600 dark:text-neutral-400">
         This is a page for my projects that keep me alive.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-3 md:mx-16 lg:mx-24 mt-7 md:mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-3 mx-4 md:mx-16 lg:mx-24 mt-7 md:mt-12">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
