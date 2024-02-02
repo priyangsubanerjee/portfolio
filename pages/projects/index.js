@@ -43,9 +43,9 @@ export default function Projects() {
           alt=""
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex items-end">
-          <div className="w-full px-12 mb-7 flex items-center justify-between">
+          <div className="w-full px-12 mb-10 flex items-center justify-between">
             <h1 className="text-5xl text-white font-semibold">Airshare.</h1>
-            <div className="flex items-center justify-between space-x-5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2">
+            <div className="flex text-white items-center justify-between space-x-5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2">
               <Icon height={20} icon="fluent:open-20-filled" />
               <Icon height={20} icon="mdi:github" />
               <Icon height={20} icon="lucide:copy" />
