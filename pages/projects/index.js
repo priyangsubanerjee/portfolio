@@ -39,6 +39,9 @@ export default function Projects() {
         </div>
         <video
           id="video"
+          onPlay={() => {
+            console.log("Playing now");
+          }}
           className="absolute inset-0 h-full w-full object-cover object-center"
           autoPlay
           playsInline
