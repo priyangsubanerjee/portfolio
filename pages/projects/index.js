@@ -40,7 +40,7 @@ export default function Projects() {
             <source src={project.coverVideo} type="video/mp4" />
           </video>
           <img
-            className="absolute inset-0 h-full w-full"
+            className="absolute inset-0 h-full w-full object-cover"
             style={{
               opacity: isPlaying ? 0 : 1,
             }}
