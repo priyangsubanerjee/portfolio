@@ -8,56 +8,69 @@ export default function Projects() {
       title: "Airshare",
       description:
         "A file sharing app that allows you to share files with your friends without any hassle.",
-      image:
-        "https://freebiesbug.com/wp-content/uploads/2023/09/original-phone-mockups.jpg",
-      github: "",
       link: "",
-      cover:
-        "https://freebiesbug.com/wp-content/uploads/2023/09/original-phone-mockups.jpg",
+      coverImage: "/projects/airshare/mock.png",
+      coverVideo: "/projects/airshare/mock.mov",
+    },
+    {
+      title: "Doctor doggy",
+      description:
+        "Revolutionizing pet healthcare by providing a platform for pet owners to connect with veterinarians.",
+      link: "",
+      coverImage: "/projects/doctordoggy/mock.png",
+      coverVideo: "/projects/doctordoggy/mock.mov",
     },
   ];
 
   const ProjectCard = ({ project }) => {
     const [isPlaying, setIsPlaying] = React.useState(false);
     return (
-      <div className="h-96 relative md:rounded-xl overflow-hidden group">
-        <video
-          id="video"
-          onPlay={() => {
-            setIsPlaying(true);
-          }}
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          autoPlay
-          playsInline
-          controls={false}
-          muted
-        >
-          <source src="/projects/airshare/mock.mov" type="video/mp4" />
-        </video>
-        <img
-          className="absolute inset-0 h-full w-full"
-          style={{
-            opacity: isPlaying ? 0 : 1,
-          }}
-          src="/projects/airshare/mock.png"
-          alt=""
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex items-end">
-          <div className="w-full px-12 mb-10 flex items-center justify-between">
-            <h1 className="text-5xl text-white font-semibold">Airshare.</h1>
-            <div className="flex text-white items-center justify-between space-x-5 bg-white/10 backdrop-blur-md rounded-full px-5 py-2">
-              <Icon height={20} icon="fluent:open-20-filled" />
-              <Icon height={20} icon="mdi:github" />
-              <Icon height={20} icon="lucide:copy" />
+      <div className="relative">
+        <div className="h-80 md:h-96 relative md:rounded-xl overflow-hidden group">
+          <video
+            id="video"
+            onPlay={() => {
+              setIsPlaying(true);
+            }}
+            className="absolute inset-0 h-full w-full object-cover object-center brightness-90"
+            autoPlay
+            playsInline
+            muted
+          >
+            <source src={project.coverVideo} type="video/mp4" />
+          </video>
+          <img
+            className="absolute inset-0 h-full w-full"
+            style={{
+              opacity: isPlaying ? 0 : 1,
+            }}
+            src={project.coverImage}
+            alt=""
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 flex items-end">
+            <div className="w-full px-5 md:px-12 mb-10 md:mb-12 flex items-center justify-between">
+              <div>
+                <h1 className="text-3xl md:text-3xl lg:text-3xl text-white font-semibold">
+                  {project.title}
+                </h1>
+                <p className="text-sm leading-7 text-white/80 mt-3">
+                  {project.description}
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="flex z-20 absolute w-fit bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 md:-translate-y-5 text-white items-center justify-between space-x-5 bg-white/20 backdrop-blur-md rounded-full px-5 py-2">
+          <Icon height={18} icon="fluent:open-20-filled" />
+          <Icon height={18} icon="mdi:github" />
+          <Icon height={18} icon="lucide:copy" />
         </div>
       </div>
     );
   };
 
   return (
-    <div className="pt-12">
+    <div className="py-12">
       <h1 className="text-3xl font-semibold text-center">Projects</h1>
       <p className="text-center text-sm mt-3 text-neutral-600 dark:text-neutral-400">
         This is a page for my projects that keep me alive.
