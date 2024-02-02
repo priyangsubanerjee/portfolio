@@ -59,7 +59,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="flex items-center justify-center px-6 mt-3 mb-4 md:mb-6">
-              <div className="flex z-20  w-fit text-white items-center justify-between space-x-5 bg-white/20 backdrop-blur-md rounded-full px-5 py-2">
+              <div className="flex z-20 brightness-75 hover:brightness-100  w-fit text-white items-center justify-between space-x-5 bg-white/20 backdrop-blur-lg rounded-full px-5 py-2 transition-all">
                 <Icon height={18} icon="fluent:open-20-filled" />
                 <Icon height={18} icon="mdi:github" />
                 <Icon height={18} icon="lucide:copy" />
