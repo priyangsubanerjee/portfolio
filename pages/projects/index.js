@@ -85,7 +85,7 @@ export default function Projects() {
       <p className="text-center text-sm mt-3 text-neutral-600 dark:text-neutral-400">
         This is a page for my projects that keep me alive.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-3 mx-4 md:mx-16 lg:mx-24 mt-7 md:mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-3 md:px-0 md:gap-3 md:max-w-4xl lg:max-w-6xl md:mx-auto mt-7 md:mt-12">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
