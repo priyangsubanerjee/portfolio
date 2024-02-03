@@ -20,6 +20,14 @@ export default function Projects() {
       coverImage: "/projects/doctordoggy/mock.png",
       coverVideo: "/projects/doctordoggy/mock.mov",
     },
+    {
+      title: "Romoni",
+      description:
+        "Ecom platform for ethnic wear. Client wanted a simple and elegant design for their website.",
+      link: "",
+      coverImage: "/projects/romoni/mock.png",
+      coverVideo: "/projects/romoni/mock.mov",
+    },
   ];
 
   const ProjectCard = ({ project }) => {
