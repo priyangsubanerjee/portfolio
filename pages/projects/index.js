@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Icon } from "@iconify/react";
+import { Button } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 
 export default function Projects() {
@@ -89,6 +91,13 @@ export default function Projects() {
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
+      </div>
+
+      <div className="flex flex-col items-center justify-center mt-16">
+        <p className="text-sm">more mockups are on the way</p>
+        <Link className="mt-4" href={"https://github.com/priyangsubanerjee"}>
+          <Button>Visit my github for more projects.</Button>
+        </Link>
       </div>
     </div>
   );
