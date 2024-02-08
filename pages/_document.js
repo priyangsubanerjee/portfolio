@@ -20,6 +20,12 @@ export default function Document() {
           sizes="192x192"
           href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
         />
+        <link rel="canonical" href="https://priyangsu.dev/" key="canonical" />
+        <link
+          rel="canonical"
+          href="https://priyangsu.dev/gallery"
+          key="canonical"
+        />
 
         <meta
           name="description"
