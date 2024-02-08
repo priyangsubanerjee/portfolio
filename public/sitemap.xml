@@ -28,6 +28,7 @@
     
     <url>
         <loc>https://priyangsu.dev/gallery</loc>
+        <changefreq>weekly</changefreq>
         <image:image>
             <image:loc>https://priyangsu.dev/gallery/sw1.png</image:loc>
         </image:image>

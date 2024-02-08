@@ -13,6 +13,7 @@ function CronServer() {
     <div>
       <Head>
         <title>Cron Server using ESP8266</title>
+        <link rel="canonical" href="https://priyangsu.dev/blogs/cron-server" />
         <meta
           name="description"
           content="Schedule time based triggers to run automations using ESP8266"
