@@ -32,6 +32,7 @@ export default function Home() {
     <>
       <Head>
         <title>Priyangsu Banerjee | Developer</title>
+        <link rel="canonical" href="https://priyangsu.dev" />
       </Head>
       <section className="max-h-[calc(100%-64px)] lg:max-h-[calc(100%-96px)] h-full w-full bg-transparent relative flex flex-col pb-8 lg:pb-10">
         <Runway />
