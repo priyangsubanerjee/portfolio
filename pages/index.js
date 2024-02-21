@@ -57,6 +57,12 @@ export default function Home() {
             id="pk1"
           />
           <img
+            src="/gallery/sp2.png"
+            className="absolute top-0 right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0 pointer-events-none"
+            alt="Priyangsu Banerjee | Full Stack Developer"
+            id="sp2"
+          />
+          <img
             src="/gallery/pb1.png"
             className="absolute top-[20%] right-0 w-[50%] h-auto lg:w-[30%] lg:h-auto opacity-0 pointer-events-none"
             alt="Priyangsu Banerjee"
