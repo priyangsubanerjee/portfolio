@@ -3,7 +3,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://priyangsu.dev</loc>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
          <image:image>
             <image:loc>https://priyangsu.dev/gallery/pk1.png</image:loc>
