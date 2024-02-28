@@ -73,7 +73,10 @@ function Gallery() {
         <meta property="og:url" content="https://priyangsu.dev"></meta>
       </Head>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-5 lg:px-16 pb-9">
+        <h1 className="text-3xl font-semibold text-center mt-10">
+          Shared Gallery
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-5 lg:px-16 pb-9 mt-20">
           {images.map((image, index) => (
             <div key={index} className="h-full w-full overflow-hidden">
               <img
