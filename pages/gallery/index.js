@@ -10,8 +10,8 @@ function Gallery() {
     "/gallery/pk1.png",
     "/gallery/pk3.png",
     "/gallery/sp1.png",
-    "/gallery/pk4.png",
     "/gallery/sw1.png",
+    "/gallery/phyr-global.webp",
   ];
   return (
     <>
