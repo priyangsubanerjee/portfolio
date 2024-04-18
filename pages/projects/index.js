@@ -86,21 +86,13 @@ export default function Projects() {
     <>
       <Head>
         <title>Projects | Fueiling up</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="shortcut icon"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
-        />
-        <link
-          rel="shortcut icon"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
+          href="/favicon.ico"
           type="image/x-icon"
         ></link>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="https://res.cloudinary.com/db9kd4qbi/image/upload/v1700054426/Personal/IMG_5D022AA3C935-1_psqtcn.jpg"
-        />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.ico" />
         <meta
           name="description"
           content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
