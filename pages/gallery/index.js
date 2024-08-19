@@ -1,28 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Gallery() {
   const images = [
     "/gallery/sp2.png",
     "/gallery/dw1.png",
     "/gallery/pb1.png",
+    "/gallery/pb2.jpg",
     "/gallery/pk1.png",
     "/gallery/pk3.png",
     "/gallery/sp1.png",
     "/gallery/sw1.png",
     "/gallery/phyr-global.webp",
   ];
+
+  const [displayImages, setDisplayImages] = useState([]);
+
+  useEffect(() => {
+    const shuffledImages = images.sort(() => Math.random() - 0.5);
+    setDisplayImages(shuffledImages);
+  }, []);
   return (
     <>
       <Head>
         <title>Gallery | Priyangsu Banerjee</title>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="shortcut icon"
-          href="/favicon.ico"
-          type="image/x-icon"
-        ></link>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon.ico" />
         <meta
           name="description"
@@ -39,24 +43,15 @@ function Gallery() {
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
-        <meta
-          property="twitter:card"
-          content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"
-        ></meta>
+        <meta property="twitter:card" content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"></meta>
         <meta property="twitter:title" content="Gallery"></meta>
         <meta
           property="twitter:description"
           content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
         ></meta>
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"
-        ></meta>
+        <meta property="og:image" content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"></meta>
         <meta property="og:title" content="Gallery"></meta>
         <meta
           property="og:description"
@@ -65,17 +60,11 @@ function Gallery() {
         <meta property="og:url" content="https://priyangsu.dev"></meta>
       </Head>
       <div>
-        <h1 className="text-3xl font-semibold text-center mt-10">
-          Shared Gallery
-        </h1>
+        <h1 className="text-3xl font-semibold text-center mt-10">Shared Gallery</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-5 lg:px-16 pb-9 mt-20">
-          {images.map((image, index) => (
+          {displayImages.map((image, index) => (
             <div key={index} className="h-full w-full overflow-hidden">
-              <img
-                src={image}
-                alt="Priyangsu Banerjee"
-                className="w-full h-full hover:grayscale-0 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
-              />
+              <img src={image} alt="Priyangsu Banerjee" className="w-full h-full hover:grayscale-0 object-cover hover:scale-105 transition-all duration-300 ease-in-out" />
             </div>
           ))}
         </div>
