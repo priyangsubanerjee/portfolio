@@ -7,19 +7,15 @@ import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function Providers({ children }) {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
   return (
     <NextUIProvider>
-      {mounted && (
-        <ThemeProvider defaultTheme="dark" attribute="class">
-          <Layout>{children}</Layout>
-        </ThemeProvider>
-      )}
+      <Layout>{children}</Layout>
     </NextUIProvider>
   );
 }

@@ -1,5 +1,7 @@
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Providers } from "./providers";
+import Navbar from "./Components/Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,9 +10,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning={true} lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <ThemeProvider defaultTheme="dark" attribute="class">
+          <Providers>
+            <Navbar />
+            {children}
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
