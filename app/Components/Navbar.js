@@ -15,7 +15,7 @@ function Navbar() {
 
   const [nTopExpanded, setNTopExpanded] = useState(false);
   const [nAirplaneState, setNAirplaneState] = useState("inAir"); // inAir, landed, expedite
-  const [nStatus, setNStatus] = useState("Approaching Runway 07");
+  const [nStatus, setNStatus] = useState("Approaching Runway 08");
 
   const toggleNav = () => {
     if (nTopExpanded) {
@@ -35,7 +35,7 @@ function Navbar() {
 
     parentDiv.style.transform = "translateY(0%)";
     mainLayout.style.overflow = "hidden";
-    setNStatus("Approaching Runway 07");
+    setNStatus("Approaching Runway 08");
     setNAirplaneState("touchDown");
     resetTouchPoint();
     resetAirplane();
@@ -78,7 +78,7 @@ function Navbar() {
         resetTouchPoint();
         resetAirplane(2);
         setNAirplaneState("inAir");
-        setNStatus("Approaching Runway 07");
+        setNStatus("Approaching Runway 08");
         parentDiv.style.transform = "translateY(-100%)";
         mainLayout.style.overflow = "auto";
 
@@ -232,7 +232,7 @@ function Navbar() {
                 <div className="w-full h-[40%] bg-white dark:bg-black"></div>
               </div>
               <h1 className="font-Bebas-Neue w-fit text-2xl font-bold text-black bg-white dark:bg-black dark:text-white py-1 px-2 z-10 -rotate-90">
-                07
+                08
               </h1>
               <div className="h-5 w-8 bg-black/10 dark:bg-white/20 flex items-center">
                 <div className="w-full h-[40%] bg-white dark:bg-black"></div>

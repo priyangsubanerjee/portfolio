@@ -7,15 +7,11 @@ import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function Providers({ children }) {
-  // const [mounted, setMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
-
   return (
-    <NextUIProvider>
-      <Layout>{children}</Layout>
-    </NextUIProvider>
+    <>
+      <NextUIProvider>
+        <Layout>{children}</Layout>
+      </NextUIProvider>
+    </>
   );
 }
