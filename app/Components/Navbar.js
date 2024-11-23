@@ -174,11 +174,11 @@ function Navbar() {
 
       <section
         id="navmenu"
-        className="fixed inset-x-0 top-0 -translate-y-[100%] h-[calc(100%)] w-full bg-white dark:bg-black z-40 transition-transform duration-500 lg:hidden flex flex-col justify-end"
+        className="fixed inset-x-0 top-0 -translate-y-[100%] h-svh w-full bg-white dark:bg-black z-40 transition-transform duration-500 lg:hidden flex flex-col justify-end"
       >
         <div className="h-full flex flex-col w-full relative pt-16">
           <ul
-            className={`text-neutral-800 mt-10 font-light text-3xl space-y-9 dark:text-neutral-300 px-6 transition-all duration-500 ${
+            className={`text-neutral-800 mt-10 font-light text-3xl space-y-8 dark:text-neutral-300 px-6 transition-all duration-500 ${
               nAirplaneState == "landed" || nAirplaneState == "expedite"
                 ? "opacity-100"
                 : "opacity-0"
@@ -271,7 +271,7 @@ function Navbar() {
               </Marquee>
             </div>
           </div>
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center mt-5">
             <span className="text-xs uppercase tracking-wider">{nStatus}</span>
           </div>
         </div>
