@@ -8,7 +8,7 @@ function Footer() {
       <div className="w-full">
         <div className="lg:flex space-y-10 lg:space-y-0 items-center justify-between mt-10">
           <span className="text-sm">
-            © 2023All Rights Reserved. Design & Coded with ❤️️
+            ©2024 All Rights Reserved. Design & Coded with ❤️️
           </span>
           <ul className="lg:flex space-y-3 lg:space-y-0 items-center lg:first-letter:space-x-8 text-sm">
             <li>
