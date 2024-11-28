@@ -55,7 +55,7 @@ function Works() {
         ))}
 
         <div className="mt-16 lg:pl-20 flex items-center">
-          <Link href="/projects">
+          <Link href="/works">
             <button className="flex group relative w-48 items-center justify-between rounded-full h-12 text-white dark:text-black dark:bg-white bg-black">
               <span className="text-sm md:text-base ml-5">
                 See all projects
