@@ -16,7 +16,7 @@ function Services() {
           viewport={{
             once: true,
           }}
-          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+          className="pl-8 border-l-2 border-neutral-200 dark:border-neutral-700"
         >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             01
@@ -35,7 +35,7 @@ function Services() {
             once: true,
           }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+          className="pl-8 border-l-2 border-neutral-200 dark:border-neutral-700"
         >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             02
@@ -53,7 +53,7 @@ function Services() {
             once: true,
           }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="pl-8 border-l-2 border-neutral-400 dark:border-neutral-700"
+          className="pl-8 border-l-2 border-neutral-200 dark:border-neutral-700"
         >
           <h1 className="text-5xl text-neutral-400 dark:text-neutral-700">
             03
