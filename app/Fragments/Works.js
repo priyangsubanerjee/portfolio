@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import { projects } from "@/static/projects";
+import { featuredProjects, projects, recentProjects } from "@/static/projects";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +11,7 @@ function Works() {
     <div id="work" className="pt-32 lg:pt-16 lg:mt-32 px-6 lg:px-16 pb-10">
       <h2 className="text-2xl lg:text-3xl font-poppins">Recent works ...</h2>
       <div className="mt-16">
-        {projects.map((project, i) => (
+        {featuredProjects().map((project, i) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,8 +23,8 @@ function Works() {
             className="py-10 border-b border-neutral-400 dark:border-neutral-700 flex group relative"
           >
             <div className="lg:ml-20 transition-all duration-1000">
-              <h1 className="text-3xl lg:text-5xl">{project.title}</h1>
-              <p className="text-sm max-w-2xl leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
+              <h1 className="text-3xl lg:text-5xl">{project.name}</h1>
+              <p className="text-sm max-w-2xl line-clamp-2 leading-7 text-neutral-600 dark:text-neutral-300 mt-5">
                 {project.description}
               </p>
               <div className="mt-6 flex items-center space-x-9">

@@ -13,7 +13,7 @@ function Message() {
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto pb-24">
         <div className="grid grid-cols-2 gap-3">
           <div
             onClick={() => document.getElementById("name-input").focus()}

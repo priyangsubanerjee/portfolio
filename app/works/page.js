@@ -3,18 +3,44 @@ import { Icon } from "@iconify/react";
 import { Button } from "@nextui-org/button";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { projects } from "@/static/projects";
+import { projects, recentProjects } from "@/static/projects";
 import Link from "next/link";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 function Works() {
   const [triggerOn, setTriggerOn] = useState(false);
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setTriggerOn(true);
-  //     }, 2000);
-  //   }, []);
+  console.log(recentProjects());
+
+  const ProjectCard = ({ project }) => {
+    return (
+      <li>
+        <h2 className="text-sm md:text-base">{project.name}</h2>
+        <p className="text-xs md:text-sm line-clamp-2 text-neutral-500 dark:text-neutral-400 leading-6 md:leading-7 mt-2">
+          {project.description}
+        </p>
+        <div className="mt-4 flex items-center gap-4">
+          {project.preview && (
+            <Link href={project.preview}>
+              <button className="flex items-center space-x-2 text-sm hover:underline text-neutral-500 dark:text-neutral-200">
+                <span>Open</span>
+                <Icon icon="ion:open-outline" />
+              </button>
+            </Link>
+          )}
+
+          {project.github && (
+            <Link href={project.github}>
+              <button className="flex items-center space-x-2 text-sm hover:underline text-neutral-500 dark:text-neutral-200">
+                <span>Github</span>
+                <Icon icon="ion:open-outline" />
+              </button>
+            </Link>
+          )}
+        </div>
+      </li>
+    );
+  };
 
   return (
     <div>
@@ -28,175 +54,62 @@ function Works() {
         </p>
       </div>
 
-      {/* <div className="px-16 mt-12 grid grid-cols-2 gap-8">
-        <div className="hover:bg-white/5 transition-all p-6">
-          <h1 className="text-2xl font-medium">Animalize LMS</h1>
-          <div className="flex items-center text-xs gap-4 text-neutral-400 mt-3">
-            <span>March 2023</span>
-          </div>
-          <p className="mt-4 text-sm text-neutral-300 leading-6">
-            A short description of the tool and how it can be used to solve a
-            problem.
-          </p>
-          <div className="mt-5 flex items-center gap-4">
-            <Button className="rounded-full text-sm bg-white text-black border border-neutral-700">
-              Open
-            </Button>
-            <Button isIconOnly className="bg-transparent rounded-full">
-              <Icon
-                height={"25"}
-                className="text-neutral-200"
-                icon="iconoir:github"
-              />
-            </Button>
-          </div>
-        </div>
-        <div className="hover:bg-white/5 transition-all p-6">
-          <h1 className="text-xl font-medium">Animalize LMS</h1>
-          <div className="flex items-center text-xs gap-4 text-neutral-400 mt-3">
-            <span>March 2023</span>
-          </div>
-          <p className="mt-4 text-sm text-neutral-300 leading-6">
-            A short description of the tool and how it can be used to solve a
-            problem.
-          </p>
-          <div className="mt-5 flex items-center gap-4">
-            <Button className="rounded-full text-sm bg-white text-black border border-neutral-700">
-              Open
-            </Button>
-            <Button isIconOnly className="bg-transparent rounded-full">
-              <Icon
-                height={"25"}
-                className="text-neutral-200"
-                icon="iconoir:github"
-              />
-            </Button>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="px-24 grid grid-cols-3 gap-6 mt-16">
-        <div className="hover:bg-white/5 transition-all p-6">
-          <h1 className="text-2xl tracking-wide">Animalize LMS</h1>
-          <div className="flex items-center text-xs gap-4 text-neutral-400 mt-3">
-            <span>March 2023</span>
-          </div>
-          <p className="mt-4 text-sm text-neutral-300 leading-7 line-clamp-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            deserunt quia fuga sapiente, pariatur perspiciatis, aliquam
-            laudantium nam cupiditate, recusandae eveniet enim nesciunt adipisci
-            atque iste in? Iure, nostrum quasi.
-          </p>
-          <div className="mt-7 flex items-center gap-4">
-            <Button className="rounded-full text-sm bg-white text-black border border-neutral-700">
-              Open
-            </Button>
-            <Button isIconOnly className="bg-transparent rounded-full">
-              <Icon
-                height={"25"}
-                className="text-neutral-200"
-                icon="iconoir:github"
-              />
-            </Button>
-          </div>
-        </div>
-      </div> */}
-
-      <div className="px-24 mt-10">
-        <Accordion defaultExpandedKeys={["1"]} selectionMode="multiple">
-          <AccordionItem
-            key="1"
-            aria-label="Accordion 1"
-            title={
-              <p className="dark:text-white/50 text-black/80 leading-[1] text-[40px]">
-                .24
-              </p>
-            }
-          >
-            <div className="pb-10">
-              <ul className="grid grid-cols-2 mt-2 px-10 gap-10 border-l pl-20 max-w-5xl ml-10 border-neutral-300 dark:border-neutral-700">
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
+      <div className="px-4 md:px-16 lg:px-24 mt-10 pb-28">
+        <Accordion defaultExpandedKeys={["0"]} selectionMode="multiple">
+          {recentProjects().map((group, index) => {
+            return (
+              <AccordionItem
+                key={index}
+                aria-label={group.year}
+                title={
+                  <p className="dark:text-white/50 text-black/80 leading-[1] text-[30px] md:text-[40px]">
+                    .{group.year.toString().slice(2)}
                   </p>
-                  <button className="flex mt-4 items-center space-x-2 uppercase text-xs tracking-wider font-medium hover:underline text-neutral-500 dark:text-neutral-200">
-                    <span>Preview</span>
-                    <Icon icon="ion:open-outline" />
-                  </button>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </AccordionItem>
-          <AccordionItem
-            key="2"
-            aria-label="Accordion 2"
-            title={
-              <p className="dark:text-white/50 text-black/80 leading-[1] text-[40px]">
-                .22
-              </p>
-            }
-          >
-            <div className="pb-10">
-              <ul className="grid grid-cols-2 mt-2 px-10 gap-10 border-l pl-20 max-w-5xl ml-10 border-neutral-300 dark:border-neutral-700">
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                  <button className="flex mt-4 items-center space-x-2 uppercase text-xs tracking-wider font-medium hover:underline text-neutral-500 dark:text-neutral-200">
-                    <span>Preview</span>
-                    <Icon icon="ion:open-outline" />
-                  </button>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-                <li>
-                  <h2>Project name</h2>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-6 mt-2">
-                    A short description of the tool and how it can be used to
-                    solve a problem.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </AccordionItem>
+                }
+              >
+                <div className="pb-10">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 mt-2 px-10 gap-10 border-l pl-6 md:pl-20 max-w-5xl ml-2 md:ml-10 border-neutral-300 dark:border-neutral-700">
+                    {group.projects.map((project, index) => {
+                      return <ProjectCard key={index} project={project} />;
+                    })}
+                  </ul>
+                </div>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
+        <div className="mt-32">
+          <h2 className="text-sm px-5 text-neutral-600 font text-center w-fit mx-auto border-b pb-5">
+            More projects are on the way{" "}
+            <span className="text-xl translate-y-[2px] inline-block">🚃</span>
+          </h2>
+          <div className="flex mt-5 gap-3 items-center justify-center text-neutral-800">
+            <ul className="flex items-center justify-center flex-wrap gap-5 text-sm text-neutral-900 dark:text-neutral-300">
+              <li>
+                <Link href={"https://github.com/priyangsubanerjee"}>
+                  Github
+                </Link>
+              </li>
+              <li>
+                <Link href={"https://www.linkedin.com/in/priyangsu-banerjee/"}>
+                  Linkedin
+                </Link>
+              </li>
+              <li>
+                <Link href={"https://www.instagram.com/priyangsu__banerjee/"}>
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={"https://www.quora.com/profile/Priyangsu-Banerjee-1"}
+                >
+                  Quora
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
