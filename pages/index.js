@@ -27,11 +27,7 @@ export default function Home() {
       <Head>
         <title>Priyangsu Banerjee - Full Stack Developer</title>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="shortcut icon"
-          href="/favicon.ico"
-          type="image/x-icon"
-        ></link>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon.ico" />
         <meta
           name="description"
@@ -48,19 +44,13 @@ export default function Home() {
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
         <meta
           property="twitter:card"
           content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"
         ></meta>
-        <meta
-          property="twitter:title"
-          content="Priyangsu Banerjee - Full Stack Developer"
-        ></meta>
+        <meta property="twitter:title" content="Priyangsu Banerjee - Full Stack Developer"></meta>
         <meta
           property="twitter:description"
           content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
@@ -69,10 +59,7 @@ export default function Home() {
           property="og:image"
           content="https://res.cloudinary.com/db9kd4qbi/image/upload/v1699945699/Personal/Priyangsu_Banerjee_ew1cz3.png"
         ></meta>
-        <meta
-          property="og:title"
-          content="Priyangsu Banerjee - Full Stack Developer"
-        ></meta>
+        <meta property="og:title" content="Priyangsu Banerjee - Full Stack Developer"></meta>
         <meta
           property="og:description"
           content="Priyangsu Banerjee is a full stack developer and entrepreneur based in India. He is currently building VBC, where they develop technologies that empower regular people to explore tech on their own terms."
@@ -86,9 +73,7 @@ export default function Home() {
             FULL <br />{" "}
             <span
               className={`
-                      ${
-                        parked ? "text-red-500" : "text-neutral-500"
-                      } transition-all
+                      ${parked ? "text-red-500" : "text-neutral-500"} transition-all
             `}
             >
               STACK
@@ -128,8 +113,7 @@ export default function Home() {
           <div className="lg:w-[30%] flex flex-col items-end relative">
             <Stamp />
             <p className="text-right leading-6 lg:leading-7 mt-6 lg:mt-0 text-sm lg:text-base">
-              specialized in Web Design & Development, UX / UI, Backend, and
-              Front End Development.
+              specialized in Web Design & Development, UX / UI, Backend, and Front End Development.
             </p>
           </div>
         </div>
@@ -144,38 +128,24 @@ export default function Home() {
       <footer className="mt-20 mb-10 border-t dark:border-t-white/30 border-t-black/30 max-w-7xl mx-auto px-6 lg:px-10">
         <div className="w-full">
           <div className="lg:flex space-y-10 lg:space-y-0 items-center justify-between mt-10">
-            <span className="text-sm">
-              © 2023All Rights Reserved. Design & Coded with ❤️️
-            </span>
+            <span className="text-sm">© 2023All Rights Reserved. Design & Coded with ❤️️</span>
             <ul className="lg:flex space-y-3 lg:space-y-0 items-center lg:first-letter:space-x-8 text-sm">
               <li>
-                <Link href={"https://github.com/priyangsubanerjee"}>
-                  Github
-                </Link>
+                <Link href={"https://github.com/priyangsubanerjee"}>Github</Link>
               </li>
               <li>
-                <Link href={"https://www.linkedin.com/in/priyangsu-banerjee/"}>
-                  Linkedin
-                </Link>
+                <Link href={"https://www.linkedin.com/in/priyangsu-banerjee/"}>Linkedin</Link>
               </li>
               <li>
-                <Link href={"https://www.instagram.com/priyangsu__banerjee/"}>
-                  Instagram
-                </Link>
+                <Link href={"https://www.instagram.com/priyangsu__banerjee/"}>Instagram</Link>
               </li>
               <li>
-                <Link
-                  href={"https://www.quora.com/profile/Priyangsu-Banerjee-1"}
-                >
-                  Quora
-                </Link>
+                <Link href={"https://www.quora.com/profile/Priyangsu-Banerjee-1"}>Quora</Link>
               </li>
             </ul>
             <ul className="flex items-center space-x-6 lg:space-x-8 text-sm">
               <li>
-                <Link href={"https://razorpay.me/@priyangsubanerjee"}>
-                  Support
-                </Link>
+                <Link href={"https://razorpay.me/@priyangsubanerjee"}>Support</Link>
               </li>
               <li
                 className="cursor-pointer"
@@ -183,8 +153,8 @@ export default function Home() {
                   if (navigator.share) {
                     navigator.share({
                       title: "Priyangsu Banerjee",
-                      text: "Full Stack Developer",
-                      url: "https://priyangsubanerjee.com",
+                      text: "I transform concepts into pixel-perfect, functional websites. From responsive front-end interfaces that adapt to any device, to robust back-end systems that power seamless experiences, I'm here to bring your online vision to life, leaving a lasting impression on the digital world. Let's collaborate and turn your ideas into an exceptional web reality.",
+                      url: "https://priyangsu.dev",
                     });
                   } else {
                     alert("Share not supported in your browser");
