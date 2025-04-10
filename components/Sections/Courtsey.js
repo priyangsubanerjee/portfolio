@@ -20,7 +20,7 @@ function Courtsey() {
         <div className="h-4 w-4 bg-green-500 rounded-full absolute left-0 -top-2 lg:-top-5 z-10"></div>
         <img
           className="h-16 lg:h-20 w-16 lg:w-20 absolute -top-3 lg:-top-6 left-0 rounded-full object-cover pointer-events-none"
-          src="https://avatars.githubusercontent.com/u/78071484?v=4"
+          src="/gallery/pb2.jpg"
           alt=""
         />
         <span className="pl-20 lg:pl-24">Let&apos;s</span> talk about a project, collaboration or an idea you may have

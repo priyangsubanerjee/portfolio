@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
